@@ -1,0 +1,31 @@
+MX:                      
+  - 172.30.177.170:
+      username: pytraining
+      passwd: Poclab123
+QFX:                      
+  - 172.30.179.239:
+      username: pytraining
+      passwd: Poclab123
+EX4200: 
+  - 172.30.179.107:                    
+      username: pytraining
+      passwd: Poclab123
+  - 172.30.179.108:
+      username: pytraining
+      passwd: Poclab123
+  - 172.30.179.109:                    
+      username: pytraining
+      passwd: Poclab123
+  - 172.30.179.112:
+      username: pytraining
+      passwd: Poclab123
+EX4300:                     
+  - 172.30.179.74:
+      username: pytraining
+      passwd: Poclab123
+  - 172.30.179.95:
+      username: pytraining
+      passwd: Poclab123
+  - 172.30.179.73:
+      username: pytraining
+      passwd: Poclab123

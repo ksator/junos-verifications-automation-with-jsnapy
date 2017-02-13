@@ -1,0 +1,14 @@
+#tests_include:
+#  - test_command_bgp
+
+test_command_bgp:
+  - command: show bgp neighbor
+  - iterate:
+#     xpath: '/bgp-information/bgp-peer'
+      xpath: '//bgp-peer'
+#     id: './peer-address'
+      tests:
+      # Check if peers are in the stablished state
+        - is-equal: peer-state, Established
+          err: "Test Failed!! peer <{{post['peer-address']}}> is not established, it is <{{post['peer-states']}}>"
+          info: "Test succeeded!! peer <{{post['peer-address']}}> state is <{{post['peer-state']}}>"

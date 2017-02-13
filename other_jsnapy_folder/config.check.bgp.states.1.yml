@@ -1,0 +1,6 @@
+    hosts:
+      - include: devices.yml
+        group: EX4300
+    tests:
+      - test_bgp.yml
+    email: send_mail.yml

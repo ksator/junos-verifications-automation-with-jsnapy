@@ -1,0 +1,51 @@
+tests_include:
+  - test_bgp_summary
+  - test_bgp_neighbor
+
+test_bgp_summary:
+# - command: show bgp summary
+  - rpc: get-bgp-summary-information
+  - item:
+      xpath: '/bgp-information'
+      tests:
+        - is-equal: down-peer-count, 0
+          err: "Test Failed!! down-peer-count is not equal to 0. it is equal to <{{post['down-peer-count']}}>"
+          info: "Test succeeded!! down-peer-count is equal to <{{post['down-peer-count']}}>"
+  - item:
+      xpath: '//bgp-rib'
+      tests:
+        - in-range: total-prefix-count, 1, 100
+          err: "Test Failed!! value of total-prefix-count is not in range of 1-100, it is equal to <{{post['total-prefix-count']}}>"
+          info: "Test succeeded!! value of total-prefix-count is in range of 1-100, it is equal to <{{post['total-prefix-count']}}>"
+  - iterate: 
+      xpath: '//bgp-peer/bgp-rib'
+      tests:
+        - in-range: accepted-prefix-count, 1, 50
+          err: "Test Failed!! value of accepted-prefix-count is not in range of 1-50, it is equal to <{{post['accepted-prefix-count']}}>"
+          info: "Test succeeded!! value of total-prefix-count is in range of 1-50, it is equal to <{{post['accepted-prefix-count']}}>"
+
+test_bgp_neighbor:
+  - command: show bgp neighbor
+# - rpc: get-bgp-neighbor-information
+  - iterate:
+#     xpath: '/bgp-information/bgp-peer'
+      xpath: '//bgp-peer'
+#     id: './peer-address'
+      tests:
+          # Check if peers are in the stablished state
+        - is-equal: peer-state, Established
+          err: "Test Failed!! peer <{{post['peer-address']}}> state is not established, it is <{{post['peer-states']}}>"
+          info: "Test succeeded!! peer <{{post['peer-address']}}> state is <{{post['peer-state']}}>"
+         # for flap-count details, it is better to use a snap/snap/check and to compare it. 
+        - all-same: flap-count
+          err: "for peer <{{post['peer-address']}}>, flap-count is <{{post['flap-count']}}>"
+          info: "for peer <{{post['peer-address']}}>, flap-count is now <{{post['flap-count']}}>!!!"
+
+        - is-equal: flap-count, 0
+          err: "Test Failed!!! flap count for peer <{{post['peer-address']}}> is not equal to 0, it is: <{{post['flap-count']}}> "
+          info: "Test Succeeded!! flap count for peer <{{post['peer-address']}}> is equal to <{{post['flap-count']}}> !!"
+
+        - in-range: peer-as, 100,900        # element in which test is performed
+          err: "Test Failed!! peer-as for peer <{{post['peer-address']}}> is not in range of 100-900, it is: <{{post['peer-as']}}>"
+          info: "Test succeeded!! peer-as for peer <{{post['peer-address']}}> is in range of 100-900, it is now <{{post['peer-as']}}>"
+

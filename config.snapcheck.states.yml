@@ -1,0 +1,11 @@
+    hosts:
+      - include: devices.yml
+        group: EX4300
+    tests:
+      - test.snapcheck.states.yml 
+#   mail: send_mail.yml
+#   mail: 
+#    pass: pass_mail.yml
+#    all: log_mail.yml
+#    fail: fail_mail.yml
+

@@ -1,0 +1,6 @@
+    hosts:
+      - include: devices.yml
+        group: EX4300
+    tests:
+      - test.diff.interfaces.yml
+

@@ -1,0 +1,10 @@
+to: ksator@juniper.net
+from: khelil.sator.git@gmail.com  
+sub: "Sample Jsnap Results, please verify"
+recipient_name: ABC 
+passwd: 67M5Xp3ez8QGYrEWAB9l
+#server: smtp.gmail.com
+#port: 587
+sender_name: "Juniper Networks"
+port: 25
+server: 127.0.0.1
