@@ -18,8 +18,8 @@ sudo pip install jsnapy
 ```
 
 ## Default structure:
-While installing Jsnapy, it creates Jsnapy folder at /etc and and /etc/logs. 
-You can refer to https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs for the details.  
+While installing Jsnapy, it creates Jsnapy folder at /etc and and /etc/logs.  
+You can refer to this [link] (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs) for the details.  
 /etc/jsnapy serves as the default lookup directory to search for configuration files when running various jsnapy commands.  
 test files should be located at /etc/jsnapy/testfiles.  
 User can chose different location by setting test_file_path in /etc/jsnapy/jsnapy.cfg  
