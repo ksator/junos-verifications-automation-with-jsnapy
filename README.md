@@ -1,6 +1,6 @@
 # About JSNAPy: 
 
-You can use it for for automating verification on Junos devices.   
+You can use it for automating verification on Junos devices.   
 This is a Python version of Junos SNapshot Administrator (JSNAP).  
 
 ## Documentation 
