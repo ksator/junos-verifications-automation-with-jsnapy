@@ -33,8 +33,15 @@ jsnapy -V
 
 # About this repo: 
 It has JSNAPy content tested with release 1.1.0.   
-topology: 3 junos devices EX4300 in a triangle topology, with BGP configured.  
 
+topology: 3 junos devices EX4300 in a triangle topology, with BGP configured.  
+```
+git clone https://github.com/ksator/ansible-training-for-junos-automation.git
+cd ansible-training-for-junos-automation
+ansible-playbook junos_template/pb.bgp.2.yml  
+cd ..
+```
+## clone this repo
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd Junos-verifications-automation-with-Jsnapy
