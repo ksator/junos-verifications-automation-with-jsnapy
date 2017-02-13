@@ -6,6 +6,8 @@ Documentation: https://github.com/Juniper/jsnapy/wiki
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
 Day one book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104   
 
+Installation 
+documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation 
 Installation using pip:  
 ```
 sudo pip install jsnapy
@@ -55,6 +57,8 @@ JSNAPy is supported in two modes:
 
 ## Command line tool:
 
+Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool 
+
 help: 
 ```
 jsnapy -h
@@ -100,6 +104,8 @@ jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73 -l pytrain
 
 #### local snapcheck:
 
+Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments 
+
 Presence of --local option runs the tests on stored snapshot. 
 To use this command one has to first create snapshot using --snap command.
 ```
@@ -133,6 +139,9 @@ jsnapy --snapcheck -f config.snapcheck.local.yml
 ```
 
 #### specify custom jsnapy lookup directory (--folder)
+
+Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments 
+
 ```
 ls other_jsnapy_folder/ -l
 
@@ -178,6 +187,7 @@ jsnapy --diff pre post -f config.diff.yml
 ```
 
 ## Python module
+Documentation: https://github.com/Juniper/jsnapy/wiki/4.-Module 
 
 ### snap, snap, and check:
 
