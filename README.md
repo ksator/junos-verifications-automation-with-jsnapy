@@ -74,7 +74,7 @@ sublime-text /etc/jsnapy/testfiles/devices.yml
 sublime-text /etc/jsnapy/testfiles/test.snapcheck.states.yml 
 ```
 
-snap_temp is the default snapshot name: 
+**snap_temp** is the default snapshot name: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snap_temp* -l
@@ -88,29 +88,29 @@ jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
 ```
 
-set verbosity to debug level messages:
+You can set the verbosity to debug level messages using **-v**
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v 
 ```
 
 you can use these optionnal arguments: 
 
-Jsnapy asks you to provide the username and password: 
-```
-jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73
-```
-
-it is not required 172.30.179.73 exists in the config file config.snapcheck.states.yml: 
+It is not required 172.30.179.73 exists in the config file config.snapcheck.states.yml: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73 -l pytraining -p Poclab123 -P 830
+```
+
+Jsnapy will prompt you to provide the username and password: 
+```
+jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73
 ```
 
 #### local snapcheck:
 
 Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments 
 
-Presence of --local option runs the tests on stored snapshot. 
-To use this command one has to first create snapshot using --snap command.
+Presence of **--local** option runs the tests on stored snapshot. 
+To use this command one has to first create snapshot using **--snap** command.
 ```
 jsnapy --snapcheck <snap_name> -f <config_file> --local
 ```
@@ -122,19 +122,19 @@ jsnapy --snapcheck -f config.snapcheck.states.yml --local snapshot_name
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snapshot_name
 ```
 
-snap_temp is the default snapshot name, so these 2 commands do the same thing:   
+**snap_temp** is the default snapshot name, so these 2 commands do the same thing:   
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v 
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snap_temp
 ```
 
-Use the key local in the configuration file if you want to run snapcheck on stored snapshots. 
-Works with --snapcheck command only. 
+Use the key **local** in the configuration file if you want to run snapcheck on stored snapshots. 
+Works with **--snapcheck** command only. 
 For exemple in config.snapcheck.local.yml, STORED is being used. 
 ```
 sublime-text /etc/jsnapy/config.snapcheck.local.yml
 ```
-So we might have already done a snap. 
+So we might have already done a **snap**. 
 ```
 jsnapy --snap STORED -f config.snapcheck.local.yml
 ls /etc/jsnapy/snapshots/*STORED* -l
