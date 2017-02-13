@@ -7,7 +7,7 @@ Samples: https://github.com/Juniper/jsnapy/tree/master/samples
 Day one book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104   
 
 Installation 
-documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation 
+documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
 Installation using pip:  
 ```
 sudo pip install jsnapy
