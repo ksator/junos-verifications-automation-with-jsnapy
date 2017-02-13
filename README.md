@@ -95,6 +95,11 @@ jsnapy --snapcheck -f config.snapcheck.states.yml -v
 
 you can use these optionnal arguments: 
 
+help: 
+```
+jsnapy -h
+```
+
 It is not required 172.30.179.73 exists in the config file config.snapcheck.states.yml: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73 -l pytraining -p Poclab123 -P 830
