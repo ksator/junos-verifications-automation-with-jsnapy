@@ -1,9 +1,8 @@
 # About JSNAPy: 
 
 Source code: https://github.com/Juniper/jsnapy
-
 Documentation: https://github.com/Juniper/jsnapy/wiki
-
+Samples: https://github.com/Juniper/jsnapy/tree/master/samples
 Day one book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104 
 
 Installation using pip:  
