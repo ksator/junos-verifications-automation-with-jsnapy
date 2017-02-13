@@ -1,19 +1,22 @@
 # About JSNAPy: 
 
-Python version of Junos SNapshot Administrator (JSNAP).  
+You can use it for for automating network verification.   
+This is a Python version of Junos SNapshot Administrator (JSNAP).  
+
+## Documentation 
 Source code: https://github.com/Juniper/jsnapy  
 Documentation: https://github.com/Juniper/jsnapy/wiki  
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
 Day one book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104   
 
-Installation 
+## Installation 
 documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
 Installation using pip:  
 ```
 sudo pip install jsnapy
 ```
 
-Default structure:
+## Default structure:
 ```
 ls /etc/jsnapy/ -l
 more /etc/jsnapy/jsnapy.cfg 
@@ -21,22 +24,22 @@ ls /etc/jsnapy/testfiles/ -l
 ls /etc/jsnapy/snapshots/ -l
 ```
 
-Logging:
+## Logging:
 ```
 sublime-text /etc/jsnapy/logging.yml 
 ls /var/log/jsnapy/ -l
 more /var/log/jsnapy/jsnapy.log 
 ```
 
+# About this repo: 
+It has ready to use JSNAPy 1.1.0 content.    
+
 Jsnapy version: 
 ```
 jsnapy -V 
 ```
 
-# About this repo: 
-It has ready to use JSNAPy 1.1.0 content.    
-
-## topology: 
+## network topology: 
 3 junos devices EX4300 in a triangle topology, with BGP configured.  
 ```
 git clone https://github.com/ksator/ansible-training-for-junos-automation.git
@@ -44,7 +47,7 @@ cd ansible-training-for-junos-automation
 ansible-playbook junos_template/pb.bgp.2.yml  
 cd ..
 ```
-## clone this repo: 
+## how to clone this repo: 
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd Junos-verifications-automation-with-Jsnapy
