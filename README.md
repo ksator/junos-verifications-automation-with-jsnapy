@@ -32,6 +32,8 @@ ls /etc/jsnapy/snapshots/ -l
 ```
 
 ## Logging:
+Documentation: https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs
+
 ```
 sublime-text /etc/jsnapy/logging.yml 
 ls /var/log/jsnapy/ -l
