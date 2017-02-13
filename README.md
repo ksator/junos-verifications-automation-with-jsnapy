@@ -1,6 +1,6 @@
 # About JSNAPy: 
 
-Python version of Junos SNapshot ADministrator. 
+Python version of Junos SNapshot ADministrator.  
 Source code: https://github.com/Juniper/jsnapy  
 Documentation: https://github.com/Juniper/jsnapy/wiki  
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
@@ -170,4 +170,41 @@ jsnapy --diff pre post -f config.diff.yml
 
 ## Python module
 
+### snap, snap, and check:
 
+#### jsnapy without pyez
+```
+sublime-text python/check.py 
+python python/check.py 
+```
+
+### jsnapy and pyez toghether
+```
+sublime-text python/checkdevice.py 
+python python/checkdevice.py 
+```
+
+### snapcheck
+
+#### jsnapy without pyez
+```
+sublime-text python/snapcheck.py 
+python python/snapcheck.py 
+```
+
+```
+sublime-text python/snapcheckdata.py 
+python python/snapcheckdata.py 
+```
+
+local snapcheck 
+```
+sublime-text python/snapchecklocal.py 
+python python/snapchecklocal.py 
+```
+
+#### jsnapy and pyez toghether
+```
+sublime-text python/snapcheckdevice.py 
+python python/snapcheckdevice.py 
+```
