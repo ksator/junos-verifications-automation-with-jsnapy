@@ -1,5 +1,6 @@
 # About JSNAPy: 
 
+Python version of Junos SNapshot ADministrator. 
 Source code: https://github.com/Juniper/jsnapy  
 Documentation: https://github.com/Juniper/jsnapy/wiki  
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
@@ -31,24 +32,26 @@ jsnapy -V
 ```
 
 # About this repo: 
-It has jsnapy content tested with JSNAPy 1.1.0.   
-topology: 3 junos devices EX4300 in a triangle topology, with BGP configured.
+It has JSNAPy content tested with release 1.1.0.   
+topology: 3 junos devices EX4300 in a triangle topology, with BGP configured.  
+
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd Junos-verifications-automation-with-Jsnapy
 ```
+
 JSNAPy is supported in two modes:  
 - Command line tool 
 - Python Module
 
-##Command line tool:
+## Command line tool:
 
 help: 
 ```
 jsnapy -h
 ```
 
-###snapcheck:
+### snapcheck:
 ```
 sublime-text /etc/jsnapy/config.snapcheck.states.yml 
 sublime-text /etc/jsnapy/testfiles/devices.yml 
@@ -69,7 +72,7 @@ jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
 ```
 
-debug level messages:
+set verbosity to debug level messages:
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v 
 ```
@@ -165,7 +168,6 @@ jsnapy --snap post -f config.diff.yml
 jsnapy --diff pre post -f config.diff.yml
 ```
 
-
-
+## Python module
 
 
