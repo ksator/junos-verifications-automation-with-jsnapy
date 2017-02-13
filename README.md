@@ -1,6 +1,6 @@
 # About JSNAPy: 
 
-Python version of Junos SNapshot ADministrator.  
+Python version of Junos SNapshot Administrator (JSNAP).  
 Source code: https://github.com/Juniper/jsnapy  
 Documentation: https://github.com/Juniper/jsnapy/wiki  
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
