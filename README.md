@@ -32,7 +32,7 @@ jsnapy -V
 ```
 
 # About this repo: 
-It has jsnapy content tested with JSNAPy 1.1.0. 
+It has jsnapy content tested with JSNAPy 1.1.0.   
 topology: 3 junos devices EX4300 in a triangle topology, with BGP configured.
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
@@ -44,7 +44,10 @@ JSNAPy is supported in two modes:
 
 ##Command line tool:
 
-help: jsnapy -h
+help: 
+```
+jsnapy -h
+```
 
 ###snapcheck:
 ```
