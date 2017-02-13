@@ -7,7 +7,8 @@ This is a Python version of Junos SNapshot Administrator (JSNAP).
 Source code: https://github.com/Juniper/jsnapy  
 Documentation: https://github.com/Juniper/jsnapy/wiki  
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
-Day one book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104   
+book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104  
+video: https://www.youtube.com/playlist?list=PLQ189o7cl3OwWSInb5hYsDfDPETrroAb2  
 
 ## Installation 
 documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
@@ -17,6 +18,12 @@ sudo pip install jsnapy
 ```
 
 ## Default structure:
+While installing Jsnapy, it creates Jsnapy folder at /etc and and /etc/logs. 
+You can refer to https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs for the details.  
+/etc/jsnapy serves as the default lookup directory to search for configuration files when running various jsnapy commands.  
+test files should be located at /etc/jsnapy/testfiles.  
+User can chose different location by setting test_file_path in /etc/jsnapy/jsnapy.cfg  
+
 ```
 ls /etc/jsnapy/ -l
 more /etc/jsnapy/jsnapy.cfg 
