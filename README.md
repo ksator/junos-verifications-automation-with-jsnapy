@@ -89,7 +89,9 @@ jsnapy --snapcheck -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snap_temp* -l
 more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_bgp_neighbor.xml
 more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_get_bgp_summary_information.xml 
+more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
 ```
+
 
 you can define a snapshot name: 
 ```
