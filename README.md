@@ -2,6 +2,9 @@
 
 You can use it for automating verification on Junos devices.   
 This is a Python version of Junos SNapshot Administrator (JSNAP).  
+JSNAPy is supported in two modes:
+ - Command line tool
+ - Python Module
 
 ## Documentation:
 Source code: https://github.com/Juniper/jsnapy  
@@ -17,9 +20,10 @@ documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation
 While installing Jsnapy, it creates Jsnapy folder at /etc and and /etc/logs.  
 You can refer to this [link] (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs) for the details.  
 
-### /etc/jsnapy/jsnapy.cfg file: 
-It contains default path for configuration files, snapshots and testfiles.  
+### jsnapy.cfg file: 
+/etc/jsnapy/jsnapy.cfg file contains default path for configuration files, snapshots and testfiles.  
 If required, overwrite the path in this file with your paths.  
+
 
 ### configuration files:
 /etc/jsnapy serves as the default lookup directory to search for configuration files when running various jsnapy commands.  
@@ -30,7 +34,7 @@ test files should be located at /etc/jsnapy/testfiles.
 User can chose different location by setting test_file_path in /etc/jsnapy/jsnapy.cfg  
 
 ### snapshots: 
-/etc/jsnapy/snapshots directory contains all snapshots. 
+/etc/jsnapy/snapshots directory contains all snapshots.  
 User can chose different location by setting snapshot_path in /etc/jsnapy/jsnapy.cfg  
 
 ```
@@ -54,15 +58,17 @@ more /var/log/jsnapy/jsnapy.log
 # How to use this repo: 
 
 ## About this repo: 
-It has ready to use JSNAPy content.    
+It has ready to use JSNAPy content.  
 
-## JSNAPy Installation
+## Install JSNAPy:
+you need to install JSNAPy: 
 ```
 sudo pip install jsnapy
 ```
+Another option would to pull a docker image that has JSNAPy from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/)
 
 ## JSNAPy version: 
-We tested these scripts with jsnapy 1.1.0 
+I tested these scripts with jsnapy 1.1.0 
 ```
 jsnapy -V 
 JSNAPy version: 1.1.0
@@ -81,7 +87,7 @@ cd ..
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd Junos-verifications-automation-with-Jsnapy
 ```
-## lookup directories: 
+## JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
 JSNAPy default lookup directory to search for JSNAPy test files files is /etc/jsnapy/testfiles.  
 Either copy the jsnapy files into the default lookup directories.  
