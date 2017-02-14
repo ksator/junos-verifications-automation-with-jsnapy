@@ -1,6 +1,7 @@
 tests_include:
   - test_bgp_summary
   - test_bgp_neighbor
+  - test-interfaces-admin-status
 
 test_bgp_summary:
 # - command: show bgp summary
@@ -48,4 +49,14 @@ test_bgp_neighbor:
         - in-range: peer-as, 100,900        # element in which test is performed
           err: "Test Failed!! peer-as for peer <{{post['peer-address']}}> is not in range of 100-900, it is: <{{post['peer-as']}}>"
           info: "Test succeeded!! peer-as for peer <{{post['peer-address']}}> is in range of 100-900, it is now <{{post['peer-as']}}>"
+
+test-interfaces-admin-status:
+  - command: show interface terse
+  - iterate:
+      xpath: '//physical-interface[contains(name, "ge-0/0")]'
+      id: './name'
+      tests:
+        - is-equal: admin-status, up
+          info: "Test Succeeded!!, <{{id_0}}> admin-status is equal to <{{post['admin-status']}}>"
+          err: "Test Failed!!!, <{{id_0}}> admin-status is not equal to up, it is <{{post['admin-status']}}>"
 
