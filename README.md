@@ -47,7 +47,7 @@ ls /etc/jsnapy/snapshots/ -l
 ### Logging:
 The file /etc/jsnapy/logging.yml describes loggging settings.  
 The directory /var/log/jsnapy contains all log messages.  
-Read the [documentation] for the details  (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs)
+[Read the documentation for the details] (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs)
 
 ```
 sublime-text /etc/jsnapy/logging.yml 
@@ -85,14 +85,15 @@ cd ..
 ## clone this repo: 
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
-cd Junos-verifications-automation-with-Jsnapy
+cd junos-verifications-automation-with-jsnapy
 ```
 ## JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
 JSNAPy default lookup directory to search for JSNAPy test files files is /etc/jsnapy/testfiles.  
-Either copy the jsnapy files into the default lookup directories.  
-Or change the default lookup directories in /etc/jsnapy/jsnapy.cfg.  
-Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here] (Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
+So:  
+- Either copy the jsnapy files into the default lookup directories.  
+- Or change the default lookup directories in /etc/jsnapy/jsnapy.cfg.  
+- Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here] (Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
 
 
 ## JSNAPy usages:  
@@ -104,7 +105,7 @@ JSNAPy is supported in two modes:
 
 Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool 
 
-help: 
+### help: 
 ```
 jsnapy -h
 ```
