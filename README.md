@@ -3,14 +3,14 @@
 You can use it for automating verification on Junos devices.   
 This is a Python version of Junos SNapshot Administrator (JSNAP).  
 
-## Documentation 
+## Documentation:
 Source code: https://github.com/Juniper/jsnapy  
 Documentation: https://github.com/Juniper/jsnapy/wiki  
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
 book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104  
 video: https://www.youtube.com/playlist?list=PLQ189o7cl3OwWSInb5hYsDfDPETrroAb2  
 
-## Installation 
+## Installation: 
 documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
 Installation using pip:  
 ```
@@ -20,7 +20,15 @@ sudo pip install jsnapy
 ## Default structure:
 While installing Jsnapy, it creates Jsnapy folder at /etc and and /etc/logs.  
 You can refer to this [link] (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs) for the details.  
+
+### /etc/jsnapy/jsnapy.cfg file
+It contains default path for configuration files, snapshots and testfiles.  
+If required, overwrite the path in this file with your paths.  
+
+### configuration files:
 /etc/jsnapy serves as the default lookup directory to search for configuration files when running various jsnapy commands.  
+
+### test files:  
 test files should be located at /etc/jsnapy/testfiles.  
 User can chose different location by setting test_file_path in /etc/jsnapy/jsnapy.cfg  
 
@@ -31,8 +39,10 @@ ls /etc/jsnapy/testfiles/ -l
 ls /etc/jsnapy/snapshots/ -l
 ```
 
-## Logging:
-Documentation: https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs
+### Logging:
+The file /etc/jsnapy/logging.yml describes loggging settings.  
+The directory /var/log/jsnapy contains all log messages.  
+[Read the documentation for the details]  (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs)
 
 ```
 sublime-text /etc/jsnapy/logging.yml 
@@ -41,11 +51,12 @@ more /var/log/jsnapy/jsnapy.log
 ```
 
 # About this repo: 
-It has ready to use JSNAPy 1.1.0 content.    
+It has ready to use JSNAPy content.    
 
 Jsnapy version: 
 ```
 jsnapy -V 
+JSNAPy version: 1.1.0
 ```
 
 ## network topology: 
@@ -56,8 +67,9 @@ cd ansible-training-for-junos-automation
 ansible-playbook junos_template/pb.bgp.2.yml  
 cd ..
 ```
-## how to clone this repo: 
+## clone this repo: 
 ```
+cd /etc/jsnapy  
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd Junos-verifications-automation-with-Jsnapy
 ```
