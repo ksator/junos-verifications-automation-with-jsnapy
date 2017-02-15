@@ -103,7 +103,8 @@ JSNAPy is supported in two modes:
 
 ## Command line tool:
 
-Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool 
+### Documentation
+https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool 
 
 ### help: 
 ```
@@ -117,6 +118,7 @@ compares the current configuration or the current operationnal states against pr
 jsnapy --snapcheck <snap_file_name> -f <config_file>
 ```
 
+#### config_file example: 
 ```
 sublime-text /etc/jsnapy/config.snapcheck.states.yml 
 sublime-text /etc/jsnapy/testfiles/devices.yml 
@@ -126,7 +128,9 @@ sublime-text /etc/jsnapy/testfiles/test.snapcheck.states.yml
 #### snapshot name: 
 
 ##### default snapshot name: 
-**snap_temp** is the default snapshot name: 
+snap_temp is the default snapshot name. 
+
+##### Example: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snap_temp* -l
@@ -134,15 +138,18 @@ more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_bgp_neighbor.xml
 more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_get_bgp_summary_information.xml 
 more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
 ```
+
 ##### snapshot name definition:
-you can define a snapshot name:  
+You can define a snapshot name. 
+
+###### Example:   
 ```
 jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
 ```
 
 #### verbosity: 
-You can set the verbosity to debug level messages using **-v**
+You can set the verbosity to debug level messages using -v
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v 
 ```
@@ -150,13 +157,12 @@ jsnapy --snapcheck -f config.snapcheck.states.yml -v
 #### optionnal arguments: 
 
 you can use these optionnal arguments: 
-
-help: 
+ 
 ```
 jsnapy -h
 ```
-##### Examples: 
 
+##### Examples: 
 It is not required 172.30.179.73 exists in the config file config.snapcheck.states.yml: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73 -l pytraining -p Poclab123 -P 830
@@ -168,18 +174,18 @@ jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73
 ```
 
 #### local snapcheck:
+Presence of --local option runs the tests on stored snapshot. 
+To use this command one has to first create snapshot using --snap command.
 
-Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments 
+##### Documentation
+https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments  
 
-Presence of **--local** option runs the tests on stored snapshot. 
-To use this command one has to first create snapshot using **--snap** command.
-
-Syntax: 
+##### Syntax: 
 ```
 jsnapy --snapcheck <snap_name> -f <config_file> --local
 ```
 
-Examples: 
+##### Examples: 
 ```
 jsnapy --snap -f config.snapcheck.states.yml snapshot_name
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
@@ -187,19 +193,19 @@ jsnapy --snapcheck -f config.snapcheck.states.yml --local snapshot_name
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snapshot_name
 ```
 
-**snap_temp** is the default snapshot name, so these 2 commands do the same thing:   
+snap_temp is the default snapshot name, so these 2 commands do the same thing:   
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v 
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snap_temp
 ```
 
-Use the key **local** in the configuration file if you want to run snapcheck on stored snapshots. 
-Works with **--snapcheck** command only. 
+Use the key local in the configuration file if you want to run snapcheck on stored snapshots. 
+Works with --snapcheck command only. 
 For exemple in config.snapcheck.local.yml, STORED is being used. 
 ```
 sublime-text /etc/jsnapy/config.snapcheck.local.yml
 ```
-So we might have already done a **snap**. 
+So we might have already done a snap. 
 ```
 jsnapy --snap STORED -f config.snapcheck.local.yml
 ls /etc/jsnapy/snapshots/*STORED* -l
@@ -210,9 +216,10 @@ jsnapy --snapcheck -f config.snapcheck.local.yml
 
 You can specify custom jsnapy lookup directory (--folder). 
 
-Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments 
+##### Documentation: 
+https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments  
 
-Examples:  
+##### Examples:  
 ```
 ls other_jsnapy_folder/ -l
 
@@ -226,12 +233,12 @@ jsnapy --snapcheck -f config.check.bgp.states.yml --folder other_jsnapy_folder
 
 Take a snapshot. 
 
-Syntax: 
+#### Syntax: 
 ```
 jsnapy --snap <file_name> -f <config_file>
 ```
 
-Examples: 
+#### Examples: 
 ```
 sublime-text /etc/jsnapy/config.check.yml
 sublime-text /etc/jsnapy/testfiles/test.check.yml 
@@ -247,12 +254,13 @@ ls /etc/jsnapy/snapshots/*_post_*
 
 Compares two snapshots based on tests.  
 So you first need to take 2 snapshots (snap).  
-Syntax: 
+
+#### Syntax: 
 ```
 jsnapy --check <pre_snap> <post_snap> -f <config_file>
 ```
 
-Examples: 
+#### Examples: 
 ```
 jsnapy --check pre post -f config.check.yml -v
 ```
@@ -272,12 +280,12 @@ Compares two snapshots (either in xml or text format) character by character.
 So you first need to take 2 snapshots (snap).  
 Supported only in command line mode.  
 
-syntax: 
+#### syntax: 
 ```
 jsnapy --diff <pre_snap> <post_snap> -f <config_file>
 ```
 
-Examples: 
+#### Examples: 
 ```
 sublime-text /etc/jsnapy/config.diff.yml 
 sublime-text /etc/jsnapy/testfiles/test.diff.yml 
