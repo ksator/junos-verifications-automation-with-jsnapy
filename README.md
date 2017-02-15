@@ -111,6 +111,12 @@ jsnapy -h
 ```
 
 ### snapcheck:
+compares the current configuration or the current operationnal states against pre-defined criteria.  
+syntax:  
+```
+jsnapy --snapcheck <snap_file_name> -f <config_file>
+```
+
 ```
 sublime-text /etc/jsnapy/config.snapcheck.states.yml 
 sublime-text /etc/jsnapy/testfiles/devices.yml 
@@ -205,6 +211,15 @@ jsnapy --snapcheck -f config.check.bgp.states.yml --folder other_jsnapy_folder
 ```
 
 ### snap: 
+
+Take a snapshot. 
+
+Syntax: 
+```
+jsnapy --snap <file_name> -f <config_file>
+```
+
+Examples: 
 ```
 sublime-text /etc/jsnapy/config.check.yml
 sublime-text /etc/jsnapy/testfiles/test.check.yml 
@@ -217,6 +232,15 @@ ls /etc/jsnapy/snapshots/*_post_*
 ```
 
 ### check: 
+
+Compares two snapshots based on tests.  
+So you first need to take 2 snapshots (snap).  
+Syntax: 
+```
+jsnapy --check <pre_snap> <post_snap> -f <config_file>
+```
+
+Examples: 
 ```
 jsnapy --check pre post -f config.check.yml -v
 ```
@@ -231,6 +255,17 @@ jsnapy --check pre post -f config.diff.interfaces.yml -v
 ```
 
 ### diff:
+
+Compares two snapshots (either in xml or text format) character by character.  
+So you first need to take 2 snapshots (snap).  
+Supported only in command line mode.  
+
+syntax: 
+```
+jsnapy --diff <pre_snap> <post_snap> -f <config_file>
+```
+
+Examples: 
 ```
 sublime-text /etc/jsnapy/config.diff.yml 
 sublime-text /etc/jsnapy/testfiles/test.diff.yml 
@@ -239,7 +274,8 @@ jsnapy --snap post -f config.diff.yml
 jsnapy --diff pre post -f config.diff.yml
 ```
 
-## Python module
+## JSNAPy python module
+
 Documentation: https://github.com/Juniper/jsnapy/wiki/4.-Module 
 
 ### snap, snap, and check:
