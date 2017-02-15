@@ -308,7 +308,7 @@ sublime-text python/check.py
 python python/check.py 
 ```
 
-### Example: jsnapy and pyez toghether
+#### Example: jsnapy and pyez together
 ```
 sublime-text python/checkdevice.py 
 python python/checkdevice.py 
@@ -332,7 +332,7 @@ sublime-text python/snapchecklocal.py
 python python/snapchecklocal.py 
 ```
 
-#### Example: jsnapy and pyez toghether
+#### Example: jsnapy and pyez together
 ```
 sublime-text python/snapcheckdevice.py 
 python python/snapcheckdevice.py 
