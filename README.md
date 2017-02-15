@@ -130,7 +130,7 @@ sublime-text /etc/jsnapy/testfiles/test.snapcheck.states.yml
 ##### default snapshot name: 
 snap_temp is the default snapshot name. 
 
-##### Example: 
+###### Example: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snap_temp* -l
@@ -155,9 +155,9 @@ jsnapy --snapcheck -f config.snapcheck.states.yml -v
 ```
 
 #### optionnal arguments: 
+you can use optionnal arguments.  
 
-you can use these optionnal arguments: 
- 
+##### Run this command to discover the optionnal arguments:     
 ```
 jsnapy -h
 ```
