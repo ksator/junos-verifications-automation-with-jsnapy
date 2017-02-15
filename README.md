@@ -111,8 +111,8 @@ jsnapy -h
 ```
 
 ### snapcheck:
-compares the current configuration or the current operationnal states against pre-defined criteria.  
-syntax:  
+compares the current configuration or the current operationnal states against pre-defined criteria.    
+#### syntax:  
 ```
 jsnapy --snapcheck <snap_file_name> -f <config_file>
 ```
@@ -123,6 +123,9 @@ sublime-text /etc/jsnapy/testfiles/devices.yml
 sublime-text /etc/jsnapy/testfiles/test.snapcheck.states.yml 
 ```
 
+#### snapshot name: 
+
+##### default snapshot name: 
 **snap_temp** is the default snapshot name: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml
@@ -131,18 +134,20 @@ more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_bgp_neighbor.xml
 more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_get_bgp_summary_information.xml 
 more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
 ```
-
-
-you can define a snapshot name: 
+##### snapshot name definition:
+you can define a snapshot name:  
 ```
 jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
 ```
 
+#### verbosity: 
 You can set the verbosity to debug level messages using **-v**
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v 
 ```
+
+#### optionnal arguments: 
 
 you can use these optionnal arguments: 
 
@@ -150,6 +155,7 @@ help:
 ```
 jsnapy -h
 ```
+##### Examples: 
 
 It is not required 172.30.179.73 exists in the config file config.snapcheck.states.yml: 
 ```
@@ -167,10 +173,13 @@ Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optio
 
 Presence of **--local** option runs the tests on stored snapshot. 
 To use this command one has to first create snapshot using **--snap** command.
+
+Syntax: 
 ```
 jsnapy --snapcheck <snap_name> -f <config_file> --local
 ```
 
+Examples: 
 ```
 jsnapy --snap -f config.snapcheck.states.yml snapshot_name
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
@@ -197,10 +206,13 @@ ls /etc/jsnapy/snapshots/*STORED* -l
 jsnapy --snapcheck -f config.snapcheck.local.yml 
 ```
 
-#### specify custom jsnapy lookup directory (--folder)
+#### Custom jsnapy lookup directory 
+
+You can specify custom jsnapy lookup directory (--folder). 
 
 Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments 
 
+Examples:  
 ```
 ls other_jsnapy_folder/ -l
 
