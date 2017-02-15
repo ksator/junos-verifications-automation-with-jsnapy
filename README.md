@@ -60,7 +60,7 @@ more /var/log/jsnapy/jsnapy.log
 ## About this repo: 
 It has ready to use JSNAPy content.  
 
-## Install JSNAPy:
+## JSNAPy installation :
 you need to install JSNAPy: 
 ```
 sudo pip install jsnapy
@@ -174,7 +174,7 @@ jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73
 ```
 
 #### local snapcheck:
-Presence of --local option runs the tests on stored snapshot. 
+Presence of --local option runs the tests on stored snapshot.  
 To use this command one has to first create snapshot using --snap command.
 
 ##### Documentation
@@ -189,7 +189,8 @@ jsnapy --snapcheck <snap_name> -f <config_file> --local
 ```
 jsnapy --snap -f config.snapcheck.states.yml snapshot_name
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
-jsnapy --snapcheck -f config.snapcheck.states.yml --local snapshot_name
+jsnapy --snapcheck -f config.snapcheck.states.yml --local snapshot_name  
+
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snapshot_name
 ```
 
@@ -199,9 +200,9 @@ jsnapy --snapcheck -f config.snapcheck.states.yml --local -v
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snap_temp
 ```
 
-Use the key local in the configuration file if you want to run snapcheck on stored snapshots. 
-Works with --snapcheck command only. 
-For exemple in config.snapcheck.local.yml, STORED is being used. 
+Use the key local in the configuration file if you want to run snapcheck on stored snapshots.  
+Works with --snapcheck command only.  
+For exemple in config.snapcheck.local.yml, STORED is being used.  
 ```
 sublime-text /etc/jsnapy/config.snapcheck.local.yml
 ```
@@ -296,17 +297,18 @@ jsnapy --diff pre post -f config.diff.yml
 
 ## JSNAPy python module
 
-Documentation: https://github.com/Juniper/jsnapy/wiki/4.-Module 
+### Documentation: 
+https://github.com/Juniper/jsnapy/wiki/4.-Module 
 
 ### snap, snap, and check:
 
-#### jsnapy without pyez
+#### Example: jsnapy without pyez
 ```
 sublime-text python/check.py 
 python python/check.py 
 ```
 
-### jsnapy and pyez toghether
+### Example: jsnapy and pyez toghether
 ```
 sublime-text python/checkdevice.py 
 python python/checkdevice.py 
@@ -314,7 +316,7 @@ python python/checkdevice.py
 
 ### snapcheck
 
-#### jsnapy without pyez
+#### Examples: jsnapy without pyez
 ```
 sublime-text python/snapcheck.py 
 python python/snapcheck.py 
@@ -324,14 +326,13 @@ python python/snapcheck.py
 sublime-text python/snapcheckdata.py 
 python python/snapcheckdata.py 
 ```
-
-local snapcheck 
+#### Example: local snapcheck, jsnapy without pyez 
 ```
 sublime-text python/snapchecklocal.py 
 python python/snapchecklocal.py 
 ```
 
-#### jsnapy and pyez toghether
+#### Example: jsnapy and pyez toghether
 ```
 sublime-text python/snapcheckdevice.py 
 python python/snapcheckdevice.py 
