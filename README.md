@@ -1,9 +1,10 @@
 # About JSNAPy: 
 You can use it to automate verifications on Junos devices.   
-This is a Python version of Junos SNapshot Administrator (JSNAP).  
-JSNAPy is supported in two modes:
- - Command line tool
- - Python Module
+This is the Python version of Junos SNapshot Administrator (JSNAP).  
+JSNAPy is supported in three modes:
+ - a command line tool
+ - a Python module
+ - An ansible module hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/)
 
 ## Documentation:
 Source code: https://github.com/Juniper/jsnapy  
@@ -95,9 +96,10 @@ So:
 
 
 ## JSNAPy usages:  
-JSNAPy is supported in two modes:  
-- Command line tool 
-- Python Module
+JSNAPy is supported in three modes:  
+- a command line tool 
+- a Python Module
+- An ansible module hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).
 
 ### Command line tool:
 
