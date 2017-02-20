@@ -71,7 +71,7 @@ jsnapy -V
 
 Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has JSNAPy installed.   
 
-## Clone this repo: 
+## Clone this git repository: 
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd junos-verifications-automation-with-jsnapy
