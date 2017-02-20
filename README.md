@@ -27,11 +27,11 @@ If required, overwrite the path in this file with your paths.
 /etc/jsnapy serves as the default lookup directory to search for configuration files when running various jsnapy commands.  
 User can chose different location by setting config_file_path in /etc/jsnapy/jsnapy.cfg  
 
-### Test files:  
+### testfiles directory:  
 Test files should be located at /etc/jsnapy/testfiles.  
 User can chose different location by setting test_file_path in /etc/jsnapy/jsnapy.cfg  
 
-### Snapshots: 
+### snapshots directory: 
 /etc/jsnapy/snapshots directory contains all snapshots.  
 User can chose different location by setting snapshot_path in /etc/jsnapy/jsnapy.cfg  
 ```
@@ -41,7 +41,7 @@ ls /etc/jsnapy/testfiles/ -l
 ls /etc/jsnapy/snapshots/ -l
 ```
 
-### Logging:
+### logging.yml file:
 The file /etc/jsnapy/logging.yml describes loggging settings.  
 The directory /var/log/jsnapy contains all log messages.  
 [Read the documentation for the details] (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs)
