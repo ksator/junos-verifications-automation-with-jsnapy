@@ -112,7 +112,7 @@ jsnapy -h
 ```
 
 ### Snapcheck:
-compares the current configuration or the current operationnal states against pre-defined criteria.    
+Compares the current configuration or the current operationnal states against pre-defined criteria.    
 
 #### Syntax:  
 ```
@@ -129,9 +129,8 @@ sublime-text /etc/jsnapy/testfiles/test.snapcheck.states.yml
 #### Snapshot name: 
 
 ##### Default snapshot name: 
-snap_temp is the default snapshot name. 
 
-###### Example using the default snapshot name: 
+The default snapshot name is snap_temp. Example using the default snapshot name: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snap_temp* -l
@@ -141,22 +140,23 @@ more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
 ```
 
 ##### Snapshot name definition:
-You can define a snapshot name. 
 
-###### Example using a defined snapshot name:       
+You can define a snapshot name. Example using a defined snapshot name:       
 ```
 jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
 ```
 
 #### Verbosity: 
+
 You can set the verbosity to debug level messages using -v
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v 
 ```
 
 #### Optionnal arguments: 
-you can use optionnal arguments.  
+
+You can use optionnal arguments.  
 
 ##### Run this command to discover the optionnal arguments:     
 ```
