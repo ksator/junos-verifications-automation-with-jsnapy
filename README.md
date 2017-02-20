@@ -85,36 +85,35 @@ ex4300-17, ge-0/0/0 <-> ex4300-9, ge-0/0/0
 ex4300-17, ge-0/0/1 <-> ex4300-18, ge-0/0/1   
 ex4300-18, ge-0/0/0 <-> ex4300-9, ge-0/0/1  
 
-In order to configure your junos devices, you can use, as example, the following method:
+## Configure your junos devices : 
+In order to configure your junos devices, you can use, as example, the following method with Ansible.
 
-### Configure your junos devices using Ansible: 
-
-#### Ansible playbook: 
+### Ansible playbook: 
 pb.yml
 
-#### Jinja2 template: 
+### Jinja2 template: 
 template.j2
 
-#### Ansible inventory file:
+### Ansible inventory file:
 The inventory file we are using in this repository is hosts. It is at the root of the repository, so it is not at the default place.
 it also define the ip address of each device with the variable junos_host. This variable is reused in the playbooks. 
 
-#### Ansible Config file:
+### Ansible Config file:
 There is an ansible.cfg file at the root of the repository.
 It refers to our inventory file (hosts): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
 
-#### Ansible variables:
+### Ansible variables:
 group_vars and host_vars directories at the root of this repository define variables for hosts and for groups.
 The inventory file (hosts file at the root of the repository) also defines some variables.
 In order to see all variables for an hostname, you can run this command:
 ```
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
-#### Requirements on your server:  
+### Requirements on your server:  
 - Install the python libraries junos-eznc and jxmlease
 - Install ansible 
 
-#### Requirements on the Junos devices:
+### Requirements on the Junos devices:
 - Connect the 3 junos devices in a triangle topology.  
   The 3 junos devices are connected like this:   
   ex4300-17, ge-0/0/0 <-> ex4300-9, ge-0/0/0  
@@ -127,7 +126,7 @@ ansible -m debug -a "var=hostvars['hostname']" localhost
   commit
   ```
 
-#### Execute the playbook: 
+### Execute the playbook: 
 ```
 $ ansible-playbook pb.yml 
 PLAY [create junos configuration] **********************************************
@@ -166,7 +165,7 @@ ex4300-9                   : ok=3    changed=2    unreachable=0    failed=0
 localhost                  : ok=1    changed=0    unreachable=0    failed=0   
 ```
 
-### Vagrant: 
+## Vagrant: 
 If you prefer to build the virtual lab using Vagrant, you can refer to this repository https://github.com/ksator/vagrant-junos
 
 ## Fix the JSNAPy lookup directories: 
