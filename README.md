@@ -65,7 +65,6 @@ sudo pip install jsnapy
 I tested these scripts with jsnapy 1.1.0  
 ```
 jsnapy -V 
-JSNAPy version: 1.1.0
 ```
 
 Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that has JSNAPy.   
