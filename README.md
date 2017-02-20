@@ -67,7 +67,7 @@ I tested these scripts with jsnapy 1.1.0
 jsnapy -V 
 ```
 
-Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that has JSNAPy.   
+Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has JSNAPy installed.   
 
 ## Clone this repo: 
 ```
