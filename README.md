@@ -79,7 +79,7 @@ cd junos-verifications-automation-with-jsnapy
 
 ## Build a network topology: 
 The network topology used into this repository is composed by 3 junos devices (EX4300) connected in a triangle topology, configured with BGP.   
-In order to build the same network topology, you can follow this procedure:  
+In order to build the same network topology, you can, as example, follow this procedure:  
 ```
 git clone https://github.com/ksator/ansible-training-for-junos-automation.git
 cd ansible-training-for-junos-automation
