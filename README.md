@@ -293,7 +293,7 @@ jsnapy --snap post -f config.diff.yml
 jsnapy --diff pre post -f config.diff.yml
 ```
 
-### JSNAPy python module
+### JSNAPy python module: 
 
 #### Documentation: 
 https://github.com/Juniper/jsnapy/wiki/4.-Module 
@@ -314,7 +314,7 @@ sublime-text python/checkdevice.py
 python python/checkdevice.py 
 ```
 
-#### snapcheck
+#### snapcheck: 
 
 ##### Examples
 
