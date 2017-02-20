@@ -62,7 +62,8 @@ You need to install JSNAPy:
 sudo pip install jsnapy
 ```
 
-I tested these scripts with jsnapy 1.1.0  
+I tested these scripts with jsnapy 1.1.0.  
+To check the JSNAPy version, run the following command:  
 ```
 jsnapy -V 
 ```
