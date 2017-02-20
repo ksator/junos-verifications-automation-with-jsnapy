@@ -1,0 +1,7 @@
+[AMS-all:children]
+AMS-EX4300
+
+[AMS-EX4300]
+ex4300-9     junos_host=172.30.179.95
+ex4300-18    junos_host=172.30.179.74
+ex4300-17    junos_host=172.30.179.73
