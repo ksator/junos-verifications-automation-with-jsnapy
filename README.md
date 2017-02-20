@@ -178,7 +178,7 @@ So:
 - Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here] (https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
 
 
-## JSNAPy usages:  
+## Use JSNAPy:  
 JSNAPy is supported in three modes:  
 - a command line tool 
 - a Python Module
