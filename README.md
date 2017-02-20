@@ -1,6 +1,5 @@
 # About JSNAPy: 
-
-You can use it for automating verification on Junos devices.   
+You can use it to automate verifications on Junos devices.   
 This is a Python version of Junos SNapshot Administrator (JSNAP).  
 JSNAPy is supported in two modes:
  - Command line tool
@@ -24,7 +23,6 @@ You can refer to this [link] (https://github.com/Juniper/jsnapy/wiki#while-insta
 /etc/jsnapy/jsnapy.cfg file contains default path for configuration files, snapshots and testfiles.  
 If required, overwrite the path in this file with your paths.  
 
-
 ### Configuration files:
 /etc/jsnapy serves as the default lookup directory to search for configuration files when running various jsnapy commands.  
 User can chose different location by setting config_file_path in /etc/jsnapy/jsnapy.cfg  
@@ -36,7 +34,6 @@ User can chose different location by setting test_file_path in /etc/jsnapy/jsnap
 ### Snapshots: 
 /etc/jsnapy/snapshots directory contains all snapshots.  
 User can chose different location by setting snapshot_path in /etc/jsnapy/jsnapy.cfg  
-
 ```
 ls /etc/jsnapy/ -l
 more /etc/jsnapy/jsnapy.cfg 
@@ -48,7 +45,6 @@ ls /etc/jsnapy/snapshots/ -l
 The file /etc/jsnapy/logging.yml describes loggging settings.  
 The directory /var/log/jsnapy contains all log messages.  
 [Read the documentation for the details] (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs)
-
 ```
 sublime-text /etc/jsnapy/logging.yml 
 ls /var/log/jsnapy/ -l
@@ -82,11 +78,13 @@ cd ansible-training-for-junos-automation
 ansible-playbook junos_template/pb.bgp.2.yml  
 cd ..
 ```
+
 ## Clone this repo: 
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd junos-verifications-automation-with-jsnapy
 ```
+
 ## Fix the JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
 JSNAPy default lookup directory to search for JSNAPy test files files is /etc/jsnapy/testfiles.  
