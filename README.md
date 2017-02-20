@@ -82,7 +82,7 @@ The network topology used into this repository is composed by 3 junos devices (E
 
 In order to configure your junos devices, you can use, as example, one of the following methods:
 
-### Configure the junos devices using Ansible: 
+### Using Ansible: 
 
 #### Ansible playbook: 
 pb.yml
@@ -155,8 +155,8 @@ ex4300-9                   : ok=3    changed=2    unreachable=0    failed=0
 localhost                  : ok=1    changed=0    unreachable=0    failed=0   
 ```
 
-### Configure the junos devices using Vagrant: 
-If you prefer to build the Junos topology using Vagrant boxes, you can refer to this repository: https://github.com/ksator/vagrant-junos
+### Using Vagrant: 
+If you prefer to build the Junos topology using Vagrant, you can refer to this repository: https://github.com/ksator/vagrant-junos
 
 ## Fix the JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
