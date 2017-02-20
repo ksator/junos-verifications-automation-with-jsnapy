@@ -70,19 +70,19 @@ JSNAPy version: 1.1.0
 
 Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that has JSNAPy.   
 
-## Build a network topology: 
-3 junos devices EX4300 in a triangle topology, with BGP configured.  
-```
-git clone https://github.com/ksator/ansible-training-for-junos-automation.git
-cd ansible-training-for-junos-automation
-ansible-playbook junos_template/pb.bgp.2.yml  
-cd ..
-```
-
 ## Clone this repo: 
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd junos-verifications-automation-with-jsnapy
+```
+
+## Build a network topology: 
+The network topology used into this repository is 3 junos devices (EX4300) in a triangle topology, with BGP configured. 
+In order to build the same network topology, you can follow this procedure:  
+```
+git clone https://github.com/ksator/ansible-training-for-junos-automation.git
+cd ansible-training-for-junos-automation
+ansible-playbook junos_template/pb.bgp.2.yml  
 ```
 
 ## Fix the JSNAPy lookup directories: 
@@ -99,34 +99,34 @@ JSNAPy is supported in two modes:
 - Command line tool 
 - Python Module
 
-## Command line tool:
+### Command line tool:
 
-### Documentation
+#### Documentation
 https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool 
 
-### Help: 
+#### Help: 
 ```
 jsnapy -h
 ```
 
-### Snapcheck:
+#### Snapcheck:
 Compares the current configuration or the current operationnal states against pre-defined criteria.    
 
-#### Syntax:  
+##### Syntax:  
 ```
 jsnapy --snapcheck <snap_file_name> -f <config_file>
 ```
 
-#### Configuration file example: 
+##### Configuration file example: 
 ```
 sublime-text /etc/jsnapy/config.snapcheck.states.yml 
 sublime-text /etc/jsnapy/testfiles/devices.yml 
 sublime-text /etc/jsnapy/testfiles/test.snapcheck.states.yml 
 ```
 
-#### Snapshot name: 
+##### Snapshot name: 
 
-##### Default snapshot name: 
+###### Default snapshot name: 
 The default snapshot name is snap_temp. Example using the default snapshot name: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml
@@ -136,15 +136,15 @@ more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_get_bgp_summary_information.x
 more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
 ```
 
-##### Snapshot name definition:
+###### Snapshot name definition:
 You can define a snapshot name. Example using a snapshot name you define:         
 ```
 jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
 ```
 
-#### Verbosity: 
-Default console loggin level is info:
+##### Verbosity: 
+Default console logging level is info:
 ```
 /etc/jsnapy/logging.yml 
 ```
@@ -154,15 +154,15 @@ You can set the verbosity to debug level messages using -v
 jsnapy --snapcheck -f config.snapcheck.states.yml -v 
 ```
 
-#### Optionnal arguments: 
+##### Optionnal arguments: 
 You can use optionnal arguments.  
 
-##### Run this command to discover the optionnal arguments:     
+###### Run this command to discover the optionnal arguments:     
 ```
 jsnapy -h
 ```
 
-##### Examples: 
+###### Examples: 
 It is not required 172.30.179.73 exists in the config file config.snapcheck.states.yml: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73 -l pytraining -p Poclab123 -P 830
@@ -173,19 +173,19 @@ Jsnapy will prompt you to provide the username and password:
 jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73
 ```
 
-#### Local snapcheck:
+##### Local snapcheck:
 Presence of --local option runs the tests on stored snapshot.  
 To use this command one has to first create snapshot using --snap command.
 
-##### Documentation
+###### Documentation
 https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments  
 
-##### Syntax: 
+###### Syntax: 
 ```
 jsnapy --snapcheck <snap_name> -f <config_file> --local
 ```
 
-##### Examples: 
+###### Examples: 
 ```
 jsnapy --snap -f config.snapcheck.states.yml snapshot_name
 ls /etc/jsnapy/snapshots/*snapshot_name* -l
@@ -213,14 +213,14 @@ ls /etc/jsnapy/snapshots/*STORED* -l
 jsnapy --snapcheck -f config.snapcheck.local.yml 
 ```
 
-#### Custom jsnapy lookup directory 
+##### Custom jsnapy lookup directory 
 
 You can specify custom jsnapy lookup directory (--folder). 
 
-##### Documentation: 
+###### Documentation: 
 https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments  
 
-##### Examples:  
+###### Examples:  
 ```
 ls other_jsnapy_folder/ -l
 
@@ -230,16 +230,16 @@ jsnapy --snap -f config.check.bgp.states.yml --folder other_jsnapy_folder STORED
 jsnapy --snapcheck -f config.check.bgp.states.yml --folder other_jsnapy_folder
 ```
 
-### Snap: 
+#### Snap: 
 
 Take a snapshot. 
 
-#### Syntax: 
+##### Syntax: 
 ```
 jsnapy --snap <file_name> -f <config_file>
 ```
 
-#### Examples: 
+##### Examples: 
 ```
 sublime-text /etc/jsnapy/config.check.yml
 sublime-text /etc/jsnapy/testfiles/test.check.yml 
@@ -251,17 +251,17 @@ jsnapy --snap post -f config.check.yml
 ls /etc/jsnapy/snapshots/*_post_*
 ```
 
-### Check: 
+#### Check: 
 
 Compares two snapshots based on tests.  
 So you first need to take 2 snapshots (snap).  
 
-#### Syntax: 
+##### Syntax: 
 ```
 jsnapy --check <pre_snap> <post_snap> -f <config_file>
 ```
 
-#### Examples: 
+##### Examples: 
 ```
 jsnapy --check pre post -f config.check.yml -v
 ```
@@ -275,18 +275,18 @@ jsnapy --snap post -f config.diff.interfaces.yml
 jsnapy --check pre post -f config.diff.interfaces.yml -v
 ```
 
-### Diff:
+#### Diff:
 
 Compares two snapshots (either in xml or text format) character by character.  
 So you first need to take 2 snapshots (snap).  
 Supported only in command line mode.  
 
-#### Syntax: 
+##### Syntax: 
 ```
 jsnapy --diff <pre_snap> <post_snap> -f <config_file>
 ```
 
-#### Examples: 
+##### Examples: 
 ```
 sublime-text /etc/jsnapy/config.diff.yml 
 sublime-text /etc/jsnapy/testfiles/test.diff.yml 
@@ -295,14 +295,14 @@ jsnapy --snap post -f config.diff.yml
 jsnapy --diff pre post -f config.diff.yml
 ```
 
-## JSNAPy python module
+### JSNAPy python module
 
-### Documentation: 
+#### Documentation: 
 https://github.com/Juniper/jsnapy/wiki/4.-Module 
 
-### Snap, snap, and check workflow:
+#### Snap, snap, and check workflow:
 
-#### Examples: 
+##### Examples: 
 
 jsnapy without pyez: 
 ```
@@ -316,9 +316,9 @@ sublime-text python/checkdevice.py
 python python/checkdevice.py 
 ```
 
-### snapcheck
+#### snapcheck
 
-#### Examples
+##### Examples
 
 Jsnapy without pyez: 
 ```
