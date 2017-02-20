@@ -156,8 +156,7 @@ jsnapy --snapcheck -f config.snapcheck.states.yml -v
 
 ##### Optionnal arguments: 
 You can use optionnal arguments.  
-
-###### Run this command to discover the optionnal arguments:     
+Run this command to discover the optionnal arguments:     
 ```
 jsnapy -h
 ```
