@@ -79,12 +79,84 @@ cd junos-verifications-automation-with-jsnapy
 
 ## Build a network topology: 
 The network topology used into this repository is composed by 3 junos devices (EX4300) connected in a triangle topology, configured with BGP.   
-In order to build the same network topology, you can, as example, follow this procedure:  
+
+In order to configure your junos devices, you can use, as example, one of teh following method:
+
+### Configure the junos devices using Ansible: 
+
+#### Ansible playbook: 
+pb.yml
+
+#### Jinja2 template: 
+template.j2
+
+#### Ansible inventory file:
+The inventory file we are using in this repository is hosts. It is at the root of the repository, so it is not at the default place.
+it also define the ip address of each device with the variable junos_host. This variable is reused in the playbooks. 
+
+#### Ansible Config file:
+There is an ansible.cfg file at the root of the repository.
+It refers to our inventory file (hosts): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
+
+#### Ansible variables:
+group_vars and host_vars directories at the root of this repository define variables for hosts and for groups.
+The inventory file (hosts file at the root of the repository) also defines some variables.
+In order to see all variables for an hostname, you can run this command:
 ```
-git clone https://github.com/ksator/ansible-training-for-junos-automation.git
-cd ansible-training-for-junos-automation
-ansible-playbook junos_template/pb.bgp.2.yml  
+ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
+#### Requirements on your server:  
+Install ansible and the python library junos-eznc on the Ansible server.
+
+#### Requirements on the Junos devices:
+Connect the 3 junos devices in a triangle topology.  
+Configure netconf on the Junos devices:
+```
+set system services netconf ssh
+commit
+```
+
+#### Execute the playbook: 
+```
+$ ansible-playbook pb.yml 
+PLAY [create junos configuration] **********************************************
+
+TASK [Render BGP configuration for junos devices] ******************************
+changed: [ex4300-9]
+changed: [ex4300-18]
+changed: [ex4300-17]
+
+TASK [push bgp configuration on devices] ***************************************
+changed: [ex4300-17]
+changed: [ex4300-9]
+changed: [ex4300-18]
+
+PLAY [wait for peers to establish connections] *********************************
+
+TASK [pause] *******************************************************************
+Pausing for 25 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [localhost]
+
+PLAY [check bgp states] ********************************************************
+
+TASK [check bgp peers states] **************************************************
+ok: [ex4300-9] => (item={u'peer_loopback': u'192.179.0.73', u'local_ip': u'192.168.0.5', u'peer_ip': u'192.168.0.4', u'interface': u'ge-0/0/0', u'asn': 110, u'name': u'ex4300-17'})
+ok: [ex4300-18] => (item={u'peer_loopback': u'192.179.0.95', u'local_ip': u'192.168.0.0', u'peer_ip': u'192.168.0.1', u'interface': u'ge-0/0/0', u'asn': 109, u'name': u'ex4300-9'})
+ok: [ex4300-17] => (item={u'peer_loopback': u'192.179.0.95', u'local_ip': u'192.168.0.4', u'peer_ip': u'192.168.0.5', u'interface': u'ge-0/0/0', u'asn': 109, u'name': u'ex4300-9'})
+ok: [ex4300-17] => (item={u'peer_loopback': u'192.179.0.74', u'local_ip': u'192.168.0.2', u'peer_ip': u'192.168.0.3', u'interface': u'ge-0/0/1', u'asn': 104, u'name': u'ex4300-18'})
+ok: [ex4300-18] => (item={u'peer_loopback': u'192.179.0.73', u'local_ip': u'192.168.0.3', u'peer_ip': u'192.168.0.2', u'interface': u'ge-0/0/1', u'asn': 110, u'name': u'ex4300-17'})
+ok: [ex4300-9] => (item={u'peer_loopback': u'192.179.0.74', u'local_ip': u'192.168.0.1', u'peer_ip': u'192.168.0.0', u'interface': u'ge-0/0/1', u'asn': 104, u'name': u'ex4300-18'})
+
+PLAY RECAP *********************************************************************
+ex4300-17                  : ok=3    changed=2    unreachable=0    failed=0   
+ex4300-18                  : ok=3    changed=2    unreachable=0    failed=0   
+ex4300-9                   : ok=3    changed=2    unreachable=0    failed=0   
+localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+```
+
+### Configure the junos devices using Vagrant: 
+If you prefer to build the Junos topology using Vagrant boxes, you can refer to this repository: https://github.com/ksator/vagrant-junos
 
 ## Fix the JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
