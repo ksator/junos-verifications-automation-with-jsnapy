@@ -57,20 +57,6 @@ more /var/log/jsnapy/jsnapy.log
 ## About this repository: 
 It has ready to use JSNAPy content.  
 
-## Install JSNAPy:
-Documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
- ```
-sudo pip install jsnapy
-```
-
-I tested these JSNAPy scripts with JSNAPy 1.1.0.  
-To check the JSNAPy version, run the following command:  
-```
-jsnapy -V 
-```
-
-Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has JSNAPy installed.   
-
 ## Clone this git repository: 
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
@@ -168,6 +154,20 @@ localhost                  : ok=1    changed=0    unreachable=0    failed=0
 ## Vagrant: 
 If you prefer to build the virtual lab using Vagrant, you can refer to this repository https://github.com/ksator/vagrant-junos
 
+## Install JSNAPy:
+Documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
+ ```
+sudo pip install jsnapy
+```
+
+I tested these JSNAPy scripts with JSNAPy 1.1.0.  
+To check the JSNAPy version, run the following command:  
+```
+jsnapy -V 
+```
+
+Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has JSNAPy installed.   
+
 ## Fix the JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
 JSNAPy default lookup directory to search for JSNAPy test files files is /etc/jsnapy/testfiles.  
@@ -175,7 +175,6 @@ So:
 - Either copy the jsnapy files into the default lookup directories.  
 - Or change the default lookup directories in /etc/jsnapy/jsnapy.cfg.  
 - Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here] (https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
-
 
 ## Use JSNAPy:  
 JSNAPy is supported in three modes:  
