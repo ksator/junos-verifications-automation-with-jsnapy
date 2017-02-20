@@ -80,7 +80,7 @@ cd junos-verifications-automation-with-jsnapy
 ## Build a network topology: 
 The network topology used into this repository is composed by 3 junos devices (EX4300) connected in a triangle topology, configured with BGP.   
 
-In order to configure your junos devices, you can use, as example, one of teh following method:
+In order to configure your junos devices, you can use, as example, one of the following methods:
 
 ### Configure the junos devices using Ansible: 
 
@@ -106,7 +106,7 @@ In order to see all variables for an hostname, you can run this command:
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
 #### Requirements on your server:  
-Install ansible and the python library junos-eznc on the Ansible server.
+Install ansible and the python libraries junos-eznc and jxmlease.
 
 #### Requirements on the Junos devices:
 Connect the 3 junos devices in a triangle topology.  
