@@ -10,11 +10,11 @@ JSNAPy is supported in two modes:
 Source code: https://github.com/Juniper/jsnapy  
 Documentation: https://github.com/Juniper/jsnapy/wiki  
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
-book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104  
-video: https://www.youtube.com/playlist?list=PLQ189o7cl3OwWSInb5hYsDfDPETrroAb2  
+Book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104  
+Video: https://www.youtube.com/playlist?list=PLQ189o7cl3OwWSInb5hYsDfDPETrroAb2  
 
 ## Installation: 
-documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
+Documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
 
 ## Default structure:
 While installing Jsnapy, it creates Jsnapy folder at /etc and and /etc/logs.  
@@ -25,15 +25,15 @@ You can refer to this [link] (https://github.com/Juniper/jsnapy/wiki#while-insta
 If required, overwrite the path in this file with your paths.  
 
 
-### configuration files:
+### Configuration files:
 /etc/jsnapy serves as the default lookup directory to search for configuration files when running various jsnapy commands.  
 User can chose different location by setting config_file_path in /etc/jsnapy/jsnapy.cfg  
 
-### test files:  
-test files should be located at /etc/jsnapy/testfiles.  
+### Test files:  
+Test files should be located at /etc/jsnapy/testfiles.  
 User can chose different location by setting test_file_path in /etc/jsnapy/jsnapy.cfg  
 
-### snapshots: 
+### Snapshots: 
 /etc/jsnapy/snapshots directory contains all snapshots.  
 User can chose different location by setting snapshot_path in /etc/jsnapy/jsnapy.cfg  
 
@@ -61,20 +61,20 @@ more /var/log/jsnapy/jsnapy.log
 It has ready to use JSNAPy content.  
 
 ## JSNAPy installation :
-you need to install JSNAPy: 
+You need to install JSNAPy: 
 ```
 sudo pip install jsnapy
 ```
-Another option would to pull a docker image that has JSNAPy from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/)
 
-## JSNAPy version: 
-I tested these scripts with jsnapy 1.1.0 
+I tested these scripts with jsnapy 1.1.0  
 ```
 jsnapy -V 
 JSNAPy version: 1.1.0
 ```
 
-## network topology: 
+Another option would to pull a docker image that has JSNAPy from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/)
+
+## Build a network topology: 
 3 junos devices EX4300 in a triangle topology, with BGP configured.  
 ```
 git clone https://github.com/ksator/ansible-training-for-junos-automation.git
@@ -82,18 +82,18 @@ cd ansible-training-for-junos-automation
 ansible-playbook junos_template/pb.bgp.2.yml  
 cd ..
 ```
-## clone this repo: 
+## Clone this repo: 
 ```
 git clone https://github.com/ksator/Junos-verifications-automation-with-Jsnapy.git
 cd junos-verifications-automation-with-jsnapy
 ```
-## JSNAPy lookup directories: 
+## Fix the JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
 JSNAPy default lookup directory to search for JSNAPy test files files is /etc/jsnapy/testfiles.  
 So:  
 - Either copy the jsnapy files into the default lookup directories.  
 - Or change the default lookup directories in /etc/jsnapy/jsnapy.cfg.  
-- Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here] (Documentation: https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
+- Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here] (https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
 
 
 ## JSNAPy usages:  
@@ -106,14 +106,15 @@ JSNAPy is supported in two modes:
 ### Documentation
 https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool 
 
-### help: 
+### Help: 
 ```
 jsnapy -h
 ```
 
-### snapcheck:
+### Snapcheck:
 compares the current configuration or the current operationnal states against pre-defined criteria.    
-#### syntax:  
+
+#### Syntax:  
 ```
 jsnapy --snapcheck <snap_file_name> -f <config_file>
 ```
