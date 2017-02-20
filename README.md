@@ -57,13 +57,13 @@ more /var/log/jsnapy/jsnapy.log
 ## About this repository: 
 It has ready to use JSNAPy content.  
 
-## JSNAPy installation :
-You need to install JSNAPy: 
-```
+## Install JSNAPy:
+Documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
+ ```
 sudo pip install jsnapy
 ```
 
-I tested these scripts with jsnapy 1.1.0.  
+I tested these JSNAPy scripts with JSNAPy 1.1.0.  
 To check the JSNAPy version, run the following command:  
 ```
 jsnapy -V 
@@ -111,15 +111,21 @@ In order to see all variables for an hostname, you can run this command:
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
 #### Requirements on your server:  
-Install ansible and the python libraries junos-eznc and jxmlease.
+- Install the python libraries junos-eznc and jxmlease
+- Install ansible 
 
 #### Requirements on the Junos devices:
-Connect the 3 junos devices in a triangle topology.  
-Configure netconf on the Junos devices:
-```
-set system services netconf ssh
-commit
-```
+- Connect the 3 junos devices in a triangle topology.  
+  The 3 junos devices are connected like this:   
+  ex4300-17, ge-0/0/0 <-> ex4300-9, ge-0/0/0  
+  ex4300-17, ge-0/0/1 <-> ex4300-18, ge-0/0/1   
+  ex4300-18, ge-0/0/0 <-> ex4300-9, ge-0/0/1  
+
+- Configure netconf on the Junos devices:
+  ```
+  set system services netconf ssh
+  commit
+  ```
 
 #### Execute the playbook: 
 ```
