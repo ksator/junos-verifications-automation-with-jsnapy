@@ -51,9 +51,9 @@ ls /var/log/jsnapy/ -l
 more /var/log/jsnapy/jsnapy.log 
 ```
 
-# How to use this repo: 
+# How to use this repository: 
 
-## About this repo: 
+## About this repository: 
 It has ready to use JSNAPy content.  
 
 ## JSNAPy installation :
@@ -68,7 +68,7 @@ jsnapy -V
 JSNAPy version: 1.1.0
 ```
 
-Another option would to pull a docker image that has JSNAPy from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/)
+Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that has JSNAPy.   
 
 ## Build a network topology: 
 3 junos devices EX4300 in a triangle topology, with BGP configured.  
