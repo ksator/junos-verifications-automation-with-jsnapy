@@ -8,5 +8,5 @@ check_major_alarm:
       tests:
       - not-in: alarm-class, Major
         info: "No major alarm"
-        err: "<{{post['alarm-description']}}>"
+        err: "major alarm: <{{post['alarm-description']}}>"
         ignore-null: True
