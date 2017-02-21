@@ -23,14 +23,18 @@ print "here's the configuring details pushed with pyez"
 cfg.pdiff()
 
 print "commiting the configuration change "
-cfg.commit()
+if cfg.commit() == True: 
+	print "commit succeed"
+else: 
+	print "commit failed"
+
 
 # instanciate the class SnapAdmin
 print "auditing the device " + dev_obj.facts["hostname"] + " using jsnapy"
 js = SnapAdmin()
 
 # the variable config_file refers to the jsnapy configuration file
-config_file = "/etc/jsnapy/config.snapcheck.configuration.yml"
+config_file = "config.snapcheck.configuration.yml"
 
 # Performing function similar to --snapcheck
 # taking a snapshot (called snap) and comparing it against predefined criteria

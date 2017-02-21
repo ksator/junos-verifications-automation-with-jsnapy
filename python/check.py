@@ -8,7 +8,7 @@ from slacker import Slacker
 js = SnapAdmin()
 
 # the variable config_file refers to the jsnapy configuration file
-config_file = "/etc/jsnapy/config.check.yml"
+config_file = "config.check.yml"
 
 # taking first snapshots using jsnapy
 # Performing function similar to --snap

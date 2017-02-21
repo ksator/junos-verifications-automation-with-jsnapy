@@ -8,7 +8,7 @@ from pprint import pprint
 js = SnapAdmin()
 
 # the variable config_file refers to the jsnapy configuration file
-config_file = "/etc/jsnapy/config.snapcheck.states.yml"
+config_file = "config.snapcheck.states.yml"
 
 # taking a snapshot using jsnapy
 # Performing function similar to --snap
