@@ -174,8 +174,8 @@ Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
 JSNAPy default lookup directory to search for JSNAPy test files files is /etc/jsnapy/testfiles.  
 So:  
-- Either copy the jsnapy files into the default lookup directories.  
-- Or change the default lookup directories in /etc/jsnapy/jsnapy.cfg.  
+- Either copy the jsnapy files from this repository into the default lookup directories.  
+- Or edit /etc/jsnapy/jsnapy.cfg to change the default JSNAPy lookup directories. This is the easiest option and the one I am using.   
 - Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here] (https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
 
 ## Use JSNAPy:  
