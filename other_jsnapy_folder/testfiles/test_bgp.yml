@@ -1,7 +1,7 @@
 #tests_include:
-#  - test_command_bgp
+#  - test_file_snapcheck_bgp_states
 
-test_command_bgp:
+test_file_snapcheck_bgp_states:
   - command: show bgp neighbor
   - iterate:
 #     xpath: '/bgp-information/bgp-peer'
