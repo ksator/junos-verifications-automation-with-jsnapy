@@ -105,26 +105,24 @@ commit
 ```
 
 ### Ansible playbook: 
-pb.yml at the root of this repository. 
+The Ansible playbook to configure the devices is pb.yml. It is at the root of this repository.  
 
 ### Jinja2 template: 
-template.j2 at the root of this repository. 
+The jinja2 template to build the junos configuration is template.j2. It is at the root of this repository. 
 
 ### Ansible inventory file:
 The inventory file we are using in this repository is hosts. It is at the root of the repository, so it is not at the default place.
 it also define the ip address of each device with the variable junos_host. This variable is reused in the playbooks. 
 
 ### Ansible Config file:
-There is an ansible.cfg file at the root of the repository.
-It refers to our inventory file (hosts): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
+There is an ansible.cfg file at the root of the repository. It refers to our inventory file (hosts): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
 
 ### Ansible variables:
-group_vars and host_vars directories at the root of this repository define variables for hosts and for groups.
-The inventory file (hosts file at the root of the repository) also defines some variables.
-In order to see all variables for an hostname, you can run this command:
+group_vars and host_vars directories at the root of this repository define variables for hosts and for groups. The inventory file (hosts file at the root of the repository) also defines some variables. In order to see all variables for an hostname, you can run this command:
 ```
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
+
 ### Execute the playbook: 
 ```
 $ ansible-playbook pb.yml 
