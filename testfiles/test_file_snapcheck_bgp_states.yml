@@ -1,8 +1,8 @@
 tests_include:
-  - test_bgp_summary
-  - test_bgp_neighbor
+  - snapcheck_bgp_summary
+  - snapcheck_bgp_neighbor
 
-test_bgp_summary:
+snapcheck_bgp_summary:
 # - command: show bgp summary
   - rpc: get-bgp-summary-information
   - item:
@@ -30,7 +30,7 @@ test_bgp_summary:
           err:  "BGP peer <{{ post['peer-address']}}> has a very small uptime of <{{ post['elapsed-time/@seconds']}}>"
           info: "BGP peer <{{ post['peer-address']}}> state is <{{ post['peer-state']}}> and has an uptime of <{{ post['elapsed-time/@seconds'] }}>"
 
-test_bgp_neighbor:
+snapcheck_bgp_neighbor:
   - command: show bgp neighbor
 # - rpc: get-bgp-neighbor-information
   - iterate:
