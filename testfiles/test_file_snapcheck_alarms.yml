@@ -1,8 +1,8 @@
 tests_include:
-  - check_active_alarm
-  - check_major_alarm
+  - snapcheck_active_alarm
+  - snapcheck_major_alarm
 
-check_active_alarm:
+snapcheck_active_alarm:
   - command: show chassis alarms
   - iterate:
       xpath: //alarm-information
@@ -11,7 +11,7 @@ check_active_alarm:
         info: "No active alarm"
         err: "there is <{{post['alarm-summary/active-alarm-count']}}> active alarms"
 
-check_major_alarm:
+snapcheck_major_alarm:
   - command: show chassis alarms
   - iterate:
       xpath: //alarm-information/alarm-detail
