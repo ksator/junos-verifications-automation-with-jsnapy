@@ -1,5 +1,5 @@
 # About JSNAPy: 
-You can use it to automate verifications on Junos devices.   
+You can use it to automate verifications on Junos devices. For both operational state verifications and configuration verifications.        
 This is the Python version of Junos SNapshot Administrator (JSNAP).  
 JSNAPy is supported in three modes:
  - a command line tool
