@@ -427,3 +427,14 @@ JSNAPy and PyEZ together:
 sublime-text python/snapcheckdevice.py 
 python python/snapcheckdevice.py 
 ```
+
+### JSNAPy ansible module:
+It is hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).  
+Modules: junos_jsnapy (Execute JSNAPy test from Ansible)  
+Documentation: http://junos-ansible-modules.readthedocs.io/  
+Source code: https://github.com/Juniper/ansible-junos-stdlib  
+Requirements: Install PyEZ, JSNAPy, jxmlease python libraries. Install ansible.   
+junos_jsnapy module installation:  
+```
+sudo ansible-galaxy install Juniper.junos  
+```
