@@ -2,5 +2,5 @@
       - include: devices.yml
         group: EX4300
     tests:
-      - test.diff.interfaces.yml
+      - test_file_snap_snap_check_intf_cfg.yml
 
