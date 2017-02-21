@@ -2,7 +2,7 @@
       - include: devices.yml
         group: EX4300
     tests:
-      - testfiles/test_bgp_states.yml
+      - test_file_bgp_states.yml
 #   mail: send_mail.yml
 #   mail: 
 #    pass: pass_mail.yml
