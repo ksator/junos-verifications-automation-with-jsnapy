@@ -1,0 +1,11 @@
+tests_include:
+  - check_int_status
+
+check_int_status:
+  - command: show interfaces terse
+  - iterate:
+      xpath: //interface-information/physical-interface[normalize-space(admin-status)='up']
+      tests:
+      - is-equal: oper-status, up
+        info: "All Interfaces with Admin UP have oper status UP"
+        err: "Interface {{post['name']}} is not UP/UP"
