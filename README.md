@@ -75,27 +75,6 @@ ex4300-18, ge-0/0/0 <-> ex4300-9, ge-0/0/1
 The 3 devices are configured with BGP.  
 In order to configure your junos devices, you can use, as example, the following method with Ansible.
 
-### Ansible playbook: 
-pb.yml
-
-### Jinja2 template: 
-template.j2
-
-### Ansible inventory file:
-The inventory file we are using in this repository is hosts. It is at the root of the repository, so it is not at the default place.
-it also define the ip address of each device with the variable junos_host. This variable is reused in the playbooks. 
-
-### Ansible Config file:
-There is an ansible.cfg file at the root of the repository.
-It refers to our inventory file (hosts): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
-
-### Ansible variables:
-group_vars and host_vars directories at the root of this repository define variables for hosts and for groups.
-The inventory file (hosts file at the root of the repository) also defines some variables.
-In order to see all variables for an hostname, you can run this command:
-```
-ansible -m debug -a "var=hostvars['hostname']" localhost
-```
 ### Requirements on your server:  
 - Install the PyEZ [dependencies] (https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
 - Install the python libraries junos-eznc and jxmlease. 
@@ -119,7 +98,27 @@ sudo pip install ansible
   set system services netconf ssh
   commit
   ```
+### Ansible playbook: 
+pb.yml at the root of this repository. 
 
+### Jinja2 template: 
+template.j2 at the root of this repository. 
+
+### Ansible inventory file:
+The inventory file we are using in this repository is hosts. It is at the root of the repository, so it is not at the default place.
+it also define the ip address of each device with the variable junos_host. This variable is reused in the playbooks. 
+
+### Ansible Config file:
+There is an ansible.cfg file at the root of the repository.
+It refers to our inventory file (hosts): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
+
+### Ansible variables:
+group_vars and host_vars directories at the root of this repository define variables for hosts and for groups.
+The inventory file (hosts file at the root of the repository) also defines some variables.
+In order to see all variables for an hostname, you can run this command:
+```
+ansible -m debug -a "var=hostvars['hostname']" localhost
+```
 ### Execute the playbook: 
 ```
 $ ansible-playbook pb.yml 
