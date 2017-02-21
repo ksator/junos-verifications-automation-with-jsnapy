@@ -1,7 +1,7 @@
 #tests_include:
-#  - test_bgp_neighbor
+#  - bgp_neighbor
 
-test_bgp_neighbor:
+bgp_neighbor:
   - command: show bgp neighbor
   - ignore-null: True
 # - rpc: get-bgp-neighbor-information
