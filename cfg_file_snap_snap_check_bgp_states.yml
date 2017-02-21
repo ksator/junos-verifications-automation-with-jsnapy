@@ -2,4 +2,4 @@
       - include: devices.yml
         group: EX4300
     tests:
-      - test_file_snap_snap_check_bgp.yml
+      - test_file_snap_snap_check_bgp_states.yml
