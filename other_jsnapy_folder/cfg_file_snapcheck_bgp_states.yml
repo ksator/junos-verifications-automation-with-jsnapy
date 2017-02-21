@@ -2,5 +2,5 @@
       - include: devices.yml
         group: EX4300
     tests:
-      - test_bgp.yml
+      - test_file_snapcheck_bgp_states.yml
     email: send_mail.yml
