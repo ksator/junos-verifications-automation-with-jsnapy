@@ -1,11 +1,54 @@
 tests_include:
-  - check_int_status
+  - check_interfaces_op_status
+  - check_interfaces_flap
+  - check_interfaces_errors
+  - check_interfaces_collisions
 
-check_int_status:
+check_interfaces_op_status:
   - command: show interfaces terse
   - iterate:
       xpath: //interface-information/physical-interface[normalize-space(admin-status)='up']
       tests:
       - is-equal: oper-status, up
-        info: "Interface {{post['name']}} status is administratively <{{post['admin-status']}}> and operationally <{{post['oper-status']}}>"
-        err: "Interface {{post['name']}} status is not up/up, it is administratively <{{post['admin-status']}}> but operationally <{{post['oper-status']}}>"
+        info: "Interface <{{post['name']}}> status is administratively <{{post['admin-status']}}> and operationally <{{post['oper-status']}}>"
+        err: "Interface <{{post['name']}}> status is not up/up, it is administratively <{{post['admin-status']}}> but operationally <{{post['oper-status']}}>"
+
+check_interfaces_flap: 
+  - command: show interfaces 
+  - iterate:
+      xpath: //interface-information/physical-interface[normalize-space(oper-status)='up' and interface-flapped/@seconds != '0']
+      tests:
+      - is-gt: interface-flapped/@seconds, 3600
+        info: "Interface <{{post['name']}}> last flap in seconds is <{{post['interface-flapped/@seconds']}}>"
+        err: "Interface <{{post['name']}}> last flap is in seconds <{{post['interface-flapped/@seconds']}}>"
+
+check_interfaces_errors:
+  - command: show interfaces extensive
+  - iterate:
+      xpath: //interface-information/physical-interface/input-error-list
+      tests:
+      - is-equal: input-errors, 0
+        info: "Interface {{post['../name']}} doesn't have input error"
+        err: "Interface {{post['../name']}} has {{post['input-errors']}} input errors"
+      - is-equal: input-drops, 0
+        info: "Interface {{post['../name']}} doesn't have input drops"
+        err: "Interface {{post['../name']}} has {{post['input-drops']}} input drops"
+
+  - iterate:
+      xpath: //interface-information/physical-interface/output-error-list
+      tests:
+      - is-equal: output-errors, 0
+        info: "Interface {{post['../name']}} doesn't have output error"
+        err: "Interface {{post['../name']}} has {{post['output-errors']}} output errors"
+      - is_equal: output-drops, 0
+        info: "Interface {{post['../name']}} doesn't have output drops"
+        err: "Interface {{post['../name']}} has {{post['output-drops']}} output drops"
+      - is-equal: mtu-errors, 0
+        info: "Interface {{post['../name']}} doesn't have mtu error"
+        err: "Interface {{post['../name']}} has {{post['mtu-errors']}} output mtu errors"
+      - is-equal: output-collisions, 0
+        info: "Interface {{post['../name']}} doesn't have output collision"
+        err: "Interface {{post['../name']}} has {{post['output-collisions']}} output collisions"
+        ignore-null: True
+        
+
