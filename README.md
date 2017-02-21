@@ -204,9 +204,9 @@ jsnapy --snapcheck <snap_file_name> -f <config_file>
 
 ##### Configuration file example: 
 ```
-sublime-text /etc/jsnapy/config.snapcheck.states.yml 
-sublime-text /etc/jsnapy/testfiles/devices.yml 
-sublime-text /etc/jsnapy/testfiles/test.snapcheck.states.yml 
+sublime-text config.snapcheck.states.yml 
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test.snapcheck.states.yml 
 ```
 
 ##### Snapshot name: 
@@ -215,17 +215,17 @@ sublime-text /etc/jsnapy/testfiles/test.snapcheck.states.yml
 The default snapshot name is snap_temp. Example using the default snapshot name: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml
-ls /etc/jsnapy/snapshots/*snap_temp* -l
-more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_bgp_neighbor.xml
-more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_get_bgp_summary_information.xml 
-more /etc/jsnapy/snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
+ls snapshots/*snap_temp* -l
+more snapshots/172.30.179.95_snap_temp_show_bgp_neighbor.xml
+more snapshots/172.30.179.95_snap_temp_get_bgp_summary_information.xml 
+more snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
 ```
 
 ###### Snapshot name definition:
 You can define a snapshot name. Example using a snapshot name you define:         
 ```
 jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
-ls /etc/jsnapy/snapshots/*snapshot_name* -l
+ls snapshots/*snapshot_name* -l
 ```
 
 ##### Verbosity: 
@@ -272,9 +272,10 @@ jsnapy --snapcheck <snap_name> -f <config_file> --local
 ###### Examples: 
 ```
 jsnapy --snap -f config.snapcheck.states.yml snapshot_name
-ls /etc/jsnapy/snapshots/*snapshot_name* -l
+ls snapshots/*snapshot_name* -l
+```
+```
 jsnapy --snapcheck -f config.snapcheck.states.yml --local snapshot_name  
-
 jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snapshot_name
 ```
 
@@ -288,12 +289,12 @@ Use the key local in the configuration file if you want to run snapcheck on stor
 Works with --snapcheck command only.  
 For exemple in config.snapcheck.local.yml, STORED is being used.  
 ```
-sublime-text /etc/jsnapy/config.snapcheck.local.yml
+sublime-text config.snapcheck.local.yml
 ```
 So we might have already done a snap. 
 ```
 jsnapy --snap STORED -f config.snapcheck.local.yml
-ls /etc/jsnapy/snapshots/*STORED* -l
+ls snapshots/*STORED* -l
 jsnapy --snapcheck -f config.snapcheck.local.yml 
 ```
 
@@ -325,14 +326,14 @@ jsnapy --snap <file_name> -f <config_file>
 
 ##### Examples: 
 ```
-sublime-text /etc/jsnapy/config.check.yml
-sublime-text /etc/jsnapy/testfiles/test.check.yml 
+sublime-text config.check.yml
+sublime-text testfiles/test.check.yml 
 
 jsnapy --snap pre -f config.check.yml -v
-ls /etc/jsnapy/snapshots/*_pre_*
+ls snapshots/*_pre_*
 
 jsnapy --snap post -f config.check.yml
-ls /etc/jsnapy/snapshots/*_post_*
+ls snapshots/*_post_*
 ```
 
 #### Check: 
@@ -352,8 +353,9 @@ jsnapy --check pre post -f config.check.yml -v
 
 test if ip @ configured on interfaces changed: 
 ```
-sublime-text /etc/jsnapy/config.diff.interfaces.yml
-sublime-text /etc/jsnapy/testfiles/test.diff.interfaces.yml 
+sublime-text config.diff.interfaces.yml
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test.diff.interfaces.yml 
 jsnapy --snap pre -f config.diff.interfaces.yml 
 jsnapy --snap post -f config.diff.interfaces.yml 
 jsnapy --check pre post -f config.diff.interfaces.yml -v
@@ -372,8 +374,8 @@ jsnapy --diff <pre_snap> <post_snap> -f <config_file>
 
 ##### Examples: 
 ```
-sublime-text /etc/jsnapy/config.diff.yml 
-sublime-text /etc/jsnapy/testfiles/test.diff.yml 
+sublime-text config.diff.yml 
+sublime-text testfiles/test.diff.yml 
 jsnapy --snap pre -f config.diff.yml
 jsnapy --snap post -f config.diff.yml
 jsnapy --diff pre post -f config.diff.yml
