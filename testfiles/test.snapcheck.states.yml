@@ -24,6 +24,12 @@ test_bgp_summary:
         - in-range: accepted-prefix-count, 1, 50
           err: "Test Failed!! value of accepted-prefix-count is not in range of 1-50, it is equal to <{{post['accepted-prefix-count']}}>"
           info: "Test succeeded!! value of total-prefix-count is in range of 1-50, it is equal to <{{post['accepted-prefix-count']}}>"
+  - iterate:
+      xpath: //bgp-information/bgp-peer[normalize-space(peer-state)='Established']
+      tests:
+        - is-gt: elapsed-time/@seconds, 3600
+          err:  "BGP peer <{{ post['peer-address']}}> has a very small uptime of <{{ post['elapsed-time/@seconds']}}>"
+          info: "BGP peer <{{ post['peer-address']}}> state is <{{ post['peer-state']}}> and has an uptime of <{{ post['elapsed-time/@seconds'] }}>"
 
 test_bgp_neighbor:
   - command: show bgp neighbor
