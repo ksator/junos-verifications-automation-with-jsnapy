@@ -2,7 +2,7 @@
       - include: devices.yml
         group: EX4300
     tests:
-      - test.snapcheck.states.yml 
+      - testfiles/test_bgp_states.yml
 #   mail: send_mail.yml
 #   mail: 
 #    pass: pass_mail.yml

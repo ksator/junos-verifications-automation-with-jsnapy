@@ -1,7 +1,18 @@
 tests_include:
+  - check-interfaces-admin-status
   - check_interfaces_op_status
   - check_interfaces_flap
   - check_interfaces_errors
+
+check-interfaces-admin-status:
+  - command: show interface terse
+  - iterate:
+      xpath: '//physical-interface[contains(name, "ge-0/0")]'
+      id: './name'
+      tests:
+        - is-equal: admin-status, up
+          info: "Test Succeeded!!, <{{id_0}}> admin-status is equal to <{{post['admin-status']}}>"
+          err: "Test Failed!!!, <{{id_0}}> admin-status is not equal to up, it is <{{post['admin-status']}}>"
 
 check_interfaces_op_status:
   - command: show interfaces terse
