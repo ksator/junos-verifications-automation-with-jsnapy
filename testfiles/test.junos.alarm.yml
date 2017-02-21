@@ -1,0 +1,11 @@
+tests_include:
+  - check_alarm
+
+check_alarm:
+  - command: show chassis alarms
+  - iterate:
+      xpath: //alarm-information
+      tests:
+      - exists: alarm-summary/no-active-alarms
+        info: "No active alarm"
+        err: "<{{post['alarm-summary/active-alarm-count']}}> active alarms"
