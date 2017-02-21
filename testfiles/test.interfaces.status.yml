@@ -7,5 +7,5 @@ check_int_status:
       xpath: //interface-information/physical-interface[normalize-space(admin-status)='up']
       tests:
       - is-equal: oper-status, up
-        info: "All Interfaces with Admin UP have oper status UP"
-        err: "Interface {{post['name']}} is not UP/UP"
+        info: "Interface {{post['name']}} status is administratively <{{post['admin-status']}}> and operationally <{{post['oper-status']}}>"
+        err: "Interface {{post['name']}} status is not up/up, it is administratively <{{post['admin-status']}}> and operationally <{{post['oper-status']}}>"
