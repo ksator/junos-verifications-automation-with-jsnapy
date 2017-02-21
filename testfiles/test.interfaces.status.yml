@@ -8,4 +8,4 @@ check_int_status:
       tests:
       - is-equal: oper-status, up
         info: "Interface {{post['name']}} status is administratively <{{post['admin-status']}}> and operationally <{{post['oper-status']}}>"
-        err: "Interface {{post['name']}} status is not up/up, it is administratively <{{post['admin-status']}}> and operationally <{{post['oper-status']}}>"
+        err: "Interface {{post['name']}} status is not up/up, it is administratively <{{post['admin-status']}}> but operationally <{{post['oper-status']}}>"
