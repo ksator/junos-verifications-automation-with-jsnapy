@@ -2,7 +2,7 @@
       - include: devices.yml
         group: EX4300
     tests:
-      - test.snapcheck.states.yml
+      - test_bgp_states.yml
     local:
       - STORED
 
