@@ -1,11 +1,11 @@
 tests_include:
-  - test_bgp_neighbor
-  - test_rpc_version
+  - show_bgp_neighbor
+  - get_junos_version
 
-test_bgp_neighbor:
+show_bgp_neighbor:
   - command: show bgp neighbor
     format: text
 
-test_rpc_version:
+get_junos_version:
   - rpc: get-software-information
     format: text
