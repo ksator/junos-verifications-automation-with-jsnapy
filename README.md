@@ -204,7 +204,7 @@ jsnapy -h
 ```
 
 #### Snapcheck:
-Compares the current configuration or the current operationnal states against pre-defined criteria.    
+Use this subcommand to compares the current configuration or the current operationnal states against pre-defined criteria.    
 
 ##### Syntax:  
 ```
@@ -219,8 +219,6 @@ sublime-text testfiles/test.snapcheck.states.yml
 ```
 
 ##### Snapshot name: 
-
-###### Default snapshot name: 
 The default snapshot name is snap_temp. Example using the default snapshot name: 
 ```
 jsnapy --snapcheck -f config.snapcheck.states.yml
@@ -230,7 +228,6 @@ more snapshots/172.30.179.95_snap_temp_get_bgp_summary_information.xml
 more snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
 ```
 
-###### Snapshot name definition:
 You can define a snapshot name. Example using a snapshot name you define:         
 ```
 jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
@@ -238,7 +235,7 @@ ls snapshots/*snapshot_name* -l
 ```
 
 ##### Verbosity: 
-Default console logging level is info:
+The default console logging level is info:
 ```
 /etc/jsnapy/logging.yml 
 ```
@@ -325,8 +322,7 @@ jsnapy --snapcheck -f config.check.bgp.states.yml --folder other_jsnapy_folder
 ```
 
 #### Snap: 
-
-Take a snapshot. 
+Use this subcommand to take a snapshot. 
 
 ##### Syntax: 
 ```
@@ -371,8 +367,7 @@ jsnapy --check pre post -f config.diff.interfaces.yml -v
 ```
 
 #### Diff:
-
-Compares two snapshots (either in xml or text format) character by character.  
+Use this subcommand to compare two snapshots (either in xml or text format) character by character.  
 So you first need to take 2 snapshots (snap).  
 Supported only in command line mode.  
 
