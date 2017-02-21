@@ -1,10 +1,10 @@
 tests_include:
-  - check-interfaces-admin-status
-  - check_interfaces_op_status
-  - check_interfaces_flap
-  - check_interfaces_errors
+  - snapcheck_interfaces_admin_status
+  - snapcheck_interfaces_op_status
+  - snapcheck_interfaces_flap
+  - snapcheck_interfaces_errors
 
-check-interfaces-admin-status:
+snapcheck_interfaces_admin_status:
   - command: show interface terse
   - iterate:
       xpath: '//physical-interface[contains(name, "ge-0/0")]'
@@ -14,7 +14,7 @@ check-interfaces-admin-status:
           info: "Test Succeeded!!, <{{id_0}}> admin-status is equal to <{{post['admin-status']}}>"
           err: "Test Failed!!!, <{{id_0}}> admin-status is not equal to up, it is <{{post['admin-status']}}>"
 
-check_interfaces_op_status:
+snapcheck_interfaces_op_status:
   - command: show interfaces terse
   - iterate:
       xpath: //interface-information/physical-interface[normalize-space(admin-status)='up']
@@ -23,7 +23,7 @@ check_interfaces_op_status:
         info: "Interface <{{post['name']}}> status is administratively <{{post['admin-status']}}> and operationally <{{post['oper-status']}}>"
         err: "Interface <{{post['name']}}> status is not up/up, it is administratively <{{post['admin-status']}}> but operationally <{{post['oper-status']}}>"
 
-check_interfaces_flap: 
+snapcheck_interfaces_flap: 
   - command: show interfaces 
   - iterate:
       xpath: //interface-information/physical-interface[normalize-space(oper-status)='up' and interface-flapped/@seconds != '0']
@@ -32,7 +32,7 @@ check_interfaces_flap:
         info: "Interface <{{post['name']}}> last flap in seconds is <{{post['interface-flapped/@seconds']}}>"
         err: "Interface <{{post['name']}}> last flap is in seconds <{{post['interface-flapped/@seconds']}}>"
 
-check_interfaces_errors:
+snapcheck_interfaces_errors:
   - command: show interfaces extensive
   - iterate:
       xpath: //interface-information/physical-interface/input-error-list
@@ -43,7 +43,6 @@ check_interfaces_errors:
       - is-equal: input-drops, 0
         info: "Interface {{post['../name']}} doesn't have input drops"
         err: "Interface {{post['../name']}} has {{post['input-drops']}} input drops"
-
   - iterate:
       xpath: //interface-information/physical-interface/output-error-list
       tests:
