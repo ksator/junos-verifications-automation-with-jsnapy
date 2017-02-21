@@ -1,5 +1,15 @@
 tests_include:
+  - check_active_alarm
   - check_major_alarm
+
+check_active_alarm:
+  - command: show chassis alarms
+  - iterate:
+      xpath: //alarm-information
+      tests:
+      - exists: alarm-summary/no-active-alarms
+        info: "No active alarm"
+        err: "there is <{{post['alarm-summary/active-alarm-count']}}> active alarms"
 
 check_major_alarm:
   - command: show chassis alarms
@@ -10,3 +20,4 @@ check_major_alarm:
         info: "No major alarm"
         err: "major alarm: <{{post['alarm-description']}}>"
         ignore-null: True
+

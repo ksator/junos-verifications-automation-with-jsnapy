@@ -1,5 +1,0 @@
-    hosts:
-      - include: devices.yml
-        group: EX4300
-    tests:
-      - test.junos.active.alarm.yml 
