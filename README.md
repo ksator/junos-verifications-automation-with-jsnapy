@@ -75,7 +75,7 @@ ex4300-18, ge-0/0/0 <-> ex4300-9, ge-0/0/1
 The 3 devices are configured with BGP.  
 In order to configure your junos devices, you can use, as example, the following method with Ansible.
 
-### Requirements on your server:  
+### Requirements on your server/laptop:  
 - Install the PyEZ [dependencies] (https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
 - Install the python libraries junos-eznc and jxmlease. 
 ```
@@ -86,6 +86,8 @@ sudo pip install jxmlease
 ```
 sudo pip install ansible
 ```
+Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has the requirements installed.   
+
 ### Requirements on the Junos devices:
 Configure netconf on the Junos devices:
 ```
