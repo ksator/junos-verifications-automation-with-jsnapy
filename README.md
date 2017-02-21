@@ -87,17 +87,12 @@ sudo pip install jxmlease
 sudo pip install ansible
 ```
 ### Requirements on the Junos devices:
-- Connect the 3 junos devices in a triangle topology.  
-  The 3 junos devices are connected like this:   
-  ex4300-17, ge-0/0/0 <-> ex4300-9, ge-0/0/0  
-  ex4300-17, ge-0/0/1 <-> ex4300-18, ge-0/0/1   
-  ex4300-18, ge-0/0/0 <-> ex4300-9, ge-0/0/1  
+Configure netconf on the Junos devices:
+```
+set system services netconf ssh
+commit
+```
 
-- Configure netconf on the Junos devices:
-  ```
-  set system services netconf ssh
-  commit
-  ```
 ### Ansible playbook: 
 pb.yml at the root of this repository. 
 
