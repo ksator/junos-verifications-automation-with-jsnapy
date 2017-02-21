@@ -72,6 +72,7 @@ ex4300-17, ge-0/0/1 <-> ex4300-18, ge-0/0/1
 ex4300-18, ge-0/0/0 <-> ex4300-9, ge-0/0/1  
 
 ## Configure your junos devices : 
+The 3 devices are configured with BGP.  
 In order to configure your junos devices, you can use, as example, the following method with Ansible.
 
 ### Ansible playbook: 
@@ -96,9 +97,16 @@ In order to see all variables for an hostname, you can run this command:
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
 ### Requirements on your server:  
-- Install the python libraries junos-eznc and jxmlease
+- Install the PyEZ [dependencies] (https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
+- Install the python libraries junos-eznc and jxmlease. 
+```
+sudo pip install junos-eznc
+sudo pip install jxmlease
+```
 - Install ansible 
-
+```
+sudo pip install ansible
+```
 ### Requirements on the Junos devices:
 - Connect the 3 junos devices in a triangle topology.  
   The 3 junos devices are connected like this:   
