@@ -85,7 +85,7 @@ The 3 devices are configured with BGP.
 In order to configure your junos devices, you can use, as example, the following method with Ansible.
 
 ### Requirements on your server/laptop:  
-- Install the PyEZ [dependencies] (https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
+- [Install the PyEZ dependencies] (https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
 - Install the python libraries junos-eznc and jxmlease. 
 ```
 sudo pip install junos-eznc
