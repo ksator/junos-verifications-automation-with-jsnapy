@@ -1,4 +1,4 @@
-test_interface: 
+interface_configuration: 
   - command: show configuration interfaces | display xml
   - ignore-null: True
   - iterate:
