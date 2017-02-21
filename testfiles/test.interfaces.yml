@@ -2,7 +2,6 @@ tests_include:
   - check_interfaces_op_status
   - check_interfaces_flap
   - check_interfaces_errors
-  - check_interfaces_collisions
 
 check_interfaces_op_status:
   - command: show interfaces terse
