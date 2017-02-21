@@ -204,7 +204,7 @@ jsnapy -h
 ```
 
 #### Snapcheck:
-Use this subcommand to compares the current configuration or the current operationnal states against pre-defined criteria.    
+Use this subcommand to compare the current configuration or the current operationnal states against pre-defined criteria.    
 
 ##### Syntax:  
 ```
