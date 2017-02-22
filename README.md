@@ -548,7 +548,7 @@ sublime-text python/snapcheckdevice.py
 python python/snapcheckdevice.py 
 ```
 
-### JSNAPy ansible module:
+### junos_jsnapy ansible module:
 You can execute JSNAPy tests from Ansible with the Ansible module junos_jsnapy.   
 It is hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).  
 Documentation: http://junos-ansible-modules.readthedocs.io/  
