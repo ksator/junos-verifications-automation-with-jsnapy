@@ -237,21 +237,56 @@ jsnapy --snapcheck <snap_file_name> -f <config_file>
 ls snapshots/*<snap_file_name>* -l
 ```
 ##### Examples 
+
 Compare the current operational states against pre-defined criteria:  
-- Using the default snapshot name: 
+
+- Alarms: 
+ - JSNAPy files details: 
+```
+  sublime-text cfg_file_snapcheck_alarms.yml 
+  sublime-text testfiles/devices.yml 
+  sublime-text testfiles/test_file_snapcheck_alarms.yml
+```
+
+ - Usage with default snapshot name: 
 ```
   jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml 
   ls -l snapshots/*_snap_temp_*
-  jsnapy --snapcheck -f cfg_file_snapcheck_intf_states.yml
-  jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
 ```
-- Using the another snapshot name: 
+
+ - Usage with another snapshot name: 
 ```
   jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml snapshot_name
   ls -l snapshots/*_snapshot_name_*
 ```
 
+
+- Interfaces: 
+ - JSNAPy files details: 
+```
+  sublime-text cfg_file_snapcheck_intf_states.yml
+  sublime-text testfiles/devices.yml 
+  sublime-text test_file_snapcheck_intf_states.yml
+```
+
+ - Usage with default snapshot name: 
+```
+  jsnapy --snapcheck -f cfg_file_snapcheck_intf_states.yml
+```
+
+- BGP:
+ - JSNAPy files details:  
+```
+  sublime-text cfg_file_snapcheck_bgp_states.yml 
+  sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
+```
+ - Usage with default snapshot name: 
+```
+  jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
+```
+
 Compare the current configuration against pre-defined criteria: 
+
 - Using the default snapshot name: 
 ```
   jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml 
@@ -264,30 +299,7 @@ Compare the current configuration against pre-defined criteria:
   ls -l snapshots/*_snapshot_name_*
 ```
 
-##### JSNAPy files details: 
 
-Compare the current operational states against pre-defined criteria:  
-
-- Interfaces:
-```
-  sublime-text cfg_file_snapcheck_intf_states.yml
-  sublime-text testfiles/devices.yml 
-  sublime-text test_file_snapcheck_intf_states.yml
-```
-
-- Alarms: 
-```
-  sublime-text cfg_file_snapcheck_alarms.yml 
-  sublime-text testfiles/devices.yml 
-  sublime-text testfiles/test_file_snapcheck_alarms.yml
-```
-
-- BGP: 
-```
-  sublime-text cfg_file_snapcheck_bgp_states.yml 
-  sublime-text testfiles/devices.yml 
-  sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
-```
 
 - BGP (local snapchecks, i.e, you first need to get a snapshot using the subcommand snap): 
 ```
