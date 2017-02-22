@@ -104,7 +104,7 @@ sudo pip install jxmlease
 ```
 sudo pip install ansible
 ```
-Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has the requirements installed.   
+Another option would be to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has the requirements installed.   
 
 ### Requirements on the Junos devices:
 Configure netconf on the Junos devices:
@@ -175,6 +175,9 @@ ex4300-17                  : ok=3    changed=2    unreachable=0    failed=0
 ex4300-18                  : ok=3    changed=2    unreachable=0    failed=0   
 ex4300-9                   : ok=3    changed=2    unreachable=0    failed=0   
 localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+
+$ ls *.conf
+ex4300-17.conf  ex4300-18.conf  ex4300-9.conf
 ```
 
 ## Vagrant: 
@@ -219,19 +222,57 @@ jsnapy -h
 ```
 
 #### Snapcheck:
-Use this subcommand to compare the current configuration or the current operationnal states against pre-defined criteria.    
+Use this subcommand to compare the current configuration or the current operational states against pre-defined criteria.    
 
 ##### Syntax:  
 ```
 jsnapy --snapcheck <snap_file_name> -f <config_file>
 ```
+##### Examples
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_intf_states.yml
+jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml 
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
+jsnapy --snapcheck -f cfg_file_snapcheck_cfg.yml 
+```
 
-##### Configuration file example: 
+##### JSNAPy files examples: 
+
+Snapcheck interfaces states:
 ```
-sublime-text config.snapcheck.states.yml 
+sublime-text cfg_file_snapcheck_intf_states.yml
 sublime-text testfiles/devices.yml 
-sublime-text testfiles/test.snapcheck.states.yml 
+sublime-text test_file_snapcheck_intf_states.yml
 ```
+
+Snapcheck the alarms: 
+```
+sublime-text cfg_file_snapcheck_alarms.yml 
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test_file_snapcheck_alarms.yml
+```
+
+Snapcheck the bgp states: 
+```
+sublime-text cfg_file_snapcheck_bgp_states.yml 
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
+```
+
+Snapcheck the bgp states (for local snapchecks, i.e, you first need to get a snapshot using the subcommand snap): 
+```
+sublime-text cfg_file_snapcheck_bgp_states_on_local_snapshots.yml
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
+```
+
+Snapcheck the configuration: 
+```
+sublime-text cfg_file_snapcheck_cfg.yml 
+sublime-text testfiles/devices.yml 
+```
+
+
 
 ##### Snapshot name: 
 The default snapshot name is snap_temp. Example using the default snapshot name: 
