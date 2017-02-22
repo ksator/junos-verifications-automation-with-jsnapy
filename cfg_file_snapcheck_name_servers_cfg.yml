@@ -2,4 +2,4 @@
       - include: devices.yml
         group: EX4300
     tests:
-      - test_file_snapcheck_cfg.yml
+      - test_file_snapcheck_name_servers_cfg.yml

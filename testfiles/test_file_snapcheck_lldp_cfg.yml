@@ -1,0 +1,19 @@
+tests_include:
+  - lldp
+
+lldp:
+  - rpc: get-config
+  - kwargs:
+      filter_xml: configuration/protocols/lldp
+  - item:
+      xpath: //configuration/protocols/lldp/interface[normalize-space(name) = "ge-0/0/0"]
+      tests:
+        - exists: name 
+          info: "Test Succeeded !! lldp is configured for interface <{{post['name']}}>."
+          err: "Test Failed !! lldp is not configured for interface <{{post['name']}}>"
+  - item:
+      xpath: //configuration/protocols/lldp/interface[normalize-space(name) = "ge-0/0/1"]
+      tests:
+        - exists: name 
+          info: "Test Succeeded !! lldp is configured for interface <{{post['name']}}>."
+          err: "Test Failed !! lldp is not configured for interface <{{post['name']}}>."
