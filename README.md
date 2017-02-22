@@ -536,7 +536,7 @@ sublime-text python/snapcheckdata.py
 python python/snapcheckdata.py 
 ```
 
-Local snapcheck, jsnapy without pyez:  
+Local snapcheck (snap + local snapcheck workflow), jsnapy without pyez:  
 ```
 sublime-text python/snapchecklocal.py 
 python python/snapchecklocal.py 
