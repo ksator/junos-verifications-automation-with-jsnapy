@@ -290,7 +290,7 @@ jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml
 
 ###### Compare the current configuration against pre-defined criteria: 
 
-- LLDP
+- LLDP:  
 JSNAPy files details:  
 ```
 sublime-text cfg_file_snapcheck_lldp_cfg.yml 
@@ -301,10 +301,10 @@ sublime-text testfiles/test_file_snapcheck_lldp_cfg.yml
 Usage with default snapshot name: 
 
 ```
-  jsnapy --snapcheck -f cfg_file_snapcheck_lldp_cfg.yml 
+jsnapy --snapcheck -f cfg_file_snapcheck_lldp_cfg.yml 
 ```
 
-- Name-servers
+- Name-servers:  
 JSNAPy files details:  
 ```
 sublime-text cfg_file_snapcheck_name_servers_cfg.yml 
@@ -324,7 +324,7 @@ jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml snapshot_name
 ls -l snapshots/*_snapshot_name_*
 ```
 
-- Various topics
+- Various topics:  
 JSNAPy files details:  
 ```
 sublime-text cfg_file_snapcheck_cfg.yml 
