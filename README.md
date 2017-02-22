@@ -237,7 +237,7 @@ jsnapy --snapcheck <snap_file_name> -f <config_file>
 ls snapshots/*<snap_file_name>* -l
 ```
 ##### Examples 
-###### Compare the current operational states against pre-defined criteria:  
+Compare the current operational states against pre-defined criteria:  
 - Using the default snapshot name: 
 ```
   jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml 
@@ -250,7 +250,8 @@ ls snapshots/*<snap_file_name>* -l
   jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml snapshot_name
   ls -l snapshots/*_snapshot_name_*
 ```
-###### Compare the current configuration against pre-defined criteria: 
+
+Compare the current configuration against pre-defined criteria: 
 - Using the default snapshot name: 
 ```
   jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml 
@@ -265,35 +266,38 @@ ls snapshots/*<snap_file_name>* -l
 
 ##### JSNAPy files details: 
 
-Snapcheck interfaces states:
+Compare the current operational states against pre-defined criteria:  
+
+- Interfaces:
 ```
 sublime-text cfg_file_snapcheck_intf_states.yml
 sublime-text testfiles/devices.yml 
 sublime-text test_file_snapcheck_intf_states.yml
 ```
 
-Snapcheck the alarms: 
+- Alarms: 
 ```
 sublime-text cfg_file_snapcheck_alarms.yml 
 sublime-text testfiles/devices.yml 
 sublime-text testfiles/test_file_snapcheck_alarms.yml
 ```
 
-Snapcheck the bgp states: 
+- BGP: 
 ```
 sublime-text cfg_file_snapcheck_bgp_states.yml 
 sublime-text testfiles/devices.yml 
 sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
 ```
 
-Snapcheck the bgp states (for local snapchecks, i.e, you first need to get a snapshot using the subcommand snap): 
+- BGP (local snapchecks, i.e, you first need to get a snapshot using the subcommand snap): 
 ```
 sublime-text cfg_file_snapcheck_bgp_states_on_local_snapshots.yml
 sublime-text testfiles/devices.yml 
 sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
 ```
 
-Snapcheck the configuration: 
+Compare the current configuration against pre-defined criteria: 
+
 ```
 sublime-text cfg_file_snapcheck_cfg.yml 
 sublime-text testfiles/devices.yml 
