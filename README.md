@@ -242,51 +242,50 @@ Compare the current operational states against pre-defined criteria:
 
 - Alarms: 
 
-  JSNAPy files details: 
+JSNAPy files details: 
 ```
-  sublime-text cfg_file_snapcheck_alarms.yml 
-  sublime-text testfiles/devices.yml 
-  sublime-text testfiles/test_file_snapcheck_alarms.yml
-```
-
-  Usage with default snapshot name: 
-```
-  jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml 
-  ls -l snapshots/*_snap_temp_*
+sublime-text cfg_file_snapcheck_alarms.yml 
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test_file_snapcheck_alarms.yml
 ```
 
-  Usage with another snapshot name: 
+Usage with default snapshot name: 
 ```
-  jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml snapshot_name
-  ls -l snapshots/*_snapshot_name_*
+jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml 
+ls -l snapshots/*_snap_temp_*
 ```
 
+Usage with another snapshot name: 
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml snapshot_name
+ls -l snapshots/*_snapshot_name_*
+```
 
 - Interfaces: 
 
-  JSNAPy files details: 
+JSNAPy files details: 
 ```
-  sublime-text cfg_file_snapcheck_intf_states.yml
-  sublime-text testfiles/devices.yml 
-  sublime-text test_file_snapcheck_intf_states.yml
+sublime-text cfg_file_snapcheck_intf_states.yml
+sublime-text testfiles/devices.yml 
+sublime-text test_file_snapcheck_intf_states.yml
 ```
 
-  Usage with default snapshot name: 
+Usage with default snapshot name: 
 ```
-  jsnapy --snapcheck -f cfg_file_snapcheck_intf_states.yml
+jsnapy --snapcheck -f cfg_file_snapcheck_intf_states.yml
 ```
 
 - BGP:
 
-  JSNAPy files details:  
+JSNAPy files details:  
 ```
-  sublime-text cfg_file_snapcheck_bgp_states.yml 
-  sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
+sublime-text cfg_file_snapcheck_bgp_states.yml 
+sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
 ```
 
-  Usage with default snapshot name: 
+Usage with default snapshot name: 
 ```
-  jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
 ```
 
 Compare the current configuration against pre-defined criteria: 
