@@ -8,13 +8,15 @@ from slacker import Slacker
 js = SnapAdmin()
 
 # the variable config_file refers to the jsnapy configuration file
-config_file = "config.check.yml"
+config_file = "cfg_file_check_bgp_states.yml"
 
 # taking first snapshots using jsnapy
 # Performing function similar to --snap
 print "taking first snapshots using jsnapy"
 js.snap(config_file, "pre")
 # jsnapy closed the connection after the snapshot. 
+
+# this is where you are supposed to apply your configuration changes
 
 # taking second snapshot using jsnapy
 # Performing function similar to --snap

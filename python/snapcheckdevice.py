@@ -1,5 +1,5 @@
 # usage of jsnapy and pyez python libraries together.   
-# Example showing how jsnapty can reuse an existing device connection from pyez
+# Example showing how jsnapy can reuse an existing device connection from pyez
 
 from jnpr.jsnapy import SnapAdmin
 
@@ -34,7 +34,7 @@ print "auditing the device " + dev_obj.facts["hostname"] + " using jsnapy"
 js = SnapAdmin()
 
 # the variable config_file refers to the jsnapy configuration file
-config_file = "config.snapcheck.configuration.yml"
+config_file = "cfg_file_snapcheck_bgp_states.yml"
 
 # Performing function similar to --snapcheck
 # taking a snapshot (called snap) and comparing it against predefined criteria

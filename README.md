@@ -352,9 +352,9 @@ You can set the verbosity to debug level messages using -v
 jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml  -v 
 ```
 
-##### Optionnal arguments: 
-You can use optionnal arguments.  
-Run this command to discover the optionnal arguments:     
+##### Optional arguments: 
+You can use optional arguments.  
+Run this command to discover the optional arguments:     
 ```
 jsnapy -h
 ```

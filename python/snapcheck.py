@@ -7,7 +7,7 @@ from jnpr.jsnapy import SnapAdmin
 js = SnapAdmin()
 
 # the variable config_file refers to the jsnapy configuration file
-config_file = "config.snapcheck.states.yml"
+config_file = "cfg_file_snapcheck_bgp_states.yml"
 
 # Performing function similar to --snapcheck
 # taking a snapshot (called snap_from_python) and comparing it against predefined criteria

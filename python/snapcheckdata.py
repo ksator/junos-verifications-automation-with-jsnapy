@@ -13,7 +13,7 @@ config_data = """
       - include: devices.yml
         group: EX4300
     tests:
-      - test.snapcheck.states.yml
+      - test_file_snapcheck_bgp_states.yml
 """
 
 # Performing function similar to --snapcheck

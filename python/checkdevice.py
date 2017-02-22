@@ -12,7 +12,7 @@ from pprint import pprint
 js = SnapAdmin()
 
 # the variable config_file refers to the jsnapy configuration file
-config_file = "config.check.yml"
+config_file = "cfg_file_check_bgp_states.yml"
 
 # taking first snapshot using jsnapy
 # Performing function similar to --snap
