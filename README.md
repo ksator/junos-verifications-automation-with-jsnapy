@@ -420,11 +420,14 @@ https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments
 ###### Examples:  
 ```
 ls other_jsnapy_folder/ -l
-
-jsnapy --snapcheck -f config.check.bgp.states.1.yml --folder other_jsnapy_folder
-
-jsnapy --snap -f config.check.bgp.states.yml --folder other_jsnapy_folder STORED
-jsnapy --snapcheck -f config.check.bgp.states.yml --folder other_jsnapy_folder
+ls other_jsnapy_folder/testfiles -l
+```
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml --folder other_jsnapy_folder
+```
+```
+jsnapy --snap -f cfg_file_snapcheck_bgp_states_on_local_snapshots.yml --folder other_jsnapy_folder STORED
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states_on_local_snapshots.yml --folder other_jsnapy_folder
 ```
 
 #### Snap: 
@@ -436,20 +439,20 @@ jsnapy --snap <file_name> -f <config_file>
 ```
 
 ##### Examples: 
+- BGP operational states:
 ```
-sublime-text config.check.yml
-sublime-text testfiles/test.check.yml 
+sublime-text cfg_file_check_bgp_states.yml
+sublime-text testfiles/test_file_check_bgp_states.yml
 
-jsnapy --snap pre -f config.check.yml -v
+jsnapy --snap pre -f cfg_file_check_bgp_states.yml -v
 ls snapshots/*_pre_*
 
-jsnapy --snap post -f config.check.yml
+jsnapy --snap post -f cfg_file_check_bgp_states.yml
 ls snapshots/*_post_*
 ```
 
 #### Check: 
-
-Compares two snapshots based on tests.  
+Use this subcommand to compares two snapshots based on tests.  
 So you first need to take 2 snapshots (snap).  
 
 ##### Syntax: 
@@ -458,18 +461,22 @@ jsnapy --check <pre_snap> <post_snap> -f <config_file>
 ```
 
 ##### Examples: 
+- BGP operational states:
 ```
-jsnapy --check pre post -f config.check.yml -v
+jsnapy --snap pre -f cfg_file_check_bgp_states.yml 
+jsnapy --snap post -f cfg_file_check_bgp_states.yml
+jsnapy --check pre post -f cfg_file_check_bgp_states.yml -v
 ```
-
-test if ip @ configured on interfaces changed: 
+- Interfaces configurations:
 ```
-sublime-text config.diff.interfaces.yml
+sublime-text cfg_file_check_intf_cfg.yml
 sublime-text testfiles/devices.yml 
-sublime-text testfiles/test.diff.interfaces.yml 
-jsnapy --snap pre -f config.diff.interfaces.yml 
-jsnapy --snap post -f config.diff.interfaces.yml 
-jsnapy --check pre post -f config.diff.interfaces.yml -v
+sublime-text testfiles/test_file_check_intf_cfg.yml
+jsnapy --snap pre -f cfg_file_check_intf_cfg.yml
+ls snapshots/*_pre_*
+jsnapy --snap post -f cfg_file_check_intf_cfg.yml
+ls snapshots/*_post_*
+jsnapy --check pre post-f cfg_file_check_intf_cfg.yml -v
 ```
 
 #### Diff:
@@ -484,11 +491,14 @@ jsnapy --diff <pre_snap> <post_snap> -f <config_file>
 
 ##### Examples: 
 ```
-sublime-text config.diff.yml 
-sublime-text testfiles/test.diff.yml 
-jsnapy --snap pre -f config.diff.yml
-jsnapy --snap post -f config.diff.yml
-jsnapy --diff pre post -f config.diff.yml
+sublime-text cfg_file_diff.yml
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test_file_diff.yml 
+jsnapy --snap pre -f cfg_file_diff.yml
+ls snapshots/*_pre_*
+jsnapy --snap post -f cfg_file_diff.yml
+ls snapshots/*_post_*
+jsnapy --diff pre post -f cfg_file_diff.yml
 ```
 
 ### JSNAPy python module: 
