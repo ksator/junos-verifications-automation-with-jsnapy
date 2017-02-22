@@ -238,7 +238,7 @@ ls snapshots/*<snap_file_name>* -l
 ```
 ##### Examples 
 
-Compare the current operational states against pre-defined criteria:  
+###### Compare the current operational states against pre-defined criteria:  
 
 - Alarms: 
 
@@ -288,49 +288,54 @@ Usage with default snapshot name:
 jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
 ```
 
-Compare the current configuration against pre-defined criteria: 
+###### Compare the current configuration against pre-defined criteria: 
 
-- Using the default snapshot name: 
-```
-  jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml 
-  jsnapy --snapcheck -f cfg_file_snapcheck_lldp_cfg.yml 
-  jsnapy --snapcheck -f cfg_file_snapcheck_cfg.yml
-```
-- Using another snapshot name: 
-```
-  jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml snapshot_name
-  ls -l snapshots/*_snapshot_name_*
-```
-
-
-
-- BGP (local snapchecks, i.e, you first need to get a snapshot using the subcommand snap): 
-```
-  sublime-text cfg_file_snapcheck_bgp_states_on_local_snapshots.yml
-  sublime-text testfiles/devices.yml 
-  sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
-```
-
-Compare the current configuration against pre-defined criteria: 
 - LLDP
+JSNAPy files details:  
 ```
-  sublime-text cfg_file_snapcheck_lldp_cfg.yml 
-  sublime-text testfiles/devices.yml 
-  sublime-text testfiles/test_file_snapcheck_lldp_cfg.yml
+sublime-text cfg_file_snapcheck_lldp_cfg.yml 
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test_file_snapcheck_lldp_cfg.yml
+```
+
+Usage with default snapshot name: 
+
+```
+  jsnapy --snapcheck -f cfg_file_snapcheck_lldp_cfg.yml 
 ```
 
 - Name-servers
+JSNAPy files details:  
 ```
-  sublime-text cfg_file_snapcheck_name_servers_cfg.yml 
-  sublime-text testfiles/devices.yml 
-  sublime-text testfiles/test_file_snapcheck_name_servers_cfg.yml
+sublime-text cfg_file_snapcheck_name_servers_cfg.yml 
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test_file_snapcheck_name_servers_cfg.yml
+```
+
+Usage with default snapshot name: 
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml 
+ls -l snapshots/*_snap_temp_*
+```
+
+Using another snapshot name: 
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml snapshot_name
+ls -l snapshots/*_snapshot_name_*
 ```
 
 - Various topics
+JSNAPy files details:  
 ```
-  sublime-text cfg_file_snapcheck_cfg.yml 
-  sublime-text testfiles/devices.yml 
-  sublime-text testfiles/test_file_snapcheck_cfg.yml
+sublime-text cfg_file_snapcheck_cfg.yml 
+sublime-text testfiles/devices.yml 
+sublime-text testfiles/test_file_snapcheck_cfg.yml
+```
+
+Usage with default snapshot name: 
+
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_cfg.yml
 ```
 
 ##### Verbosity: 
@@ -341,7 +346,7 @@ The default console logging level is info:
 
 You can set the verbosity to debug level messages using -v 
 ```
-jsnapy --snapcheck -f config.snapcheck.states.yml -v 
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml  -v 
 ```
 
 ##### Optionnal arguments: 
@@ -354,12 +359,12 @@ jsnapy -h
 ###### Examples: 
 It is not required 172.30.179.73 exists in the config file config.snapcheck.states.yml: 
 ```
-jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73 -l pytraining -p Poclab123 -P 830
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml -v -t 172.30.179.73 -l pytraining -p Poclab123 -P 830
 ```
 
 Jsnapy will prompt you to provide the username and password: 
 ```
-jsnapy --snapcheck -f config.snapcheck.states.yml -v -t 172.30.179.73
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml -v -t 172.30.179.73
 ```
 
 ##### Local snapcheck:
@@ -376,31 +381,31 @@ jsnapy --snapcheck <snap_name> -f <config_file> --local
 
 ###### Examples: 
 ```
-jsnapy --snap -f config.snapcheck.states.yml snapshot_name
+jsnapy --snap -f cfg_file_snapcheck_bgp_states.yml snapshot_name
 ls snapshots/*snapshot_name* -l
 ```
 ```
-jsnapy --snapcheck -f config.snapcheck.states.yml --local snapshot_name  
-jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snapshot_name
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml  --local snapshot_name  
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml  --local -v snapshot_name
 ```
 
 snap_temp is the default snapshot name, so these 2 commands do the same thing:   
 ```
-jsnapy --snapcheck -f config.snapcheck.states.yml --local -v 
-jsnapy --snapcheck -f config.snapcheck.states.yml --local -v snap_temp
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml --local -v 
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml --local -v snap_temp
 ```
 
 Use the key local in the configuration file if you want to run snapcheck on stored snapshots.  
 Works with --snapcheck command only.  
-For exemple in config.snapcheck.local.yml, STORED is being used.  
+For exemple in cfg_file_snapcheck_bgp_states_on_local_snapshots.yml, STORED is being used.  
 ```
-sublime-text config.snapcheck.local.yml
+sublime-text cfg_file_snapcheck_bgp_states_on_local_snapshots.yml
 ```
 So we might have already done a snap. 
 ```
-jsnapy --snap STORED -f config.snapcheck.local.yml
+jsnapy --snap STORED -f cfg_file_snapcheck_bgp_states_on_local_snapshots.yml
 ls snapshots/*STORED* -l
-jsnapy --snapcheck -f config.snapcheck.local.yml 
+jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states_on_local_snapshots.yml
 ```
 
 ##### Custom jsnapy lookup directory 
