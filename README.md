@@ -270,41 +270,53 @@ Compare the current operational states against pre-defined criteria:
 
 - Interfaces:
 ```
-sublime-text cfg_file_snapcheck_intf_states.yml
-sublime-text testfiles/devices.yml 
-sublime-text test_file_snapcheck_intf_states.yml
+  sublime-text cfg_file_snapcheck_intf_states.yml
+  sublime-text testfiles/devices.yml 
+  sublime-text test_file_snapcheck_intf_states.yml
 ```
 
 - Alarms: 
 ```
-sublime-text cfg_file_snapcheck_alarms.yml 
-sublime-text testfiles/devices.yml 
-sublime-text testfiles/test_file_snapcheck_alarms.yml
+  sublime-text cfg_file_snapcheck_alarms.yml 
+  sublime-text testfiles/devices.yml 
+  sublime-text testfiles/test_file_snapcheck_alarms.yml
 ```
 
 - BGP: 
 ```
-sublime-text cfg_file_snapcheck_bgp_states.yml 
-sublime-text testfiles/devices.yml 
-sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
+  sublime-text cfg_file_snapcheck_bgp_states.yml 
+  sublime-text testfiles/devices.yml 
+  sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
 ```
 
 - BGP (local snapchecks, i.e, you first need to get a snapshot using the subcommand snap): 
 ```
-sublime-text cfg_file_snapcheck_bgp_states_on_local_snapshots.yml
-sublime-text testfiles/devices.yml 
-sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
+  sublime-text cfg_file_snapcheck_bgp_states_on_local_snapshots.yml
+  sublime-text testfiles/devices.yml 
+  sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
 ```
 
 Compare the current configuration against pre-defined criteria: 
-
+- LLDP
 ```
-sublime-text cfg_file_snapcheck_cfg.yml 
-sublime-text testfiles/devices.yml 
+  sublime-text cfg_file_snapcheck_lldp_cfg.yml 
+  sublime-text testfiles/devices.yml 
+  sublime-text testfiles/test_file_snapcheck_lldp_cfg.yml
 ```
 
+- Name-servers
+```
+  sublime-text cfg_file_snapcheck_name_servers_cfg.yml 
+  sublime-text testfiles/devices.yml 
+  sublime-text testfiles/test_file_snapcheck_name_servers_cfg.yml
+```
 
-
+- Various topics
+```
+  sublime-text cfg_file_snapcheck_cfg.yml 
+  sublime-text testfiles/devices.yml 
+  sublime-text testfiles/test_file_snapcheck_cfg.yml
+```
 
 ##### Verbosity: 
 The default console logging level is info:
