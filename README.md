@@ -225,15 +225,43 @@ jsnapy -h
 Use this subcommand to compare the current configuration or the current operational states against pre-defined criteria.    
 
 ##### Syntax:  
+###### Using the default snapshot name
+The default snapshot name is snap_temp. 
+```
+jsnapy --snapcheck -f <config_file>
+ls snapshots/*snap_temp* -l
+```
+###### Using another snapshot name
+You can define a snapshot name.  
 ```
 jsnapy --snapcheck <snap_file_name> -f <config_file>
+ls snapshots/*<snap_file_name>* -l
 ```
-##### Examples
+##### Examples 
+###### Compare the current operational states against pre-defined criteria:  
+####### Using the default snapshot name
 ```
-jsnapy --snapcheck -f cfg_file_snapcheck_intf_states.yml
 jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml 
+ls -l snapshots/*_snap_temp_*
+jsnapy --snapcheck -f cfg_file_snapcheck_intf_states.yml
 jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
-jsnapy --snapcheck -f cfg_file_snapcheck_cfg.yml 
+```
+####### Using the another snapshot name
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml snapshot_name
+ls -l snapshots/*_snapshot_name_*
+```
+###### Compare the current configuration against pre-defined criteria: 
+####### Using the default snapshot name
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml 
+jsnapy --snapcheck -f cfg_file_snapcheck_lldp_cfg.yml 
+jsnapy --snapcheck -f cfg_file_snapcheck_cfg.yml
+```
+####### Using another snapshot name
+```
+jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml snapshot_name
+ls -l snapshots/*_snapshot_name_*
 ```
 
 ##### JSNAPy files examples: 
@@ -274,21 +302,6 @@ sublime-text testfiles/devices.yml
 
 
 
-##### Snapshot name: 
-The default snapshot name is snap_temp. Example using the default snapshot name: 
-```
-jsnapy --snapcheck -f config.snapcheck.states.yml
-ls snapshots/*snap_temp* -l
-more snapshots/172.30.179.95_snap_temp_show_bgp_neighbor.xml
-more snapshots/172.30.179.95_snap_temp_get_bgp_summary_information.xml 
-more snapshots/172.30.179.95_snap_temp_show_interface_terse.xml
-```
-
-You can define a snapshot name. Example using a snapshot name you define:         
-```
-jsnapy --snapcheck snapshot_name -f config.snapcheck.states.yml
-ls snapshots/*snapshot_name* -l
-```
 
 ##### Verbosity: 
 The default console logging level is info:
