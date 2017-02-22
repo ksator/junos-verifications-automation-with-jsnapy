@@ -476,7 +476,7 @@ jsnapy --snap pre -f cfg_file_check_intf_cfg.yml
 ls snapshots/*_pre_*
 jsnapy --snap post -f cfg_file_check_intf_cfg.yml
 ls snapshots/*_post_*
-jsnapy --check pre post-f cfg_file_check_intf_cfg.yml -v
+jsnapy --check pre post -f cfg_file_check_intf_cfg.yml -v
 ```
 
 #### Diff:

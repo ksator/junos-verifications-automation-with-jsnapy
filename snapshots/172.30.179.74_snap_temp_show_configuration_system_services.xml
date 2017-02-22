@@ -1,0 +1,14 @@
+<configuration-information>
+<configuration-output>
+ftp;
+ssh;
+telnet;
+xnm-clear-text;
+netconf {
+    ssh;
+}
+web-management {
+    http;
+}
+</configuration-output>
+</configuration-information>
