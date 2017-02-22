@@ -225,46 +225,45 @@ jsnapy -h
 Use this subcommand to compare the current configuration or the current operational states against pre-defined criteria.    
 
 ##### Syntax:  
-###### Using the default snapshot name
-The default snapshot name is snap_temp. 
+The default snapshot name is snap_temp: 
 ```
 jsnapy --snapcheck -f <config_file>
 ls snapshots/*snap_temp* -l
 ```
-###### Using another snapshot name
-You can define a snapshot name.  
+
+You can define a snapshot name:   
 ```
 jsnapy --snapcheck <snap_file_name> -f <config_file>
 ls snapshots/*<snap_file_name>* -l
 ```
 ##### Examples 
 ###### Compare the current operational states against pre-defined criteria:  
-####### Using the default snapshot name
+Using the default snapshot name: 
 ```
 jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml 
 ls -l snapshots/*_snap_temp_*
 jsnapy --snapcheck -f cfg_file_snapcheck_intf_states.yml
 jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
 ```
-####### Using the another snapshot name
+Using the another snapshot name: 
 ```
 jsnapy --snapcheck -f cfg_file_snapcheck_alarms.yml snapshot_name
 ls -l snapshots/*_snapshot_name_*
 ```
 ###### Compare the current configuration against pre-defined criteria: 
-####### Using the default snapshot name
+Using the default snapshot name: 
 ```
 jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml 
 jsnapy --snapcheck -f cfg_file_snapcheck_lldp_cfg.yml 
 jsnapy --snapcheck -f cfg_file_snapcheck_cfg.yml
 ```
-####### Using another snapshot name
+Using another snapshot name: 
 ```
 jsnapy --snapcheck -f cfg_file_snapcheck_name_servers_cfg.yml snapshot_name
 ls -l snapshots/*_snapshot_name_*
 ```
 
-##### JSNAPy files examples: 
+##### JSNAPy files details: 
 
 Snapcheck interfaces states:
 ```
