@@ -124,10 +124,10 @@ The inventory file we are using in this repository is [hosts] (https://github.co
 it also define the ip address of each device with the variable junos_host. This variable is reused in the playbooks. 
 
 ### Ansible Config file:
-There is an [ansible.cfg file] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ansible.cfg) at the root of the repository. It refers to our inventory file ([hosts] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts)): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
+There is an [ansible.cfg] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ansible.cfg)  file at the root of the repository. It refers to our inventory file ([hosts] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts)): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
 
 ### Ansible variables:
-[group_vars] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/group_vars/) and [host_vars] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/host_vars) directories at the root of this repository define variables for hosts and for groups. The [inventory file] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts) (hosts file at the root of the repository) also defines some variables. In order to see all variables for an hostname, you can run this command:
+[group_vars] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/group_vars/) and [host_vars] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/host_vars) directories at the root of this repository define variables for hosts and for groups. The [inventory] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts) file (hosts file at the root of the repository) also defines some variables. In order to see all variables for an hostname, you can run this command:
 ```
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
