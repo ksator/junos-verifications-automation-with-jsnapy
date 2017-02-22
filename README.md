@@ -277,12 +277,12 @@ Compare the current operational states against pre-defined criteria:
 - BGP:
  - JSNAPy files details:  
 ```
-  sublime-text cfg_file_snapcheck_bgp_states.yml 
-  sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
+   sublime-text cfg_file_snapcheck_bgp_states.yml 
+   sublime-text testfiles/test_file_snapcheck_bgp_states.yml 
 ```
  - Usage with default snapshot name: 
 ```
-  jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
+   jsnapy --snapcheck -f cfg_file_snapcheck_bgp_states.yml 
 ```
 
 Compare the current configuration against pre-defined criteria: 
