@@ -1,12 +1,12 @@
 tests_include:
 #  - minimum-time-v1
 #  - minimum-time-v2
-#  - minimum-time-v3
+  - minimum-time-v3
   - domain-name
-#  - services
-#  - telnet
-#  - name-servers-present
-#  - name-servers-absent
+  - services
+  - telnet
+  - name-servers-present
+  - name-servers-absent
 #  - name-servers
 #  - lldp
 
