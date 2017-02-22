@@ -66,13 +66,13 @@ more /var/log/jsnapy/jsnapy.log
 ## About this repository: 
 It has ready to use JSNAPy content.  
 
-### files naming convention: 
-Ansible playbooks: pb.*.yml  
-Jsnapy configuration files: cfg_file_*.yml  
-Jsnapy test files: test_file_*.yml  
-Jsnapy files for snap + snap + check workflow: cfg_file_check_*.yml and test_file_check_*.yml  
-Jsnapy files for snap  + snap +  diff workflow: cfg_file_diff_*.yml and test_file_diff_*.yml  
-Jsnapy files for snapcheck or snap + local snapcheck workflow: cfg_file_snapcheck_*.yml and test_file_snapcheck_*.yml  
+I am using this files naming convention: 
+- Ansible playbooks: pb.*.yml  
+- Jsnapy configuration files: cfg_file_*.yml  
+- Jsnapy test files: test_file_*.yml  
+- Jsnapy files for snap + snap + check workflow: cfg_file_check_*.yml and test_file_check_*.yml  
+- Jsnapy files for snap  + snap +  diff workflow: cfg_file_diff_*.yml and test_file_diff_*.yml  
+- Jsnapy files for snapcheck or snap + local snapcheck workflow: cfg_file_snapcheck_*.yml and test_file_snapcheck_*.yml  
 
 ## Clone this git repository: 
 ```
