@@ -117,8 +117,13 @@ The default netconf port is 830. Make sure your server/laptop can access to the 
 ### Ansible playbook: 
 The Ansible playbook to configure the devices is [pb.yml] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/pb.yml). It is at the root of this repository.  
 
-### Jinja2 template: 
-The jinja2 template to build the junos configuration is [template.j2] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/template.j2). It is at the root of this repository. The playbook [pb.yml] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/pb.yml) will render the template [template.j2] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/template.j2) using the devices [variables] (https://github.com/ksator/junos-verifications-automation-with-jsnapy#ansible-variables) and will push and commit the rendered junos configuration to the devices. 
+### junos template: 
+The jinja2 template to build the junos configuration is [template.j2] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/template.j2). It is at the root of this repository.  
+The playbook [pb.yml] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/pb.yml) will render the template [template.j2] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/template.j2) using the devices [variables] (https://github.com/ksator/junos-verifications-automation-with-jsnapy#ansible-variables) and will push and commit the rendered junos configuration to the devices.  
+The rendered files are:  
+- [ex4300-9.conf] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-9.conf) 
+- [ex4300-17.conf] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-17.conf) 
+- [ex4300-18.conf] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-18.conf)
 
 ### Ansible inventory file:
 The inventory file we are using in this repository is [hosts] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts). It is at the root of the repository, so it is not at the default place.
