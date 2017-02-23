@@ -65,9 +65,17 @@ more /var/log/jsnapy/jsnapy.log
 # How to use this repository: 
 
 ## About this repository: 
+
+### what to find 
 It has ready to use JSNAPy content.  
 
-## Repository structure
+### Author
+Khelil Sator / Juniper Networks
+
+### Contributions:
+Please submit github issues and pull requests. 
+
+### Repository structure
 ```
 $ tree -d
 .
@@ -85,7 +93,7 @@ $ tree -d
 └── testfiles
 ```
 
-## files naming convention: 
+### files naming convention: 
 I am using this files naming convention: 
 - Ansible playbooks: pb.\*.yml  
 - Jsnapy configuration files: cfg_file_\*.yml    
@@ -578,3 +586,4 @@ junos_jsnapy module installation:
 ```
 sudo ansible-galaxy install Juniper.junos  
 ```
+
