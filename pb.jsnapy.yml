@@ -23,7 +23,7 @@
        host: "{{ junos_host }}"
        user: "{{ credentials.username }}"
        passwd: "{{ credentials.password }}"
-       action: snapcheck
+       action: "snapcheck"
        config_file: "{{ jsnapy_conf_file }}"
      register: jsnapy_test_1
 
@@ -39,4 +39,5 @@
        token: T2MBN64JX/B2N0Z2MEU/1OoB46XLX6Q1oFf89Xl2X9gq
        icon_url: "https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png"
        msg: "jsnapy test from pb.jsnapy.yml failed"
-     when: jsnapy_test_1.pass_Percentage != 100
+     when: jsnapy_test_1.passPercentage != 100
+

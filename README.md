@@ -586,4 +586,13 @@ junos_jsnapy module installation:
 ```
 sudo ansible-galaxy install Juniper.junos  
 ```
+#### Examples
+The playbook is pb.jsnapy.yml at the root of the repository. 
+I did not hardcode the jsnapy configuration file name, it is a variable. I did not define the value of this variable: 
+```
+$ ansible-playbook pb.jsnapy.yml --extra-vars jsnapy_conf_file=/etc/jsnapy/cfg_file_snapcheck_cfg.yml
+$ ansible-playbook pb.jsnapy.yml --extra-vars jsnapy_conf_file=/etc/jsnapy/cfg_file_snapcheck_bgp_states.yml
+$ ansible-playbook pb.jsnapy.yml --extra-vars jsnapy_conf_file=/etc/jsnapy/cfg_file_snapcheck_lldp_cfg.yml
+$ ansible-playbook pb.jsnapy.yml --extra-vars jsnapy_conf_file=/etc/jsnapy/cfg_file_snapcheck_alarms.yml
+```
 
