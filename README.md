@@ -12,6 +12,7 @@ Documentation: https://github.com/Juniper/jsnapy/wiki
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
 Book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104  
 Video: https://www.youtube.com/playlist?list=PLQ189o7cl3OwWSInb5hYsDfDPETrroAb2  
+Other repositories to test JSNAPy: https://github.com/titom73/jsnapy-tester 
 
 ## Installation: 
 Documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
@@ -65,6 +66,24 @@ more /var/log/jsnapy/jsnapy.log
 
 ## About this repository: 
 It has ready to use JSNAPy content.  
+
+## Repository structure
+```
+$ tree -d
+.
+├── group_vars
+│   └── all
+├── host_vars
+│   ├── ex4300-17
+│   ├── ex4300-18
+│   └── ex4300-9
+├── other_jsnapy_folder
+│   ├── snapshots
+│   └── testfiles
+├── python
+├── snapshots
+└── testfiles
+```
 
 ## files naming convention: 
 I am using this files naming convention: 
