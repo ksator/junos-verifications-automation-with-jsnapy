@@ -586,7 +586,10 @@ junos_jsnapy module installation:
 ```
 sudo ansible-galaxy install Juniper.junos  
 ```
-#### Examples
+
+you can use this module with or without jsnapy configuration files (i.e you can skip the jsnapy configuration file and use only a jsnapy test file)
+
+#### Examples using a jsnapy configuration file
 The playbook is pb.jsnapy.yml at the root of the repository. 
 I did not hardcode the jsnapy configuration file name, it is a variable. I did not define the value of this variable: 
 ```
@@ -595,4 +598,11 @@ $ ansible-playbook pb.jsnapy.yml --extra-vars jsnapy_conf_file=/etc/jsnapy/cfg_f
 $ ansible-playbook pb.jsnapy.yml --extra-vars jsnapy_conf_file=/etc/jsnapy/cfg_file_snapcheck_lldp_cfg.yml
 $ ansible-playbook pb.jsnapy.yml --extra-vars jsnapy_conf_file=/etc/jsnapy/cfg_file_snapcheck_alarms.yml
 ```
+
+#### Example skipping the jsnapy configuration file (using only a test file)
+The playbook is pb.jsnapy.test_file_only.yml at the root of the repository. 
+```
+$ ansible-playbook pb.jsnapy.test_file_only.yml
+```
+
 
