@@ -236,7 +236,7 @@ So:
 JSNAPy is supported in three modes:  
 - a command line tool 
 - a Python Module
-- An ansible module hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).
+- An ansible module hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).  
 We cover below examples using these 3 modes.   
 
 ### Command line tool:
