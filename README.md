@@ -12,6 +12,7 @@ Documentation: https://github.com/Juniper/jsnapy/wiki
 Samples: https://github.com/Juniper/jsnapy/tree/master/samples  
 Book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104  
 Video: https://www.youtube.com/playlist?list=PLQ189o7cl3OwWSInb5hYsDfDPETrroAb2  
+JSNAPY Guide: https://www.juniper.net/techpubs/en_US/junos-snapshot1.0/information-products/pathway-pages/junos-snapshot-python.pdf 
 Other repositories to test JSNAPy: https://github.com/titom73/jsnapy-tester 
 
 ## Installation: 
