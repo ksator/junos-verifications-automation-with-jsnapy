@@ -495,12 +495,14 @@ jsnapy --check <pre_snap> <post_snap> -f <config_file>
 
 ##### Examples: 
 - BGP operational states:  
+
 ```
 jsnapy --snap pre -f cfg_file_check_bgp_states.yml 
 jsnapy --snap post -f cfg_file_check_bgp_states.yml
 jsnapy --check pre post -f cfg_file_check_bgp_states.yml -v
 ```
 - Interfaces configurations:  
+
 ```
 sublime-text cfg_file_check_intf_cfg.yml
 sublime-text testfiles/devices.yml 
