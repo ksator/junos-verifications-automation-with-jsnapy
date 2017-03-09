@@ -494,13 +494,13 @@ jsnapy --check <pre_snap> <post_snap> -f <config_file>
 ```
 
 ##### Examples: 
-- BGP operational states:
+- BGP operational states:  
 ```
 jsnapy --snap pre -f cfg_file_check_bgp_states.yml 
 jsnapy --snap post -f cfg_file_check_bgp_states.yml
 jsnapy --check pre post -f cfg_file_check_bgp_states.yml -v
 ```
-- Interfaces configurations:
+- Interfaces configurations:  
 ```
 sublime-text cfg_file_check_intf_cfg.yml
 sublime-text testfiles/devices.yml 
@@ -517,12 +517,12 @@ Use this subcommand to compare two snapshots (either in xml or text format) char
 So you first need to take 2 snapshots (snap).  
 Supported only in command line mode.  
 
-##### Syntax: 
+##### Syntax:  
 ```
 jsnapy --diff <pre_snap> <post_snap> -f <config_file>
 ```
 
-##### Examples: 
+##### Examples:   
 ```
 sublime-text cfg_file_diff.yml
 sublime-text testfiles/devices.yml 
@@ -543,13 +543,13 @@ https://github.com/Juniper/jsnapy/wiki/4.-Module
 
 ##### Examples: 
 
-jsnapy without pyez: 
+jsnapy without pyez:  
 ```
 sublime-text python/check.py 
 python python/check.py 
 ```
 
-jsnapy and pyez together: 
+jsnapy and pyez together:  
 ```
 sublime-text python/checkdevice.py 
 python python/checkdevice.py 
@@ -569,13 +569,13 @@ sublime-text python/snapcheckdata.py
 python python/snapcheckdata.py 
 ```
 
-Local snapcheck (snap + local snapcheck workflow), jsnapy without pyez:  
+Local snapcheck (snap + local snapcheck workflow), jsnapy without pyez:   
 ```
 sublime-text python/snapchecklocal.py 
 python python/snapchecklocal.py 
 ```
 
-JSNAPy and PyEZ together: 
+JSNAPy and PyEZ together:   
 ```
 sublime-text python/snapcheckdevice.py 
 python python/snapcheckdevice.py 
