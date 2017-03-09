@@ -126,12 +126,14 @@ In order to configure your junos devices, you can use, as example, the following
 
 ### Requirements on your server/laptop:  
 - [Install the PyEZ dependencies] (https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
-- Install the python libraries junos-eznc and jxmlease. 
+- Install the python libraries junos-eznc and jxmlease.  
+
 ```
 sudo pip install junos-eznc
 sudo pip install jxmlease
 ```
-- Install ansible 
+- Install ansible  
+
 ```
 sudo pip install ansible
 ```
@@ -472,7 +474,8 @@ jsnapy --snap <file_name> -f <config_file>
 ```
 
 ##### Examples: 
-- BGP operational states:
+- BGP operational states:  
+
 ```
 sublime-text cfg_file_check_bgp_states.yml
 sublime-text testfiles/test_file_check_bgp_states.yml
