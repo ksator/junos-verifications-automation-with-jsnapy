@@ -13,10 +13,11 @@ Samples: https://github.com/Juniper/jsnapy/tree/master/samples
 Book: http://forums.juniper.net/t5/Day-One-Books/Day-One-Enabling-Automated-Network-Verifications-with-JSNAPy/ba-p/302104  
 JSNAPY Guide: https://www.juniper.net/techpubs/en_US/junos-snapshot1.0/information-products/pathway-pages/junos-snapshot-python.pdf  
 Other repositories to test JSNAPy: https://github.com/titom73/jsnapy-tester  
-Video: 
-- JSNAPy Overview: https://www.youtube.com/watch?v=t7oGEbfdCt8 
-- Others video: https://www.youtube.com/playlist?list=PLQ189o7cl3OwWSInb5hYsDfDPETrroAb2  
-
+Videos: 
+- JSNAPy Overview: https://www.youtube.com/watch?v=t7oGEbfdCt8   
+- JSNAPy Tutorial (Detailed): https://www.youtube.com/watch?v=it4HxJq0jR0  
+- Network Automation using Ansible & JSNAPy: https://www.youtube.com/watch?v=lv7lh3kwKns  
+- Others JSNAPy video: https://www.youtube.com/playlist?list=PLQ189o7cl3OwWSInb5hYsDfDPETrroAb2  
 
 ## Installation: 
 Documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation  
