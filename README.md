@@ -30,7 +30,7 @@ ls /etc/jsnapy/ -l
 ```
 
 ### jsnapy.cfg file: 
-/etc/jsnapy/jsnapy.cfg file contains default path for configuration files, snapshots and testfiles.  
+/etc/jsnapy/jsnapy.cfg file contains default path for configuration files, snapshots and test files.  
 If required, overwrite the path in this file with your paths.  
 ```
 sublime-text /etc/jsnapy/jsnapy.cfg 
@@ -71,8 +71,8 @@ more /var/log/jsnapy/jsnapy.log
 
 ## About this repository: 
 
-### what to find 
-It has ready to use JSNAPy content.  
+### What to find 
+It has ready-to-use JSNAPy content.  
 
 ### Author
 Khelil Sator / Juniper Networks
@@ -98,7 +98,8 @@ $ tree -d
 └── testfiles
 ```
 
-### files naming convention: 
+
+### Files naming convention: 
 I am using this files naming convention: 
 - Ansible playbooks: pb.\*.yml  
 - Jsnapy configuration files: cfg_file_\*.yml    
@@ -114,7 +115,7 @@ cd junos-verifications-automation-with-jsnapy
 ```
 
 ## Build a network topology: 
-The network topology used into this repository is composed by 3 junos devices (EX4300) connected in a triangle topology, configured with BGP.   
+The network topology used into this repository is composed of 3 junos devices (EX4300) connected in a triangle topology, configured with BGP.   
 
 The 3 junos devices are connected like this:   
 ex4300-17, ge-0/0/0 <-> ex4300-9, ge-0/0/0  
@@ -123,7 +124,7 @@ ex4300-18, ge-0/0/0 <-> ex4300-9, ge-0/0/1
 
 ## Configure your junos devices : 
 The 3 devices are configured with BGP.  
-In order to configure your junos devices, you can use, as example, the following method with Ansible.
+In order to configure your junos devices, you can use, for example, the following method with Ansible.
 
 ### Requirements on your server/laptop:  
 - [Install the PyEZ dependencies] (https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
@@ -146,7 +147,7 @@ Configure netconf on the Junos devices:
 set system services netconf ssh
 commit
 ```
-The default netconf port is 830. Make sure your server/laptop can access to the devices management ip address on port 830.  
+The default netconf port is 830. Make sure your server/laptop can access the devices management ip address on port 830.  
 
 ### Ansible playbook: 
 The Ansible playbook to configure the devices is [pb.yml] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/pb.yml). It is at the root of this repository.  
@@ -161,10 +162,10 @@ The rendered files are:
 
 ### Ansible inventory file:
 The inventory file we are using in this repository is [hosts] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts). It is at the root of the repository, so it is not at the default place.
-it also define the ip address of each device with the variable junos_host. This variable is reused in the playbooks. 
+It also defines the ip address of each device with the variable junos_host. This variable is re-used in the playbooks. 
 
 ### Ansible Config file:
-There is an [ansible.cfg] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ansible.cfg)  file at the root of the repository. It refers to our inventory file ([hosts] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts)): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
+There is an [ansible.cfg] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ansible.cfg)  file at the root of the repository. It refers to our inventory file ([hosts] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts)): So, even if the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
 
 ### Ansible variables:
 [group_vars] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/group_vars/) and [host_vars] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/host_vars) directories at the root of this repository define variables for hosts and for groups. The [inventory] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts) file (hosts file at the root of the repository) also defines some variables. In order to see all variables for an hostname, you can run this command:
@@ -229,11 +230,12 @@ To check the JSNAPy version, run the following command:
 jsnapy -V 
 ```
 
-Another option would to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has JSNAPy installed.   
+Another option would be to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has JSNAPy installed.   
 
 ## Fix the JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
-JSNAPy default lookup directory to search for JSNAPy test files files is /etc/jsnapy/testfiles.  
+JSNAPy default lookup directory to search for JSNAPy test files is /etc/jsnapy/testfiles.  
+
 So:  
 - Either copy the jsnapy files from this repository into the default lookup directories.  
 - Or edit /etc/jsnapy/jsnapy.cfg to change the default JSNAPy lookup directories. This is the easiest option and the one I am using.   
@@ -241,8 +243,8 @@ So:
 
 ## Use JSNAPy:  
 JSNAPy is supported in three modes:  
-- a command line tool 
-- a Python Module
+- A command line tool 
+- A Python Module
 - An ansible module hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).  
 
 We cover below examples using these 3 modes.   
@@ -489,7 +491,7 @@ ls snapshots/*_post_*
 ```
 
 #### Check: 
-Use this subcommand to compares two snapshots based on tests.  
+Use this subcommand to compare two snapshots based on tests.  
 So you first need to take 2 snapshots (snap).  
 
 ##### Syntax: 
@@ -599,7 +601,7 @@ junos_jsnapy module installation:
 sudo ansible-galaxy install Juniper.junos  
 ```
 
-you can use this module with or without jsnapy configuration files (i.e you can skip the jsnapy configuration file and use only a jsnapy test file)
+You can use this module with or without jsnapy configuration files (i.e you can skip the jsnapy configuration file and use only a jsnapy test file)
 
 #### Examples using a jsnapy configuration file
 The playbook is pb.jsnapy.yml at the root of the repository. 
