@@ -30,6 +30,12 @@
    - name: Debug jsnapy
      debug: 
        msg: "{{ jsnapy_test_1}}"
+   
+   - name: Check JSNAPy tests results
+     assert:
+       that:
+       - "jsnapy_test_1.passPercentage == 100"
+       msg: "jsnapy test from pb.jsnapy.yml on {{ inventory_hostname }} failed"
 
    - name: Send Slack notification when jsnapy fails
      local_action:
