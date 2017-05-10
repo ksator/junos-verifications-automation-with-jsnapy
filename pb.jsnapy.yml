@@ -41,3 +41,10 @@
        msg: "jsnapy test from pb.jsnapy.yml failed"
      when: jsnapy_test_1.passPercentage != 100
 
+   - name: Check JSNAPy tests results
+     assert:
+       that:
+       - "jsnapy_test_1.passPercentage == 100"
+       msg: "jsnapy test from pb.jsnapy.yml on {{ inventory_hostname }} failed"
+
+
