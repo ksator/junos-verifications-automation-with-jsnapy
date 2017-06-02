@@ -24,7 +24,7 @@ Documentation: https://github.com/Juniper/jsnapy/wiki/1.-Installation
 
 ## Default structure:
 While installing Jsnapy, it creates Jsnapy folder at /etc and and /etc/logs.  
-You can refer to this [link] (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs) for the details.  
+You can refer to this [link](https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs) for the details.  
 ```
 ls /etc/jsnapy/ -l
 ```
@@ -60,7 +60,7 @@ ls /etc/jsnapy/snapshots/ -l
 ### logging.yml file:
 The file /etc/jsnapy/logging.yml describes loggging settings.  
 The directory /var/log/jsnapy contains all log messages.  
-[Read the documentation for the details] (https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs)
+[Read the documentation for the details](https://github.com/Juniper/jsnapy/wiki#while-installing-jsnapy-it-creates-jsnapy-folder-at-etc-and-and-etclogs)
 ```
 sublime-text /etc/jsnapy/logging.yml 
 ls /var/log/jsnapy/ -l
@@ -127,7 +127,7 @@ The 3 devices are configured with BGP.
 In order to configure your junos devices, you can use, for example, the following method with Ansible.
 
 ### Requirements on your server/laptop:  
-- [Install the PyEZ dependencies] (https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
+- [Install the PyEZ dependencies](https://www.juniper.net/techpubs/en_US/junos-pyez1.0/topics/task/installation/junos-pyez-server-installing.html) 
 - Install the python libraries junos-eznc and jxmlease.  
 
 ```
@@ -139,7 +139,7 @@ sudo pip install jxmlease
 ```
 sudo pip install ansible
 ```
-Another option would be to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has the requirements installed.   
+Another option would be to pull from [docker hub](https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has the requirements installed.   
 
 ### Requirements on the Junos devices:
 Configure netconf on the Junos devices:
@@ -150,25 +150,25 @@ commit
 The default netconf port is 830. Make sure your server/laptop can access the devices management ip address on port 830.  
 
 ### Ansible playbook: 
-The Ansible playbook to configure the devices is [pb.yml] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/pb.yml). It is at the root of this repository.  
+The Ansible playbook to configure the devices is [pb.yml](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/pb.yml). It is at the root of this repository.  
 
 ### junos template: 
-The jinja2 template to build the junos configuration is [template.j2] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/template.j2). It is at the root of this repository.  
-The playbook [pb.yml] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/pb.yml) will render the template [template.j2] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/template.j2) using the devices [variables] (https://github.com/ksator/junos-verifications-automation-with-jsnapy#ansible-variables) and will push and commit the rendered junos configuration to the devices.  
+The jinja2 template to build the junos configuration is [template.j2](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/template.j2). It is at the root of this repository.  
+The playbook [pb.yml](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/pb.yml) will render the template [template.j2](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/template.j2) using the devices [variables](https://github.com/ksator/junos-verifications-automation-with-jsnapy#ansible-variables) and will push and commit the rendered junos configuration to the devices.  
 The rendered files are:  
-- [ex4300-9.conf] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-9.conf) 
-- [ex4300-17.conf] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-17.conf) 
-- [ex4300-18.conf] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-18.conf)
+- [ex4300-9.conf](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-9.conf) 
+- [ex4300-17.conf](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-17.conf) 
+- [ex4300-18.conf](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ex4300-18.conf)
 
 ### Ansible inventory file:
-The inventory file we are using in this repository is [hosts] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts). It is at the root of the repository, so it is not at the default place.
+The inventory file we are using in this repository is [hosts](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts). It is at the root of the repository, so it is not at the default place.
 It also defines the ip address of each device with the variable junos_host. This variable is re-used in the playbooks. 
 
 ### Ansible Config file:
-There is an [ansible.cfg] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ansible.cfg)  file at the root of the repository. It refers to our inventory file ([hosts] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts)): So, even if the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
+There is an [ansible.cfg](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/ansible.cfg)  file at the root of the repository. It refers to our inventory file ([hosts](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts)): So, even if the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands. 
 
 ### Ansible variables:
-[group_vars] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/group_vars/) and [host_vars] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/host_vars) directories at the root of this repository define variables for hosts and for groups. The [inventory] (https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts) file (hosts file at the root of the repository) also defines some variables. In order to see all variables for an hostname, you can run this command:
+[group_vars](https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/group_vars/) and [host_vars](https://github.com/ksator/junos-verifications-automation-with-jsnapy/tree/master/host_vars) directories at the root of this repository define variables for hosts and for groups. The [inventory](https://github.com/ksator/junos-verifications-automation-with-jsnapy/blob/master/hosts) file (hosts file at the root of the repository) also defines some variables. In order to see all variables for an hostname, you can run this command:
 ```
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
@@ -230,7 +230,7 @@ To check the JSNAPy version, run the following command:
 jsnapy -V 
 ```
 
-Another option would be to pull from [docker hub] (https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has JSNAPy installed.   
+Another option would be to pull from [docker hub](https://hub.docker.com/r/ksator/junos-automation-tools/) a docker image that already has JSNAPy installed.   
 
 ## Fix the JSNAPy lookup directories: 
 JSNAPy default lookup directory to search for JSNAPy configuration files is /etc/jsnapy.  
@@ -239,7 +239,7 @@ JSNAPy default lookup directory to search for JSNAPy test files is /etc/jsnapy/t
 So:  
 - Either copy the jsnapy files from this repository into the default lookup directories.  
 - Or edit /etc/jsnapy/jsnapy.cfg to change the default JSNAPy lookup directories. This is the easiest option and the one I am using.   
-- Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here] (https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
+- Another option is to specify custom jsnapy lookup directory using the optional argument --folder when you use jsnapy commands as indicated [here](https://github.com/Juniper/jsnapy/wiki/3.-Command-Line-Tool#optional-arguments).  
 
 ## Use JSNAPy:  
 JSNAPy is supported in three modes:  
