@@ -14,7 +14,7 @@
        user: "{{ credentials.username }}"
        passwd: "{{ credentials.password }}"
        action: "snap_pre"
-       test_files: /etc/jsnapy/testfiles/snap.yml
+       test_files: /etc/jsnapy/testfiles/snap_lldp.yml
 
    - name: Collect Post Snapshot
      junos_jsnapy:
@@ -22,7 +22,7 @@
        user: "{{ credentials.username }}"
        passwd: "{{ credentials.password }}"
        action: "snap_post"
-       test_files: /etc/jsnapy/testfiles/snap.yml
+       test_files: /etc/jsnapy/testfiles/snap_lldp.yml
 
    - name: Compare snapshots
      junos_jsnapy:
@@ -30,7 +30,7 @@
        user: "{{ credentials.username }}"
        passwd: "{{ credentials.password }}"
        action: "check"
-       test_files: /etc/jsnapy/testfiles/snap.yml
+       test_files: /etc/jsnapy/testfiles/snap_lldp.yml
      register: test_check
 
    - name: Debug jsnapy
