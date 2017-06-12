@@ -18,11 +18,14 @@ device_hostname:
  - command: show configuration system host-name | display xml 
  - iterate:
       xpath: system
-      id: './host-name'
+    # id: './host-name'
+      id: './domain-name'
       tests:
         - no-diff: host-name
-          err: "Test Failed!! host-name changed!"
-          info: "Test succeeded!! host-name did not change. it is <{{id_0}}>"
+          err: "Test Failed!! host-name changed! was <{{pre['./host-name']}}>, is now <{{post['./host-name']}}>"
+          info: "Test succeeded!! host-name did not change. it is <{{post['./host-name']}}>."
+        # err: "Test Failed!! host-name changed!"
+        # info: "Test succeeded!! host-name did not change. it is <{{id_0}}>"
 
 device_SN: 
  - command: show chassis hardware
