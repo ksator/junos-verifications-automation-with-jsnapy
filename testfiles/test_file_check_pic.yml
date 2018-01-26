@@ -1,0 +1,32 @@
+test_pic_0_status:
+  - command: show chassis fpc pic-status 0
+  - iterate:
+      xpath: '//pic'
+      id: './pic-slot'
+      tests:
+        - no-diff: pic-state
+          info: "Test succeeded! pic-slot {{pre['pic-slot']}} was {{pre['pic-state']}} and is still {{post['pic-state']}}"
+          err: "Test failed! pic slot {{pre['pic-state']}} was {{pre['pic-state']}}  but is now {{post['pic-state']}}"
+
+
+test_pic_1_status:
+  - command: show chassis fpc pic-status 1
+  - iterate:
+      xpath: '//pic'
+      id: './pic-slot'
+      tests:
+        - no-diff: pic-state
+          info: "Test succeeded! pic-slot {{pre['pic-slot']}} was {{pre['pic-state']}} and is still {{post['pic-state']}}" 
+          err: "Test failed! pic slot {{pre['pic-state']}} was {{pre['pic-state']}}  but is now {{post['pic-state']}}"
+ 
+
+test_pic_status:
+  - command: show chassis fpc pic-status
+  - iterate:
+      xpath: '//pic'
+      id: './pic-slot'
+      tests:
+        - no-diff: pic-state
+          info: "Test succeeded! pic-state was {{pre['pic-state']}} and is still {{post['pic-state']}}"
+          err: "Test failed! pic-state was {{pre['pic-state']}}  but is now {{post['pic-state']}}"
+

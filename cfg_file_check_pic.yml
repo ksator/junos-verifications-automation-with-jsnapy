@@ -1,0 +1,6 @@
+    hosts:
+      - include: devices.yml
+        group: SPINE
+    tests:
+      - test_file_check_pic.yml
+

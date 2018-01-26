@@ -1,3 +1,7 @@
+SPINE: 
+  - 172.30.54.110: 
+     username: lab
+     passwd: m0naco
 MX:                      
   - 172.30.177.170:
       username: pytraining
