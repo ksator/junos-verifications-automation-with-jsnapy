@@ -1,8 +1,8 @@
 <bgp-information>
 <bgp-peer style="detail">
-<peer-address>192.168.0.1+62683</peer-address>
+<peer-address>192.168.0.1+179</peer-address>
 <peer-as>109</peer-as>
-<local-address>192.168.0.0+179</local-address>
+<local-address>192.168.0.0+64253</local-address>
 <local-as>104</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -17,7 +17,7 @@ bgp-out
 <import-policy>
 bgp-in
 </import-policy>
-<bgp-options>Preference PeerAS Multipath LocalAS Refresh</bgp-options>
+<bgp-options>Preference LogUpDown PeerAS Multipath LocalAS Refresh</bgp-options>
 <bgp-options2>MultipathAs</bgp-options2>
 <bgp-options-extended/>
 <holdtime>90</holdtime>
@@ -25,7 +25,13 @@ bgp-in
 <local-as>104</local-as>
 <local-system-as>100</local-system-as>
 </bgp-option-information>
-<flap-count>0</flap-count>
+<flap-count>2</flap-count>
+<last-flap-event>RecvNotify</last-flap-event>
+<bgp-error>
+<name>Cease</name>
+<send-count>0</send-count>
+<receive-count>2</receive-count>
+</bgp-error>
 <peer-id>192.179.0.95</peer-id>
 <local-id>192.179.0.74</local-id>
 <active-holdtime>90</active-holdtime>
@@ -58,22 +64,22 @@ bgp-in
 <bgp-rib-state>BGP restart is complete</bgp-rib-state>
 <send-state>in sync</send-state>
 <active-prefix-count>2</active-prefix-count>
-<received-prefix-count>5</received-prefix-count>
-<accepted-prefix-count>5</accepted-prefix-count>
+<received-prefix-count>6</received-prefix-count>
+<accepted-prefix-count>6</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
 <advertised-prefix-count>6</advertised-prefix-count>
 </bgp-rib>
-<last-received>8</last-received>
-<last-sent>5</last-sent>
-<last-checked>29</last-checked>
-<input-messages>255959</input-messages>
-<input-updates>3</input-updates>
+<last-received>5</last-received>
+<last-sent>10</last-sent>
+<last-checked>44</last-checked>
+<input-messages>3262</input-messages>
+<input-updates>5</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>4863345</input-octets>
-<output-messages>255899</output-messages>
-<output-updates>2</output-updates>
+<input-octets>62109</input-octets>
+<output-messages>3260</output-messages>
+<output-updates>4</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>4862229</output-octets>
+<output-octets>62134</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>
@@ -99,7 +105,7 @@ bgp-out
 <import-policy>
 bgp-in
 </import-policy>
-<bgp-options>Preference PeerAS Multipath LocalAS Refresh</bgp-options>
+<bgp-options>Preference LogUpDown PeerAS Multipath LocalAS Refresh</bgp-options>
 <bgp-options2>MultipathAs</bgp-options2>
 <bgp-options-extended/>
 <holdtime>90</holdtime>
@@ -145,17 +151,17 @@ bgp-in
 <suppressed-prefix-count>0</suppressed-prefix-count>
 <advertised-prefix-count>5</advertised-prefix-count>
 </bgp-rib>
-<last-received>3</last-received>
-<last-sent>7</last-sent>
-<last-checked>23</last-checked>
-<input-messages>255956</input-messages>
-<input-updates>3</input-updates>
+<last-received>12</last-received>
+<last-sent>25</last-sent>
+<last-checked>57</last-checked>
+<input-messages>261505</input-messages>
+<input-updates>7</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>4863244</input-octets>
-<output-messages>255901</output-messages>
-<output-updates>2</output-updates>
+<input-octets>4968759</input-octets>
+<output-messages>261443</output-messages>
+<output-updates>6</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>4862262</output-octets>
+<output-octets>4967644</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>

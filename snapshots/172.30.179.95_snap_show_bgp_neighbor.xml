@@ -1,8 +1,8 @@
 <bgp-information>
 <bgp-peer style="detail">
-<peer-address>192.168.0.0+179</peer-address>
+<peer-address>192.168.0.0+64253</peer-address>
 <peer-as>104</peer-as>
-<local-address>192.168.0.1+62683</local-address>
+<local-address>192.168.0.1+179</local-address>
 <local-as>109</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -17,7 +17,7 @@ bgp-out
 <import-policy>
 bgp-in
 </import-policy>
-<bgp-options>Preference PeerAS Multipath LocalAS Refresh</bgp-options>
+<bgp-options>Preference LogUpDown PeerAS Multipath LocalAS Refresh</bgp-options>
 <bgp-options2>MultipathAs</bgp-options2>
 <bgp-options-extended/>
 <holdtime>90</holdtime>
@@ -31,7 +31,7 @@ bgp-in
 <active-holdtime>90</active-holdtime>
 <keepalive-interval>30</keepalive-interval>
 <group-index>0</group-index>
-<peer-index>0</peer-index>
+<peer-index>1</peer-index>
 <bgp-bfd>
 <bfd-configuration-state>disabled</bfd-configuration-state>
 <bfd-operational-state>down</bfd-operational-state>
@@ -61,19 +61,19 @@ bgp-in
 <received-prefix-count>6</received-prefix-count>
 <accepted-prefix-count>6</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
-<advertised-prefix-count>5</advertised-prefix-count>
+<advertised-prefix-count>6</advertised-prefix-count>
 </bgp-rib>
-<last-received>7</last-received>
-<last-sent>8</last-sent>
-<last-checked>46</last-checked>
-<input-messages>255899</input-messages>
-<input-updates>3</input-updates>
+<last-received>17</last-received>
+<last-sent>12</last-sent>
+<last-checked>64</last-checked>
+<input-messages>3260</input-messages>
+<input-updates>5</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>4862166</input-octets>
-<output-messages>255960</output-messages>
-<output-updates>2</output-updates>
+<input-octets>62115</input-octets>
+<output-messages>3263</output-messages>
+<output-updates>4</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>4863383</output-octets>
+<output-octets>62191</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>
@@ -84,7 +84,7 @@ bgp-in
 <bgp-peer style="detail">
 <peer-address>192.168.0.4+179</peer-address>
 <peer-as>110</peer-as>
-<local-address>192.168.0.5+60985</local-address>
+<local-address>192.168.0.5+59018</local-address>
 <local-as>109</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -99,7 +99,7 @@ bgp-out
 <import-policy>
 bgp-in
 </import-policy>
-<bgp-options>Preference PeerAS Multipath LocalAS Refresh</bgp-options>
+<bgp-options>Preference LogUpDown PeerAS Multipath LocalAS Refresh</bgp-options>
 <bgp-options2>MultipathAs</bgp-options2>
 <bgp-options-extended/>
 <holdtime>90</holdtime>
@@ -113,7 +113,7 @@ bgp-in
 <active-holdtime>90</active-holdtime>
 <keepalive-interval>30</keepalive-interval>
 <group-index>0</group-index>
-<peer-index>1</peer-index>
+<peer-index>0</peer-index>
 <bgp-bfd>
 <bfd-configuration-state>disabled</bfd-configuration-state>
 <bfd-operational-state>down</bfd-operational-state>
@@ -143,19 +143,19 @@ bgp-in
 <received-prefix-count>6</received-prefix-count>
 <accepted-prefix-count>6</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
-<advertised-prefix-count>6</advertised-prefix-count>
+<advertised-prefix-count>5</advertised-prefix-count>
 </bgp-rib>
-<last-received>2</last-received>
-<last-sent>17</last-sent>
-<last-checked>76</last-checked>
-<input-messages>255957</input-messages>
-<input-updates>5</input-updates>
+<last-received>8</last-received>
+<last-sent>10</last-sent>
+<last-checked>75</last-checked>
+<input-messages>3261</input-messages>
+<input-updates>3</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>4863314</input-octets>
-<output-messages>255960</output-messages>
-<output-updates>4</output-updates>
+<input-octets>62044</input-octets>
+<output-messages>3263</output-messages>
+<output-updates>2</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>4863434</output-octets>
+<output-octets>62140</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>
