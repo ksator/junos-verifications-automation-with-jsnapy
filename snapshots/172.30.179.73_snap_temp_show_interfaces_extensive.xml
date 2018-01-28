@@ -18,6 +18,9 @@ up
 <generation>
 135
 </generation>
+<description>
+ex4300-9
+</description>
 <link-level-type>
 Ethernet
 </link-level-type>
@@ -96,33 +99,33 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:23
 </hardware-physical-address>
-<interface-flapped seconds="4081157">
-2017-01-06 12:16:18 CET (6w5d 05:39 ago)
+<interface-flapped seconds="2716382">
+2017-10-30 07:17:12 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
 </statistics-cleared>
 <traffic-statistics style="verbose">
 <input-bytes>
-50129889
+45141390
 </input-bytes>
 <input-bps>
 0
 </input-bps>
 <output-bytes>
-50245024
+45238742
 </output-bytes>
 <output-bps>
-400
+0
 </output-bps>
 <input-packets>
-333592
+300440
 </input-packets>
 <input-pps>
 0
 </input-pps>
 <output-packets>
-333616
+300424
 </output-packets>
 <output-pps>
 0
@@ -176,7 +179,7 @@ Never
 </input-error-list>
 <output-error-list>
 <carrier-transitions>
-3
+1
 </carrier-transitions>
 <output-errors>
 0
@@ -277,7 +280,7 @@ network-control
 0
 </queue-counters-queued-packets>
 <queue-counters-trans-packets>
-333616
+300425
 </queue-counters-trans-packets>
 <queue-counters-total-drop-packets>
 0
@@ -428,34 +431,34 @@ mcast-nc
 </active-defects>
 <ethernet-mac-statistics style="verbose">
 <input-bytes>
-50129889
+45141390
 </input-bytes>
 <output-bytes>
-50245024
+45238742
 </output-bytes>
 <input-packets>
-333592
+300440
 </input-packets>
 <output-packets>
-333616
+300424
 </output-packets>
 <input-unicasts>
-223495
+201316
 </input-unicasts>
 <output-unicasts>
-223455
+201305
 </output-unicasts>
 <input-broadcasts>
-1395
+1238
 </input-broadcasts>
 <output-broadcasts>
-1435
+1226
 </output-broadcasts>
 <input-multicasts>
-108702
+97886
 </input-multicasts>
 <output-multicasts>
-108726
+97893
 </output-multicasts>
 <input-crc-errors>
 0
@@ -676,7 +679,7 @@ Disabled
 ge-0/0/0.0
 </name>
 <local-index>
-555
+554
 </local-index>
 <snmp-index>
 512
@@ -685,7 +688,7 @@ ge-0/0/0.0
 4095
 </hardware-token>
 <generation>
-166
+139
 </generation>
 <description>
 ex4300-9
@@ -704,53 +707,53 @@ ENET2
 </policer-overhead>
 <traffic-statistics style="verbose" indent="2">
 <input-bytes>
-58297218
+86279868
 </input-bytes>
 <output-bytes>
-61043683
+90336039
 </output-bytes>
 <input-packets>
-406056
+600882
 </input-packets>
 <output-packets>
-406105
+600866
 </output-packets>
 </traffic-statistics>
 <local-traffic-statistics>
 <input-bytes>
-27795971
+41138408
 </input-bytes>
 <output-bytes>
-29730324
+43992815
 </output-bytes>
 <input-packets>
-203028
+300441
 </input-packets>
 <output-packets>
-203077
+300425
 </output-packets>
 </local-traffic-statistics>
 <transit-traffic-statistics>
 <input-bytes>
-30501247
+45141460
 </input-bytes>
 <input-bps>
 0
 </input-bps>
 <output-bytes>
-31313359
+46343224
 </output-bytes>
 <output-bps>
 0
 </output-bps>
 <input-packets>
-203028
+300441
 </input-packets>
 <input-pps>
 0
 </input-pps>
 <output-packets>
-203028
+300441
 </output-packets>
 <output-pps>
 0
@@ -766,7 +769,7 @@ inet
 1500
 </mtu>
 <generation>
-183
+157
 </generation>
 <route-table>
 0
@@ -793,7 +796,7 @@ inet
 Unspecified
 </ifa-broadcast>
 <generation>
-195
+143
 </generation>
 </interface-address>
 </address-family>
@@ -945,13 +948,13 @@ Never
 pfe-0/0/0.16383
 </name>
 <local-index>
-551
+553
 </local-index>
 <snmp-index>
 508
 </snmp-index>
 <generation>
-136
+138
 </generation>
 <if-config-flags>
 <iff-up/>
@@ -1017,7 +1020,7 @@ inet
 Unlimited
 </mtu>
 <generation>
-153
+155
 </generation>
 <route-table>
 1
@@ -1049,7 +1052,7 @@ Unlimited
 0
 </intf-dropcnt>
 <generation>
-154
+156
 </generation>
 <route-table>
 1
@@ -1206,10 +1209,83 @@ Never
 pfh-0/0/0.16383
 </name>
 <local-index>
-552
+551
 </local-index>
 <snmp-index>
 506
+</snmp-index>
+<generation>
+136
+</generation>
+<if-config-flags>
+<iff-up/>
+<iff-snmp-traps/>
+</if-config-flags>
+<encapsulation>
+ENET2
+</encapsulation>
+<policer-overhead>
+</policer-overhead>
+<logical-interface-bandwidth>
+0
+</logical-interface-bandwidth>
+<traffic-statistics style="verbose" indent="2">
+<input-bytes>
+0
+</input-bytes>
+<output-bytes>
+0
+</output-bytes>
+<input-packets>
+0
+</input-packets>
+<output-packets>
+0
+</output-packets>
+</traffic-statistics>
+<local-traffic-statistics>
+<input-bytes>
+0
+</input-bytes>
+<output-bytes>
+0
+</output-bytes>
+<input-packets>
+0
+</input-packets>
+<output-packets>
+0
+</output-packets>
+</local-traffic-statistics>
+<filter-information>
+</filter-information>
+<address-family>
+<address-family-name>
+inet
+</address-family-name>
+<mtu>
+Unlimited
+</mtu>
+<generation>
+153
+</generation>
+<route-table>
+1
+</route-table>
+<address-family-flags>
+<ifff-none/>
+</address-family-flags>
+</address-family>
+</logical-interface>
+<logical-interface>
+<name>
+pfh-0/0/0.16384
+</name>
+<local-index>
+552
+</local-index>
+<snmp-index>
+510
 </snmp-index>
 <generation>
 137
@@ -1264,80 +1340,7 @@ inet
 Unlimited
 </mtu>
 <generation>
-155
-</generation>
-<route-table>
-1
-</route-table>
-<address-family-flags>
-<ifff-none/>
-</address-family-flags>
-</address-family>
-</logical-interface>
-<logical-interface>
-<name>
-pfh-0/0/0.16384
-</name>
-<local-index>
-553
-</local-index>
-<snmp-index>
-510
-</snmp-index>
-<generation>
-138
-</generation>
-<if-config-flags>
-<iff-up/>
-<iff-snmp-traps/>
-</if-config-flags>
-<encapsulation>
-ENET2
-</encapsulation>
-<policer-overhead>
-</policer-overhead>
-<logical-interface-bandwidth>
-0
-</logical-interface-bandwidth>
-<traffic-statistics style="verbose" indent="2">
-<input-bytes>
-0
-</input-bytes>
-<output-bytes>
-0
-</output-bytes>
-<input-packets>
-0
-</input-packets>
-<output-packets>
-0
-</output-packets>
-</traffic-statistics>
-<local-traffic-statistics>
-<input-bytes>
-0
-</input-bytes>
-<output-bytes>
-0
-</output-bytes>
-<input-packets>
-0
-</input-packets>
-<output-packets>
-0
-</output-packets>
-</local-traffic-statistics>
-<filter-information>
-</filter-information>
-<address-family>
-<address-family-name>
-inet
-</address-family-name>
-<mtu>
-Unlimited
-</mtu>
-<generation>
-156
+154
 </generation>
 <route-table>
 2
@@ -1445,33 +1448,33 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:24
 </hardware-physical-address>
-<interface-flapped seconds="4323072">
-2017-01-03 17:04:23 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716375">
+2017-10-30 07:17:19 CET (4w3d 10:32 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
 </statistics-cleared>
 <traffic-statistics style="verbose">
 <input-bytes>
-50247881
+45235082
 </input-bytes>
 <input-bps>
-400
+120
 </input-bps>
 <output-bytes>
-50253554
+45234121
 </output-bytes>
 <output-bps>
-0
+96
 </output-bps>
 <input-packets>
-333767
+300401
 </input-packets>
 <input-pps>
 0
 </input-pps>
 <output-packets>
-333835
+300394
 </output-packets>
 <output-pps>
 0
@@ -1626,7 +1629,7 @@ network-control
 0
 </queue-counters-queued-packets>
 <queue-counters-trans-packets>
-333837
+300394
 </queue-counters-trans-packets>
 <queue-counters-total-drop-packets>
 0
@@ -1777,34 +1780,34 @@ mcast-nc
 </active-defects>
 <ethernet-mac-statistics style="verbose">
 <input-bytes>
-50247881
+45235082
 </input-bytes>
 <output-bytes>
-50253554
+45234121
 </output-bytes>
 <input-packets>
-333767
+300401
 </input-packets>
 <output-packets>
-333835
+300394
 </output-packets>
 <input-unicasts>
-223565
+201280
 </input-unicasts>
 <output-unicasts>
-223712
+201276
 </output-unicasts>
 <input-broadcasts>
-1517
+1236
 </input-broadcasts>
 <output-broadcasts>
-1432
+1236
 </output-broadcasts>
 <input-multicasts>
-108685
+97885
 </input-multicasts>
 <output-multicasts>
-108691
+97882
 </output-multicasts>
 <input-crc-errors>
 0
@@ -2025,7 +2028,7 @@ Disabled
 ge-0/0/1.0
 </name>
 <local-index>
-556
+555
 </local-index>
 <snmp-index>
 514
@@ -2034,7 +2037,7 @@ ge-0/0/1.0
 4094
 </hardware-token>
 <generation>
-167
+140
 </generation>
 <description>
 ex4300-18
@@ -2053,53 +2056,53 @@ ENET2
 </policer-overhead>
 <traffic-statistics style="verbose" indent="2">
 <input-bytes>
-58429968
+86468168
 </input-bytes>
 <output-bytes>
-61104698
+90425073
 </output-bytes>
 <input-packets>
-406014
+600802
 </input-packets>
 <output-packets>
-406032
+600796
 </output-packets>
 </traffic-statistics>
 <local-traffic-statistics>
 <input-bytes>
-27862605
+41232788
 </input-bytes>
 <output-bytes>
-29725307
+43988085
 </output-bytes>
 <input-packets>
-203007
+300400
 </input-packets>
 <output-packets>
-203025
+300394
 </output-packets>
 </local-traffic-statistics>
 <transit-traffic-statistics>
 <input-bytes>
-30567363
+45235380
 </input-bytes>
 <input-bps>
 0
 </input-bps>
 <output-bytes>
-31379391
+46436988
 </output-bytes>
 <output-bps>
 0
 </output-bps>
 <input-packets>
-203007
+300402
 </input-packets>
 <input-pps>
 0
 </input-pps>
 <output-packets>
-203007
+300402
 </output-packets>
 <output-pps>
 0
@@ -2115,7 +2118,7 @@ inet
 1500
 </mtu>
 <generation>
-184
+158
 </generation>
 <route-table>
 0
@@ -2142,7 +2145,7 @@ inet
 Unspecified
 </ifa-broadcast>
 <generation>
-201
+145
 </generation>
 </interface-address>
 </address-family>
@@ -2209,7 +2212,6 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
-  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -2247,8 +2249,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:25
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716383">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -2783,8 +2785,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:26
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716383">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -3282,6 +3284,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -3319,8 +3322,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:27
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716383">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -3818,6 +3821,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -3855,8 +3859,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:28
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716383">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -4354,6 +4358,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -4391,8 +4396,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:29
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -4890,6 +4895,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -4927,8 +4933,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:2a
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -5463,8 +5469,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:2b
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -5999,8 +6005,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:2c
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -6535,8 +6541,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:2d
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -7071,8 +7077,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:2e
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -7607,8 +7613,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:2f
 </hardware-physical-address>
-<interface-flapped seconds="4323088">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -8106,7 +8112,6 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
-  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -8144,8 +8149,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:30
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -8680,8 +8685,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:31
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -9216,8 +9221,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:32
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -9753,8 +9758,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:33
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -10252,7 +10257,6 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
-  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -10290,8 +10294,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:34
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -10826,8 +10830,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:35
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -11362,8 +11366,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:36
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -11861,7 +11865,6 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
-  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -11899,8 +11902,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:37
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -12436,8 +12439,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:38
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -12972,8 +12975,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:39
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -13508,8 +13511,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:60:3a
 </hardware-physical-address>
-<interface-flapped seconds="4323089">
-2017-01-03 17:04:07 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716384">
+2017-10-30 07:17:11 CET (4w3d 10:33 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
@@ -13980,7 +13983,6 @@ Unlimited
 <clocking>
 Unspecified
 </clocking>
-  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -14182,7 +14184,7 @@ Unspecified
 Unspecified
 </ifa-broadcast>
 <generation>
-200
+144
 </generation>
 </interface-address>
 <interface-address>
@@ -14199,7 +14201,7 @@ Unspecified
 Unspecified
 </ifa-broadcast>
 <generation>
-194
+142
 </generation>
 </interface-address>
 <interface-address>
@@ -14614,7 +14616,7 @@ Unspecified
 </filter-information>
 <address-family>
 <address-family-name>
-inet
+vpls
 </address-family-name>
 <mtu>
 Unlimited
@@ -14624,6 +14626,53 @@ Unlimited
 </generation>
 <route-table>
 3
+</route-table>
+<address-family-flags>
+<ifff-none/>
+</address-family-flags>
+</address-family>
+</logical-interface>
+<logical-interface>
+<name>
+.local..4
+</name>
+<local-index>
+545
+</local-index>
+<snmp-index>
+0
+</snmp-index>
+<hardware-token>
+262144
+</hardware-token>
+<generation>
+130
+</generation>
+<if-config-flags>
+<iff-point-to-point/>
+</if-config-flags>
+<encapsulation>
+Unspecified
+</encapsulation>
+<policer-overhead>
+</policer-overhead>
+<logical-interface-bandwidth>
+0
+</logical-interface-bandwidth>
+<filter-information>
+</filter-information>
+<address-family>
+<address-family-name>
+inet
+</address-family-name>
+<mtu>
+Unlimited
+</mtu>
+<generation>
+144
+</generation>
+<route-table>
+4
 </route-table>
 <address-family-flags>
 <ifff-none/>
@@ -14649,57 +14698,10 @@ Unspecified
 </logical-interface>
 <logical-interface>
 <name>
-.local..4
-</name>
-<local-index>
-546
-</local-index>
-<snmp-index>
-0
-</snmp-index>
-<hardware-token>
-262144
-</hardware-token>
-<generation>
-131
-</generation>
-<if-config-flags>
-<iff-point-to-point/>
-</if-config-flags>
-<encapsulation>
-Unspecified
-</encapsulation>
-<policer-overhead>
-</policer-overhead>
-<logical-interface-bandwidth>
-0
-</logical-interface-bandwidth>
-<filter-information>
-</filter-information>
-<address-family>
-<address-family-name>
-vpls
-</address-family-name>
-<mtu>
-Unlimited
-</mtu>
-<generation>
-145
-</generation>
-<route-table>
-4
-</route-table>
-<address-family-flags>
-<ifff-none/>
-</address-family-flags>
-</address-family>
-</logical-interface>
-<logical-interface>
-<name>
 .local..5
 </name>
 <local-index>
-547
+549
 </local-index>
 <snmp-index>
 0
@@ -14708,7 +14710,7 @@ Unlimited
 327680
 </hardware-token>
 <generation>
-132
+134
 </generation>
 <if-config-flags>
 <iff-point-to-point/>
@@ -14731,7 +14733,7 @@ inet
 Unlimited
 </mtu>
 <generation>
-146
+149
 </generation>
 <route-table>
 5
@@ -14748,7 +14750,7 @@ iso
 Unlimited
 </mtu>
 <generation>
-147
+150
 </generation>
 <route-table>
 5
@@ -14780,7 +14782,7 @@ Unlimited
 0
 </intf-dropcnt>
 <generation>
-149
+152
 </generation>
 <route-table>
 5
@@ -14795,7 +14797,7 @@ Unlimited
 .local..6
 </name>
 <local-index>
-548
+550
 </local-index>
 <snmp-index>
 0
@@ -14804,7 +14806,7 @@ Unlimited
 393216
 </hardware-token>
 <generation>
-133
+135
 </generation>
 <if-config-flags>
 <iff-point-to-point/>
@@ -14830,7 +14832,7 @@ Unlimited
 3
 </maximum-labels>
 <generation>
-148
+151
 </generation>
 <route-table>
 6
@@ -14875,7 +14877,6 @@ Unspecified
 <clocking>
 Unspecified
 </clocking>
-  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -14919,13 +14920,13 @@ Never
 0
 </input-bytes>
 <output-bytes>
-133769390
+120425294
 </output-bytes>
 <input-packets>
 0
 </input-packets>
 <output-packets>
-667457
+600823
 </output-packets>
 <ipv6-transit-statistics>
 <input-bytes>
@@ -15011,13 +15012,13 @@ ENET2
 </policer-overhead>
 <traffic-statistics style="verbose" indent="2">
 <input-bytes>
-127496125
+114817072
 </input-bytes>
 <output-bytes>
 168
 </output-bytes>
 <input-packets>
-667195
+600843
 </input-packets>
 <output-packets>
 4
@@ -15025,13 +15026,13 @@ ENET2
 </traffic-statistics>
 <local-traffic-statistics>
 <input-bytes>
-127496125
+114817072
 </input-bytes>
 <output-bytes>
 168
 </output-bytes>
 <input-packets>
-667195
+600843
 </input-packets>
 <output-packets>
 4
@@ -15163,7 +15164,6 @@ Unspecified
 <clocking>
 Unspecified
 </clocking>
-  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -15304,7 +15304,6 @@ Unlimited
 <speed>
 Unlimited
 </speed>
-  
 <up-hold-time>
 0
 </up-hold-time>
@@ -15384,7 +15383,6 @@ Unlimited
 <speed>
 Unlimited
 </speed>
-  
 <up-hold-time>
 0
 </up-hold-time>
@@ -15719,7 +15717,7 @@ Never
 jsrv.1
 </name>
 <local-index>
-545
+546
 </local-index>
 <snmp-index>
 504
@@ -15728,7 +15726,7 @@ jsrv.1
 4294967295
 </hardware-token>
 <generation>
-130
+131
 </generation>
 <if-config-flags>
 <iff-up/>
@@ -15816,10 +15814,10 @@ inet
 1514
 </mtu>
 <generation>
-144
+145
 </generation>
 <route-table>
-3
+4
 </route-table>
 <address-family-flags>
 <ifff-is-primary/>
@@ -15881,6 +15879,7 @@ Unspecified
 <clocking>
 Unspecified
 </clocking>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -15923,16 +15922,16 @@ Never
 </statistics-cleared>
 <traffic-statistics style="verbose">
 <input-bytes>
-20130918610
+12614376948
 </input-bytes>
 <output-bytes>
-20130918610
+12614376948
 </output-bytes>
 <input-packets>
-157969810
+99126154
 </input-packets>
 <output-packets>
-157969810
+99126154
 </output-packets>
 <ipv6-transit-statistics>
 <input-bytes>
@@ -15994,13 +15993,13 @@ Never
 lo0.0
 </name>
 <local-index>
-550
+548
 </local-index>
 <snmp-index>
 16
 </snmp-index>
 <generation>
-135
+133
 </generation>
 <if-config-flags>
 <iff-snmp-traps/>
@@ -16012,30 +16011,30 @@ Unspecified
 </policer-overhead>
 <traffic-statistics style="verbose" indent="2">
 <input-bytes>
-1672
+0
 </input-bytes>
 <output-bytes>
-1672
+0
 </output-bytes>
 <input-packets>
-10
+0
 </input-packets>
 <output-packets>
-10
+0
 </output-packets>
 </traffic-statistics>
 <local-traffic-statistics>
 <input-bytes>
-1672
+0
 </input-bytes>
 <output-bytes>
-1672
+0
 </output-bytes>
 <input-packets>
-10
+0
 </input-packets>
 <output-packets>
-10
+0
 </output-packets>
 </local-traffic-statistics>
 <filter-information>
@@ -16048,7 +16047,7 @@ inet
 Unlimited
 </mtu>
 <generation>
-151
+147
 </generation>
 <route-table>
 0
@@ -16105,7 +16104,7 @@ iso
 Unlimited
 </mtu>
 <generation>
-152
+148
 </generation>
 <route-table>
 0
@@ -16138,13 +16137,13 @@ Unspecified
 lo0.16385
 </name>
 <local-index>
-549
+547
 </local-index>
 <snmp-index>
 22
 </snmp-index>
 <generation>
-134
+132
 </generation>
 <if-config-flags>
 <iff-snmp-traps/>
@@ -16156,30 +16155,30 @@ Unspecified
 </policer-overhead>
 <traffic-statistics style="verbose" indent="2">
 <input-bytes>
-20130908904
+12614361642
 </input-bytes>
 <output-bytes>
-20130908904
+12614361642
 </output-bytes>
 <input-packets>
-157969707
+99126026
 </input-packets>
 <output-packets>
-157969707
+99126026
 </output-packets>
 </traffic-statistics>
 <local-traffic-statistics>
 <input-bytes>
-20130908904
+12614361642
 </input-bytes>
 <output-bytes>
-20130908904
+12614361642
 </output-bytes>
 <input-packets>
-157969707
+99126026
 </input-packets>
 <output-packets>
-157969707
+99126026
 </output-packets>
 </local-traffic-statistics>
 <filter-information>
@@ -16192,7 +16191,7 @@ inet
 Unlimited
 </mtu>
 <generation>
-150
+146
 </generation>
 <route-table>
 1
@@ -16415,24 +16414,24 @@ Unspecified
 <alternate-physical-address>
 Unspecified
 </alternate-physical-address>
-<interface-flapped seconds="4323149">
-2017-01-03 17:03:07 CET (7w1d 00:52 ago)
+<interface-flapped seconds="2716350">
+2017-10-30 07:17:45 CET (4w3d 10:32 ago)
 </interface-flapped>
 <statistics-cleared>
 Never
 </statistics-cleared>
 <traffic-statistics style="verbose">
 <input-bytes>
-174554117567
+370492098989
 </input-bytes>
 <output-bytes>
-1470742185
+191187369
 </output-bytes>
 <input-packets>
-468352576
+1135884963
 </input-packets>
 <output-packets>
-6549842
+1005248
 </output-packets>
 <ipv6-transit-statistics>
 <input-bytes>
@@ -16522,30 +16521,30 @@ ENET2
 </logical-interface-bandwidth>
 <traffic-statistics style="verbose" indent="2">
 <input-bytes>
-144154065408
+338761444807
 </input-bytes>
 <output-bytes>
-1444140876
+186973753
 </output-bytes>
 <input-packets>
-392659408
+1068004896
 </input-packets>
 <output-packets>
-6549884
+1005277
 </output-packets>
 </traffic-statistics>
 <local-traffic-statistics>
 <input-bytes>
-144154065408
+338761444807
 </input-bytes>
 <output-bytes>
-1444140876
+186973753
 </output-bytes>
 <input-packets>
-392659408
+1068004896
 </input-packets>
 <output-packets>
-6549884
+1005277
 </output-packets>
 </local-traffic-statistics>
 <filter-information>
@@ -16623,7 +16622,6 @@ Unlimited
 <speed>
 Unlimited
 </speed>
-  
 <up-hold-time>
 0
 </up-hold-time>
@@ -16702,7 +16700,6 @@ Unlimited
 <speed>
 Unlimited
 </speed>
-  
 <up-hold-time>
 0
 </up-hold-time>
@@ -16780,7 +16777,6 @@ Unlimited
 <speed>
 Unlimited
 </speed>
-  
 <up-hold-time>
 0
 </up-hold-time>
@@ -16861,7 +16857,6 @@ Unlimited
 <clocking>
 Unspecified
 </clocking>
-  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>

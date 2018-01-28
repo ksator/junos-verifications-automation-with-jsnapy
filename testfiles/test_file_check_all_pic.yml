@@ -1,0 +1,10 @@
+test_all_pic_status:
+  - command: show chassis fpc pic-status
+  - iterate:
+      xpath: fpc/pic
+      id: pic-slot, ../slot
+      tests:
+        - no-diff: pic-state
+          info: "Test succeeded! PIC {{post['pic-slot']}} in FPC {{post['../slot']}} status remains identical!"
+          err: "Test failed! PIC {{post['pic-slot']}} in FPC {{post['../slot']}} changed status from {{pre['pic-state']}} to {{post['pic-state']}}!"
+

@@ -1,14 +1,10 @@
-<configuration changed-seconds="1487778667" changed-localtime="2017-02-22 16:51:07 CET">
+<configuration changed-seconds="1517091630" changed-localtime="2018-01-27 23:20:30 CET">
     <system>
-        <login>
-            <retry-options>
-                <minimum-time>40</minimum-time>
-            </retry-options>
-            <user>
-                <name>remote</name>
-                <uid>2000</uid>
-                <class>super-user</class>
-            </user>
-        </login>
+        <name-server>
+            <name>8.8.8.8</name>
+        </name-server>
+        <name-server>
+            <name>8.8.4.4</name>
+        </name-server>
     </system>
 </configuration>

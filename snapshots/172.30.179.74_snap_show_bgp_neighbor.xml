@@ -1,8 +1,8 @@
 <bgp-information>
 <bgp-peer style="detail">
-<peer-address>192.168.0.1+179</peer-address>
+<peer-address>192.168.0.1+62683</peer-address>
 <peer-as>109</peer-as>
-<local-address>192.168.0.0+54213</local-address>
+<local-address>192.168.0.0+179</local-address>
 <local-as>104</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -58,22 +58,22 @@ bgp-in
 <bgp-rib-state>BGP restart is complete</bgp-rib-state>
 <send-state>in sync</send-state>
 <active-prefix-count>2</active-prefix-count>
-<received-prefix-count>6</received-prefix-count>
-<accepted-prefix-count>6</accepted-prefix-count>
+<received-prefix-count>5</received-prefix-count>
+<accepted-prefix-count>5</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
-<advertised-prefix-count>5</advertised-prefix-count>
+<advertised-prefix-count>6</advertised-prefix-count>
 </bgp-rib>
-<last-received>21</last-received>
-<last-sent>8</last-sent>
-<last-checked>14</last-checked>
-<input-messages>5676</input-messages>
+<last-received>8</last-received>
+<last-sent>5</last-sent>
+<last-checked>29</last-checked>
+<input-messages>255959</input-messages>
 <input-updates>3</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>107929</input-octets>
-<output-messages>5680</output-messages>
+<input-octets>4863345</input-octets>
+<output-messages>255899</output-messages>
 <output-updates>2</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>108063</output-octets>
+<output-octets>4862229</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>
@@ -82,9 +82,9 @@ bgp-in
 </bgp-output-queue>
 </bgp-peer>
 <bgp-peer style="detail">
-<peer-address>192.168.0.2+54501</peer-address>
+<peer-address>192.168.0.2+179</peer-address>
 <peer-as>110</peer-as>
-<local-address>192.168.0.3+179</local-address>
+<local-address>192.168.0.3+58622</local-address>
 <local-as>104</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -140,22 +140,22 @@ bgp-in
 <bgp-rib-state>BGP restart is complete</bgp-rib-state>
 <send-state>in sync</send-state>
 <active-prefix-count>2</active-prefix-count>
-<received-prefix-count>6</received-prefix-count>
-<accepted-prefix-count>6</accepted-prefix-count>
+<received-prefix-count>5</received-prefix-count>
+<accepted-prefix-count>5</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
-<advertised-prefix-count>6</advertised-prefix-count>
+<advertised-prefix-count>5</advertised-prefix-count>
 </bgp-rib>
-<last-received>15</last-received>
-<last-sent>5</last-sent>
-<last-checked>10</last-checked>
-<input-messages>5679</input-messages>
-<input-updates>5</input-updates>
+<last-received>3</last-received>
+<last-sent>7</last-sent>
+<last-checked>23</last-checked>
+<input-messages>255956</input-messages>
+<input-updates>3</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>108076</input-octets>
-<output-messages>5681</output-messages>
-<output-updates>4</output-updates>
+<input-octets>4863244</input-octets>
+<output-messages>255901</output-messages>
+<output-updates>2</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>108133</output-octets>
+<output-octets>4862262</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>

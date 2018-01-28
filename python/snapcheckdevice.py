@@ -34,14 +34,20 @@ print "auditing the device " + dev_obj.facts["hostname"] + " using jsnapy"
 js = SnapAdmin()
 
 # the variable config_file refers to the jsnapy configuration file
-config_file = "cfg_file_snapcheck_bgp_states.yml"
+# config_file = "cfg_file_snapcheck_bgp_states.yml"
+
+# the variable config_data refers to the jsnapy test files without details for the device
+config_data = """
+tests:
+  - test_file_snapcheck_bgp_states.yml
+"""
 
 # Performing function similar to --snapcheck
 # taking a snapshot (called snap) and comparing it against predefined criteria
 # passing device object from pyez. so jsnapy will not create new connection with device. 
 # also jsnapy will not close the device connection 
 # the jsnapy result will be print later on
-snapchk = js.snapcheck(config_file, "snap", dev=dev_obj)
+snapchk = js.snapcheck(config_data, "snap", dev=dev_obj)
 
 # rollback the junos configuration using pyez. 
 # and closing the connection using pyez. 
@@ -57,4 +63,4 @@ for val in snapchk:
     print "Total passed: ", val.no_passed
     print "Total failed:", val.no_failed
 #   print val.test_details
-    pprint(dict(val.test_details))
+#   pprint(dict(val.test_details))

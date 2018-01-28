@@ -1,8 +1,8 @@
 <bgp-information>
 <bgp-peer style="detail">
-<peer-address>192.168.0.3+179</peer-address>
+<peer-address>192.168.0.3+58622</peer-address>
 <peer-as>104</peer-as>
-<local-address>192.168.0.2+54501</local-address>
+<local-address>192.168.0.2+179</local-address>
 <local-as>110</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -25,7 +25,13 @@ bgp-in
 <local-as>110</local-as>
 <local-system-as>100</local-system-as>
 </bgp-option-information>
-<flap-count>0</flap-count>
+<flap-count>1</flap-count>
+<last-flap-event>RecvNotify</last-flap-event>
+<bgp-error>
+<name>Cease</name>
+<send-count>0</send-count>
+<receive-count>1</receive-count>
+</bgp-error>
 <peer-id>192.179.0.74</peer-id>
 <local-id>192.179.0.73</local-id>
 <active-holdtime>90</active-holdtime>
@@ -58,22 +64,22 @@ bgp-in
 <bgp-rib-state>BGP restart is complete</bgp-rib-state>
 <send-state>in sync</send-state>
 <active-prefix-count>2</active-prefix-count>
-<received-prefix-count>6</received-prefix-count>
-<accepted-prefix-count>6</accepted-prefix-count>
+<received-prefix-count>5</received-prefix-count>
+<accepted-prefix-count>5</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
-<advertised-prefix-count>6</advertised-prefix-count>
+<advertised-prefix-count>5</advertised-prefix-count>
 </bgp-rib>
-<last-received>3</last-received>
+<last-received>19</last-received>
 <last-sent>16</last-sent>
-<last-checked>19</last-checked>
-<input-messages>5679</input-messages>
-<input-updates>5</input-updates>
+<last-checked>42</last-checked>
+<input-messages>255901</input-messages>
+<input-updates>3</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>108032</input-octets>
-<output-messages>5678</output-messages>
-<output-updates>4</output-updates>
+<input-octets>4862243</input-octets>
+<output-messages>255957</output-messages>
+<output-updates>2</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>108076</output-octets>
+<output-octets>4863326</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>
@@ -82,9 +88,9 @@ bgp-in
 </bgp-output-queue>
 </bgp-peer>
 <bgp-peer style="detail">
-<peer-address>192.168.0.5+179</peer-address>
+<peer-address>192.168.0.5+60985</peer-address>
 <peer-as>109</peer-as>
-<local-address>192.168.0.4+50548</local-address>
+<local-address>192.168.0.4+179</local-address>
 <local-as>110</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -107,7 +113,13 @@ bgp-in
 <local-as>110</local-as>
 <local-system-as>100</local-system-as>
 </bgp-option-information>
-<flap-count>0</flap-count>
+<flap-count>1</flap-count>
+<last-flap-event>RecvNotify</last-flap-event>
+<bgp-error>
+<name>Cease</name>
+<send-count>0</send-count>
+<receive-count>1</receive-count>
+</bgp-error>
 <peer-id>192.179.0.95</peer-id>
 <local-id>192.179.0.73</local-id>
 <active-holdtime>90</active-holdtime>
@@ -140,22 +152,22 @@ bgp-in
 <bgp-rib-state>BGP restart is complete</bgp-rib-state>
 <send-state>in sync</send-state>
 <active-prefix-count>2</active-prefix-count>
-<received-prefix-count>5</received-prefix-count>
-<accepted-prefix-count>5</accepted-prefix-count>
+<received-prefix-count>6</received-prefix-count>
+<accepted-prefix-count>6</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
-<advertised-prefix-count>5</advertised-prefix-count>
+<advertised-prefix-count>6</advertised-prefix-count>
 </bgp-rib>
-<last-received>25</last-received>
-<last-sent>16</last-sent>
-<last-checked>68</last-checked>
-<input-messages>5676</input-messages>
-<input-updates>3</input-updates>
+<last-received>1</last-received>
+<last-sent>12</last-sent>
+<last-checked>24</last-checked>
+<input-messages>255960</input-messages>
+<input-updates>5</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>107924</input-octets>
-<output-messages>5678</output-messages>
-<output-updates>2</output-updates>
+<input-octets>4863415</input-octets>
+<output-messages>255957</output-messages>
+<output-updates>4</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>108025</output-octets>
+<output-octets>4863377</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>

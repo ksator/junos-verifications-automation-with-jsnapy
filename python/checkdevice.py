@@ -53,10 +53,10 @@ for item in my_devices_list:
 print "comparing first and second snapshots using jsnapy ..."
 chk = js.check(config_file, "pre", "post")
 
-for check in chk:
-    print "Tested on", check.device
-    print "Final result: ", check.result
-    print "Total passed: ", check.no_passed
-    print "Total failed:", check.no_failed
+#for check in chk:
+#    print "Tested on", check.device
+#    print "Final result: ", check.result
+#    print "Total passed: ", check.no_passed
+#    print "Total failed:", check.no_failed
 #   print check.test_details
-    pprint(dict(check.test_details))
+#    pprint(dict(check.test_details))

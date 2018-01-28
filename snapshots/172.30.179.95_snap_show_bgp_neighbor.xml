@@ -1,8 +1,8 @@
 <bgp-information>
 <bgp-peer style="detail">
-<peer-address>192.168.0.0+54213</peer-address>
+<peer-address>192.168.0.0+179</peer-address>
 <peer-as>104</peer-as>
-<local-address>192.168.0.1+179</local-address>
+<local-address>192.168.0.1+62683</local-address>
 <local-as>109</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -31,7 +31,7 @@ bgp-in
 <active-holdtime>90</active-holdtime>
 <keepalive-interval>30</keepalive-interval>
 <group-index>0</group-index>
-<peer-index>1</peer-index>
+<peer-index>0</peer-index>
 <bgp-bfd>
 <bfd-configuration-state>disabled</bfd-configuration-state>
 <bfd-operational-state>down</bfd-operational-state>
@@ -58,22 +58,22 @@ bgp-in
 <bgp-rib-state>BGP restart is complete</bgp-rib-state>
 <send-state>in sync</send-state>
 <active-prefix-count>2</active-prefix-count>
-<received-prefix-count>5</received-prefix-count>
-<accepted-prefix-count>5</accepted-prefix-count>
+<received-prefix-count>6</received-prefix-count>
+<accepted-prefix-count>6</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
-<advertised-prefix-count>6</advertised-prefix-count>
+<advertised-prefix-count>5</advertised-prefix-count>
 </bgp-rib>
-<last-received>6</last-received>
-<last-sent>18</last-sent>
-<last-checked>23</last-checked>
-<input-messages>5679</input-messages>
+<last-received>7</last-received>
+<last-sent>8</last-sent>
+<last-checked>46</last-checked>
+<input-messages>255899</input-messages>
 <input-updates>3</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>108025</input-octets>
-<output-messages>5676</output-messages>
+<input-octets>4862166</input-octets>
+<output-messages>255960</output-messages>
 <output-updates>2</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>107992</output-octets>
+<output-octets>4863383</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>
@@ -82,9 +82,9 @@ bgp-in
 </bgp-output-queue>
 </bgp-peer>
 <bgp-peer style="detail">
-<peer-address>192.168.0.4+50548</peer-address>
+<peer-address>192.168.0.4+179</peer-address>
 <peer-as>110</peer-as>
-<local-address>192.168.0.5+179</local-address>
+<local-address>192.168.0.5+60985</local-address>
 <local-as>109</local-as>
 <peer-type>External</peer-type>
 <peer-state>Established</peer-state>
@@ -113,7 +113,7 @@ bgp-in
 <active-holdtime>90</active-holdtime>
 <keepalive-interval>30</keepalive-interval>
 <group-index>0</group-index>
-<peer-index>0</peer-index>
+<peer-index>1</peer-index>
 <bgp-bfd>
 <bfd-configuration-state>disabled</bfd-configuration-state>
 <bfd-operational-state>down</bfd-operational-state>
@@ -140,22 +140,22 @@ bgp-in
 <bgp-rib-state>BGP restart is complete</bgp-rib-state>
 <send-state>in sync</send-state>
 <active-prefix-count>2</active-prefix-count>
-<received-prefix-count>5</received-prefix-count>
-<accepted-prefix-count>5</accepted-prefix-count>
+<received-prefix-count>6</received-prefix-count>
+<accepted-prefix-count>6</accepted-prefix-count>
 <suppressed-prefix-count>0</suppressed-prefix-count>
-<advertised-prefix-count>5</advertised-prefix-count>
+<advertised-prefix-count>6</advertised-prefix-count>
 </bgp-rib>
-<last-received>13</last-received>
-<last-sent>22</last-sent>
-<last-checked>79</last-checked>
-<input-messages>5678</input-messages>
-<input-updates>3</input-updates>
+<last-received>2</last-received>
+<last-sent>17</last-sent>
+<last-checked>76</last-checked>
+<input-messages>255957</input-messages>
+<input-updates>5</input-updates>
 <input-refreshes>0</input-refreshes>
-<input-octets>108006</input-octets>
-<output-messages>5677</output-messages>
-<output-updates>2</output-updates>
+<input-octets>4863314</input-octets>
+<output-messages>255960</output-messages>
+<output-updates>4</output-updates>
 <output-refreshes>0</output-refreshes>
-<output-octets>108006</output-octets>
+<output-octets>4863434</output-octets>
 <bgp-output-queue>
 <number>0</number>
 <count>0</count>

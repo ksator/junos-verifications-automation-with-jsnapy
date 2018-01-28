@@ -1,4 +1,4 @@
-<configuration commit-seconds="1487778667" commit-localtime="2017-02-22 16:51:07 CET" commit-user="pytraining">
+<configuration commit-seconds="1512142033" commit-localtime="2017-12-01 16:27:13 CET" commit-user="pytraining">
     <system>
         <host-name>ex4300-9</host-name>
         <domain-name>poc-nl.jnpr.net</domain-name>
@@ -34,14 +34,20 @@
                 <minimum-time>40</minimum-time>
             </retry-options>
             <user>
+                <name>lab</name>
+                <uid>2001</uid>
+                <class>super-user</class>
+                <authentication>
+                    <encrypted-password>$5$6iF2mPt1$JPfC/UC93vqQxLCRhheqwETL8zws98UzdXxqmtrFBJB</encrypted-password>
+                </authentication>
+            </user>
+            <user>
                 <name>remote</name>
                 <uid>2000</uid>
                 <class>super-user</class>
             </user>
         </login>
         <services>
-            <ftp>
-            </ftp>
             <ssh>
             </ssh>
             <telnet>
@@ -94,6 +100,14 @@
                     <name>interactive-commands</name>
                     <info/>
                 </contents>
+            </host>
+            <host>
+                <name>172.30.55.201</name>
+                <contents>
+                    <name>any</name>
+                    <any/>
+                </contents>
+                <port>516</port>
             </host>
             <file>
                 <name>messages</name>

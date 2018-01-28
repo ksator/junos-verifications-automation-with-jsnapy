@@ -57,6 +57,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -84,18 +85,18 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:43
 </hardware-physical-address>
-<interface-flapped seconds="4323068">
-2017-01-03 17:04:22 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716372">
+2017-10-30 07:17:16 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
-120
+400
 </input-bps>
 <input-pps>
 0
 </input-pps>
 <output-bps>
-96
+0
 </output-bps>
 <output-pps>
 0
@@ -119,7 +120,7 @@ Disabled
 ge-0/0/0.0
 </name>
 <local-index>
-555
+554
 </local-index>
 <snmp-index>
 510
@@ -141,10 +142,10 @@ ENET2
 </policer-overhead>
 <traffic-statistics style="brief">
 <input-packets>
-406062
+444182
 </input-packets>
 <output-packets>
-406046
+444256
 </output-packets>
 </traffic-statistics>
 <filter-information>
@@ -193,6 +194,7 @@ up
 <speed>
 800mbps
 </speed>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -220,7 +222,7 @@ Never
 pfe-0/0/0.16383
 </name>
 <local-index>
-551
+553
 </local-index>
 <snmp-index>
 508
@@ -305,6 +307,7 @@ up
 <speed>
 800mbps
 </speed>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -332,7 +335,7 @@ Never
 pfh-0/0/0.16383
 </name>
 <local-index>
-552
+551
 </local-index>
 <snmp-index>
 506
@@ -376,7 +379,7 @@ Unlimited
 pfh-0/0/0.16384
 </name>
 <local-index>
-553
+552
 </local-index>
 <snmp-index>
 518
@@ -474,6 +477,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -501,18 +505,18 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:44
 </hardware-physical-address>
-<interface-flapped seconds="4323068">
-2017-01-03 17:04:22 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716372">
+2017-10-30 07:17:16 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
-120
+0
 </input-bps>
 <input-pps>
 0
 </input-pps>
 <output-bps>
-488
+0
 </output-bps>
 <output-pps>
 0
@@ -536,7 +540,7 @@ Disabled
 ge-0/0/1.0
 </name>
 <local-index>
-556
+555
 </local-index>
 <snmp-index>
 512
@@ -558,10 +562,10 @@ ENET2
 </policer-overhead>
 <traffic-statistics style="brief">
 <input-packets>
-406044
+444138
 </input-packets>
 <output-packets>
-406029
+444126
 </output-packets>
 </traffic-statistics>
 <filter-information>
@@ -649,6 +653,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -678,8 +683,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:45
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -767,6 +772,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -796,8 +802,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:46
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -885,6 +891,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -914,8 +921,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:47
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1003,6 +1010,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -1032,8 +1040,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:48
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1121,6 +1129,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -1150,8 +1159,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:49
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1239,6 +1248,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -1268,8 +1278,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:4a
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1357,6 +1367,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -1386,8 +1397,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:4b
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1475,6 +1486,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -1504,8 +1516,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:4c
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1593,6 +1605,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -1622,8 +1635,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:4d
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1711,6 +1724,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -1740,8 +1754,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:4e
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1858,8 +1872,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:4f
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -1976,8 +1990,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:50
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -2094,8 +2108,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:51
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -2183,6 +2197,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -2212,8 +2227,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:52
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -2330,8 +2345,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:53
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -2448,8 +2463,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:54
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -2566,8 +2581,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:55
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -2684,8 +2699,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:56
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -2773,6 +2788,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -2802,8 +2818,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:57
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -2891,6 +2907,7 @@ disabled
 <if-media-type>
 Copper
 </if-media-type>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -2920,8 +2937,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:58
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -3038,8 +3055,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:59
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -3156,8 +3173,8 @@ Copper
 <hardware-physical-address>
 4c:96:14:ee:85:5a
 </hardware-physical-address>
-<interface-flapped seconds="4323069">
-2017-01-03 17:04:21 CET (7w1d 00:51 ago)
+<interface-flapped seconds="2716373">
+2017-10-30 07:17:15 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-bps>
@@ -3237,7 +3254,7 @@ Never
 0
 </input-packets>
 <output-packets>
-667294
+600933
 </output-packets>
 </traffic-statistics>
 <logical-interface>
@@ -3263,7 +3280,7 @@ ENET2
 </policer-overhead>
 <traffic-statistics style="brief">
 <input-packets>
-667192
+600850
 </input-packets>
 <output-packets>
 4
@@ -3602,7 +3619,7 @@ Never
 jsrv.1
 </name>
 <local-index>
-548
+546
 </local-index>
 <snmp-index>
 504
@@ -3691,6 +3708,7 @@ Loopback
 <mtu>
 Unlimited
 </mtu>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -3709,10 +3727,10 @@ Never
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-packets>
-157975541
+99056684
 </input-packets>
 <output-packets>
-157975541
+99056684
 </output-packets>
 </traffic-statistics>
 <logical-interface>
@@ -3720,7 +3738,7 @@ Never
 lo0.0
 </name>
 <local-index>
-550
+548
 </local-index>
 <snmp-index>
 16
@@ -3735,10 +3753,10 @@ Unspecified
 </policer-overhead>
 <traffic-statistics style="brief">
 <input-packets>
-119
+0
 </input-packets>
 <output-packets>
-119
+0
 </output-packets>
 </traffic-statistics>
 <filter-information>
@@ -3795,7 +3813,7 @@ Unlimited
 lo0.16385
 </name>
 <local-index>
-549
+547
 </local-index>
 <snmp-index>
 22
@@ -3810,10 +3828,10 @@ Unspecified
 </policer-overhead>
 <traffic-statistics style="brief">
 <input-packets>
-157975312
+99056572
 </input-packets>
 <output-packets>
-157975312
+99056572
 </output-packets>
 </traffic-statistics>
 <filter-information>
@@ -3859,6 +3877,7 @@ Unlimited
 <speed>
 Unlimited
 </speed>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -3910,6 +3929,7 @@ Ethernet
 <speed>
 1000mbps
 </speed>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>
@@ -3933,15 +3953,15 @@ Full-Duplex
 <hardware-physical-address format="MAC 4c:96:14:ee:85:40">
 4c:96:14:ee:85:40
 </hardware-physical-address>
-<interface-flapped seconds="4323127">
-2017-01-03 17:03:23 CET (7w1d 00:52 ago)
+<interface-flapped seconds="2716345">
+2017-10-30 07:17:43 CET (4w3d 10:32 ago)
 </interface-flapped>
 <traffic-statistics style="brief">
 <input-packets>
-468357537
+1135883267
 </input-packets>
 <output-packets>
-6569075
+1003490
 </output-packets>
 </traffic-statistics>
 <logical-interface>
@@ -3971,10 +3991,10 @@ ENET2
 </logical-interface-bandwidth>
 <traffic-statistics style="brief">
 <input-packets>
-392664734
+1068003262
 </input-packets>
 <output-packets>
-6569076
+1003492
 </output-packets>
 </traffic-statistics>
 <filter-information>
@@ -4127,6 +4147,7 @@ Unlimited
 <speed>
 Unlimited
 </speed>
+  
 <if-device-flags>
 <ifdf-present/>
 <ifdf-running/>

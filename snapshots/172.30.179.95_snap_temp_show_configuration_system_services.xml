@@ -1,6 +1,5 @@
 <configuration-information>
 <configuration-output>
-ftp;
 ssh;
 telnet;
 xnm-clear-text;
