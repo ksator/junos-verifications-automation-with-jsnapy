@@ -7,5 +7,5 @@ JSNAPy is supported in three modes:
 You will find at the root of the repository a [JSNAPy presentation](JSNAPy_presentation.pdf)  
 
 This repo has ready to use JSNAPy content.  
-Please visit [wiki](https://github.com/ksator/junos-verifications-automation-with-jsnapy/wiki) for the instructions.   
+Please visit [**wiki**](https://github.com/ksator/junos-verifications-automation-with-jsnapy/wiki) for the instructions.   
 
